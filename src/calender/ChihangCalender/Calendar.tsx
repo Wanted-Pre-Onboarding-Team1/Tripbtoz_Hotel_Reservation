@@ -36,16 +36,6 @@ function Calendar({
   const today = addMonths(new Date(), monthIndex);
   const firstDayOfThisMonth = startOfMonth(today);
   const lastDayOfThisMonth = endOfMonth(today);
-  const firstDayOfNextMonth = startOfMonth(addMonths(today, monthIndex + 1));
-  const lastDayOfNextMonth = endOfMonth(addMonths(today, monthIndex + 1));
-  const thisMonthInterval = {
-    start: firstDayOfThisMonth,
-    end: lastDayOfThisMonth,
-  };
-  const nextMonthInterval = {
-    start: firstDayOfNextMonth,
-    end: lastDayOfNextMonth,
-  };
   const firstDayOfWeek = startOfWeek(firstDayOfThisMonth);
   const weeksArray = makeCustomArray(getWeeksInMonth(today));
   const daysArray = makeCustomArray(7);
@@ -78,6 +68,16 @@ function Calendar({
                   isSameDay(firstReservation as Date, currentDay) ||
                   isSameDay(lastReservation as Date, currentDay)
                 }
+                after={
+                  (lastReservation as Date) &&
+                  isAfter(lastReservation as Date, lastDayOfThisMonth) &&
+                  isAfter(currentDay, firstReservation as Date)
+                }
+                before={
+                  (lastReservation as Date) &&
+                  isBefore(firstReservation as Date, firstDayOfThisMonth) &&
+                  isBefore(currentDay, lastReservation as Date)
+                }
               />
             );
           }
@@ -86,7 +86,12 @@ function Calendar({
       </Week>
     );
   });
-  return <CalendarBox>{calendarShape}</CalendarBox>;
+  return (
+    <CalendarBox>
+      <h1>{format(today, 'yyyy년 MM월')}</h1>
+      {calendarShape}
+    </CalendarBox>
+  );
 }
 
 export default Calendar;
@@ -95,18 +100,26 @@ const Day = styled.div<{
   isCurrentMonth?: boolean;
   isInRange?: boolean;
   isReserved?: boolean;
+  after?: boolean;
+  before?: boolean;
 }>`
   width: 100px;
   height: 100px;
   border: 1px solid black;
-  background: ${({ isInRange, isReserved, isCurrentMonth }) =>
+  background: ${({ isInRange, isReserved, isCurrentMonth, after, before }) =>
     // eslint-disable-next-line no-nested-ternary
-    isInRange
-      ? isReserved
+    isCurrentMonth
+      ? isInRange
+        ? isReserved
+          ? 'skyblue'
+          : 'tomato'
+        : isReserved
         ? 'skyblue'
-        : 'tomato'
-      : isReserved
-      ? 'skyblue'
+        : 'transparent'
+      : after
+      ? 'tomato'
+      : before
+      ? 'tomato'
       : 'transparent'};
   cursor: pointer;
 `;
