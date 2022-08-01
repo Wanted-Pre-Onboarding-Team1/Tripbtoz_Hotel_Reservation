@@ -57,7 +57,7 @@ function Test() {
         }
         break;
       default:
-        setFirstReservation(currentDay);
+        setFirstReservation(null);
         setLastReservation(null);
         setReservationRange((previousRange) => {
           return {
@@ -101,7 +101,10 @@ function Test() {
   });
   return (
     <div>
-      {calendarShape}
+      <CalendarContainer>
+        <CalendarBox>{calendarShape}</CalendarBox>
+        <CalendarBox>{calendarShape}</CalendarBox>
+      </CalendarContainer>
       <Button
         type="button"
         onClick={() => {
@@ -156,4 +159,14 @@ const Button = styled.button`
   width: 100px;
   height: 30px;
   border: 1px solid black;
+`;
+
+const CalendarContainer = styled.div`
+  display: flex;
+`;
+
+const CalendarBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
 `;
