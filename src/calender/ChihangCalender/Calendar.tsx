@@ -71,11 +71,13 @@ function Calendar({
                 after={
                   (lastReservation as Date) &&
                   isAfter(lastReservation as Date, lastDayOfThisMonth) &&
+                  isSameMonth(firstReservation as Date, firstDayOfThisMonth) &&
                   isAfter(currentDay, firstReservation as Date)
                 }
                 before={
                   (lastReservation as Date) &&
                   isBefore(firstReservation as Date, firstDayOfThisMonth) &&
+                  isSameMonth(lastReservation as Date, lastDayOfThisMonth) &&
                   isBefore(currentDay, lastReservation as Date)
                 }
               />
