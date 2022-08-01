@@ -22,6 +22,14 @@ export default function HJCalendar() {
   const [selectedMonth, setSelectedMonth] = React.useState(
     format(today, 'MMM yyyy'),
   );
+  const [reserveDate, setReserveDate] = React.useState<{
+    checkin: Date;
+    checkout: Date | null;
+  }>({
+    checkin: addDays(today, 7),
+    checkout: addDays(today, 8),
+  });
+  const { checkin, checkout } = reserveDate;
 
   const parsedSelectedMonth = parse(selectedMonth, 'MMM yyyy', new Date());
 
@@ -49,6 +57,34 @@ export default function HJCalendar() {
         !isAfter(nextMonth, addMonths(startOfMonth(today), 12)) &&
           setSelectedMonth(format(nextMonth, 'MMM yyyy'));
         break;
+    }
+  };
+
+  const handleDateClick: MouseEventHandler<HTMLTimeElement> = (event) => {
+    const targetDateTime = event.currentTarget.dateTime;
+    const clickedDate = parse(targetDateTime, 'yyyy MMM d', new Date());
+
+    if (isBefore(clickedDate, today)) return;
+
+    if (isBefore(clickedDate, checkin)) {
+      setReserveDate({
+        checkin: clickedDate,
+        checkout: null,
+      });
+    }
+
+    if (isAfter(clickedDate, checkin)) {
+      if (checkout) {
+        setReserveDate({
+          checkin: clickedDate,
+          checkout: null,
+        });
+        return;
+      }
+      setReserveDate((previous) => ({
+        checkin: previous.checkin,
+        checkout: clickedDate,
+      }));
     }
   };
 
@@ -83,14 +119,19 @@ export default function HJCalendar() {
           return (
             <DateBox
               key={`date_${date}`}
-              type="button"
+              dateTime={format(date, 'yyyy MMM d')}
               style={{
                 gridColumnStart: index === 0 ? firstDayOfSelectedMonth : '',
+                background:
+                  isEqual(date, checkin) ||
+                  isEqual(date, checkout as Date) ||
+                  (isAfter(date, checkin) && isBefore(date, checkout as Date))
+                    ? 'blue'
+                    : '',
               }}
+              onClick={handleDateClick}
             >
-              <time dateTime={format(date, 'yyyy MMM d')}>
-                {format(date, 'd')}
-              </time>
+              <button type="button">{format(date, 'd')}</button>
             </DateBox>
           );
         })}
@@ -102,6 +143,7 @@ export default function HJCalendar() {
 const CalendarContainer = styled.section`
   padding: 1rem;
   min-width: 480px;
+  max-width: 900px;
 `;
 
 const MonthBlock = styled.section`
@@ -118,7 +160,10 @@ const DatesBlock = styled.section`
   text-align: center;
 `;
 
-const DateBox = styled.button`
+const DateBox = styled.time`
   text-align: center;
   padding: 0.5rem;
+  :hover {
+    cursor: pointer;
+  }
 `;
