@@ -13,10 +13,10 @@ import {
   isBefore,
   isAfter,
   isEqual,
-  isSameMonth,
 } from 'date-fns';
 import React, { MouseEventHandler } from 'react';
 import styled from 'styled-components';
+import HJDateBox from './HJDateBox';
 
 const WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 interface Reservation {
@@ -26,14 +26,16 @@ interface Reservation {
 
 export default function HJCalendar() {
   const today = startOfDay(Date.now());
+
   const [currentDate, setCurrentDate] = React.useState(today);
+  const currentMonth = format(currentDate, 'MMM yyyy');
+
   const [reserveDate, setReserveDate] = React.useState<Reservation>({
     checkin: addDays(today, 7),
     checkout: addDays(today, 8),
   });
-
-  const currentMonth = format(currentDate, 'MMM yyyy');
   const { checkin, checkout } = reserveDate;
+
   const datesOfCurrentMonth = eachDayOfInterval({
     start: startOfWeek(startOfMonth(currentDate)),
     end: endOfWeek(endOfMonth(currentDate)),
@@ -74,17 +76,16 @@ export default function HJCalendar() {
     }
 
     if (isAfter(clickedDate, checkin)) {
-      if (checkout) {
+      checkout &&
         setReserveDate({
           checkin: clickedDate,
           checkout: null,
         });
-        return;
-      }
-      setReserveDate((previous) => ({
-        checkin: previous.checkin,
-        checkout: clickedDate,
-      }));
+      !checkout &&
+        setReserveDate((previous) => ({
+          checkin: previous.checkin,
+          checkout: clickedDate,
+        }));
     }
   };
 
@@ -113,12 +114,17 @@ export default function HJCalendar() {
       </MonthBlock>
       <DatesBlock>
         {WEEK.map((dayOfTheWeek, index) => (
-          <strong key={`week_${dayOfTheWeek}_${index}`}>{dayOfTheWeek}</strong>
+          <WeekBox key={`week_${dayOfTheWeek}_${index}`}>
+            {dayOfTheWeek}
+          </WeekBox>
         ))}
         {datesOfCurrentMonth.map((date, index) => (
-          <DateBox
+          <HJDateBox
             key={`date_${date}`}
+            date={date}
             dateTime={format(date, 'yyyy MMM d')}
+            currentDate={currentDate}
+            onClick={handleDateClick}
             style={{
               gridColumnStart: index === 0 ? firstDayOfCurrentMonth : '',
               background:
@@ -128,17 +134,7 @@ export default function HJCalendar() {
                   ? 'rgba(0,0,0,0.1)'
                   : '',
             }}
-            onClick={handleDateClick}
-          >
-            <ButtonStyled
-              type="button"
-              style={{
-                color: !isSameMonth(date, currentDate) ? 'gray' : '',
-              }}
-            >
-              {format(date, 'd')}
-            </ButtonStyled>
-          </DateBox>
+          />
         ))}
       </DatesBlock>
     </CalendarContainer>
@@ -146,9 +142,9 @@ export default function HJCalendar() {
 }
 
 const CalendarContainer = styled.section`
-  padding: 1rem;
-  min-width: 480px;
+  width: 100%;
   max-width: 900px;
+  padding: 1rem;
 `;
 
 const MonthBlock = styled.section`
@@ -165,19 +161,6 @@ const DatesBlock = styled.section`
   text-align: center;
 `;
 
-const DateBox = styled.time`
-  text-align: center;
-  padding: 0.5rem;
-  :hover {
-    cursor: pointer;
-  }
-`;
-
-const ButtonStyled = styled.button`
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  :hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
+const WeekBox = styled.span`
+  font-weight: 700;
 `;
