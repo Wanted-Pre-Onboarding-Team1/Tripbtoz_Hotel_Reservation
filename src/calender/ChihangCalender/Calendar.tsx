@@ -46,19 +46,35 @@ function Calendar({
           const currentDay = addDays(addWeeks(firstDayOfWeek, indexa), indexb);
           let result: React.ReactNode;
           if (isSameMonth(currentDay, today)) {
-            result = (
-              <Day
-                isCurrentMonth={isSameMonth(currentDay, today)}
-                isInRange={isWithinInterval(currentDay, reservationRange)}
-                isReserved={
-                  isSameDay(firstReservation as Date, currentDay) ||
-                  isSameDay(lastReservation as Date, currentDay)
-                }
-                onClick={() => setReservationDay(currentDay)}
-              >
-                {format(currentDay, 'MM/dd')}
-              </Day>
-            );
+            if (isBefore(currentDay, addDays(new Date(), -1))) {
+              result = (
+                <Day
+                  isCurrentMonth={isSameMonth(currentDay, today)}
+                  isInRange={isWithinInterval(currentDay, reservationRange)}
+                  isReserved={
+                    isSameDay(firstReservation as Date, currentDay) ||
+                    isSameDay(lastReservation as Date, currentDay)
+                  }
+                  isBeforeToday={isBefore(currentDay, addDays(new Date(), -1))}
+                >
+                  {format(currentDay, 'MM/dd')}
+                </Day>
+              );
+            } else {
+              result = (
+                <Day
+                  isCurrentMonth={isSameMonth(currentDay, today)}
+                  isInRange={isWithinInterval(currentDay, reservationRange)}
+                  isReserved={
+                    isSameDay(firstReservation as Date, currentDay) ||
+                    isSameDay(lastReservation as Date, currentDay)
+                  }
+                  onClick={() => setReservationDay(currentDay)}
+                >
+                  {format(currentDay, 'MM/dd')}
+                </Day>
+              );
+            }
           } else {
             result = (
               <Day
@@ -68,13 +84,13 @@ function Calendar({
                   isSameDay(firstReservation as Date, currentDay) ||
                   isSameDay(lastReservation as Date, currentDay)
                 }
-                after={
+                isAfterReservation={
                   (lastReservation as Date) &&
                   isAfter(lastReservation as Date, lastDayOfThisMonth) &&
                   isSameMonth(firstReservation as Date, firstDayOfThisMonth) &&
                   isAfter(currentDay, firstReservation as Date)
                 }
-                before={
+                isBeforeReservation={
                   (lastReservation as Date) &&
                   isBefore(firstReservation as Date, firstDayOfThisMonth) &&
                   isSameMonth(lastReservation as Date, lastDayOfThisMonth) &&
@@ -102,13 +118,20 @@ const Day = styled.div<{
   isCurrentMonth?: boolean;
   isInRange?: boolean;
   isReserved?: boolean;
-  after?: boolean;
-  before?: boolean;
+  isAfterReservation?: boolean;
+  isBeforeReservation?: boolean;
+  isBeforeToday?: boolean;
 }>`
   width: 100px;
   height: 100px;
   border: 1px solid black;
-  background: ${({ isInRange, isReserved, isCurrentMonth, after, before }) =>
+  background: ${({
+    isInRange,
+    isReserved,
+    isCurrentMonth,
+    isAfterReservation,
+    isBeforeReservation,
+  }) =>
     // eslint-disable-next-line no-nested-ternary
     isCurrentMonth
       ? isInRange
@@ -118,11 +141,12 @@ const Day = styled.div<{
         : isReserved
         ? 'skyblue'
         : 'transparent'
-      : after
+      : isAfterReservation
       ? 'tomato'
-      : before
+      : isBeforeReservation
       ? 'tomato'
       : 'transparent'};
+  color: ${({ isBeforeToday }) => (isBeforeToday ? 'lightgray' : 'black')};
   cursor: pointer;
 `;
 

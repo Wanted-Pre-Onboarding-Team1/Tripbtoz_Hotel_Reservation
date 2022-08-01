@@ -1,12 +1,13 @@
 import React from 'react';
-import { isSameDay, isBefore } from 'date-fns';
+import { isSameDay, isBefore, addWeeks, addDays } from 'date-fns';
 
-export const useReservation = () => {
+export const useReservation = (today: Date = new Date()) => {
+  const standardDate = addWeeks(today, 1);
   const [firstReservation, setFirstReservation] = React.useState<Date | null>(
-    null,
+    standardDate,
   );
   const [lastReservation, setLastReservation] = React.useState<Date | null>(
-    null,
+    addDays(standardDate, 1),
   );
   const [reservationRange, setReservationRange] = React.useState<Interval>({
     start: Date.parse('0'),
