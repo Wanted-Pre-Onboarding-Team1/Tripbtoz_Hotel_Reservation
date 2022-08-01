@@ -6,56 +6,56 @@ import {
   startOfMonth,
   endOfMonth,
   startOfDay,
+  startOfWeek,
+  endOfWeek,
   addDays,
   addMonths,
   isBefore,
   isAfter,
   isEqual,
+  isSameMonth,
 } from 'date-fns';
 import React, { MouseEventHandler } from 'react';
 import styled from 'styled-components';
 
-const week = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+interface Reservation {
+  checkin: Date;
+  checkout: Date | null;
+}
 
 export default function HJCalendar() {
   const today = startOfDay(Date.now());
-  const [selectedMonth, setSelectedMonth] = React.useState(
-    format(today, 'MMM yyyy'),
-  );
-  const [reserveDate, setReserveDate] = React.useState<{
-    checkin: Date;
-    checkout: Date | null;
-  }>({
+  const [currentDate, setCurrentDate] = React.useState(today);
+  const [reserveDate, setReserveDate] = React.useState<Reservation>({
     checkin: addDays(today, 7),
     checkout: addDays(today, 8),
   });
+
+  const currentMonth = format(currentDate, 'MMM yyyy');
   const { checkin, checkout } = reserveDate;
-
-  const parsedSelectedMonth = parse(selectedMonth, 'MMM yyyy', new Date());
-
-  const datesOfSelectedMonth = eachDayOfInterval({
-    start: startOfMonth(parsedSelectedMonth),
-    end: endOfMonth(parsedSelectedMonth),
+  const datesOfCurrentMonth = eachDayOfInterval({
+    start: startOfWeek(startOfMonth(currentDate)),
+    end: endOfWeek(endOfMonth(currentDate)),
   });
+  const firstDayOfCurrentMonth = datesOfCurrentMonth[0].getDay() + 1;
 
-  const firstDayOfSelectedMonth = datesOfSelectedMonth[0].getDay() + 1;
-
-  const handleMonthClick: MouseEventHandler<HTMLButtonElement> = (event) => {
+  const handleMonthChange: MouseEventHandler<HTMLButtonElement> = (event) => {
     const targetId = event.currentTarget.id;
 
     switch (targetId) {
       case 'previous_month':
-        const previousMonth = addMonths(parsedSelectedMonth, -1);
+        const previousMonth = addMonths(currentDate, -1);
 
         !isBefore(previousMonth, startOfMonth(today)) &&
-          setSelectedMonth(format(previousMonth, 'MMM yyyy'));
+          setCurrentDate(previousMonth);
         break;
 
       case 'next_month':
-        const nextMonth = addMonths(parsedSelectedMonth, 1);
+        const nextMonth = addMonths(currentDate, 1);
 
         !isAfter(nextMonth, addMonths(startOfMonth(today), 12)) &&
-          setSelectedMonth(format(nextMonth, 'MMM yyyy'));
+          setCurrentDate(nextMonth);
         break;
     }
   };
@@ -91,50 +91,55 @@ export default function HJCalendar() {
   return (
     <CalendarContainer>
       <MonthBlock>
-        <h2>{selectedMonth}</h2>
+        <h2>{currentMonth}</h2>
         <div>
           <button
             type="button"
             id="previous_month"
             aria-label="previous month"
-            onClick={handleMonthClick}
+            onClick={handleMonthChange}
           >
-            ⬅️
+            ◀️
           </button>
           <button
             type="button"
             id="next_month"
             aria-label="next month"
-            onClick={handleMonthClick}
+            onClick={handleMonthChange}
           >
-            ➡️
+            ▶️
           </button>
         </div>
       </MonthBlock>
       <DatesBlock>
-        {week.map((dayOfTheWeek, index) => (
+        {WEEK.map((dayOfTheWeek, index) => (
           <strong key={`week_${dayOfTheWeek}_${index}`}>{dayOfTheWeek}</strong>
         ))}
-        {datesOfSelectedMonth.map((date, index) => {
-          return (
-            <DateBox
-              key={`date_${date}`}
-              dateTime={format(date, 'yyyy MMM d')}
+        {datesOfCurrentMonth.map((date, index) => (
+          <DateBox
+            key={`date_${date}`}
+            dateTime={format(date, 'yyyy MMM d')}
+            style={{
+              gridColumnStart: index === 0 ? firstDayOfCurrentMonth : '',
+              background:
+                isEqual(date, checkin) ||
+                isEqual(date, checkout as Date) ||
+                (isAfter(date, checkin) && isBefore(date, checkout as Date))
+                  ? 'rgba(0,0,0,0.1)'
+                  : '',
+            }}
+            onClick={handleDateClick}
+          >
+            <ButtonStyled
+              type="button"
               style={{
-                gridColumnStart: index === 0 ? firstDayOfSelectedMonth : '',
-                background:
-                  isEqual(date, checkin) ||
-                  isEqual(date, checkout as Date) ||
-                  (isAfter(date, checkin) && isBefore(date, checkout as Date))
-                    ? 'blue'
-                    : '',
+                color: !isSameMonth(date, currentDate) ? 'gray' : '',
               }}
-              onClick={handleDateClick}
             >
-              <button type="button">{format(date, 'd')}</button>
-            </DateBox>
-          );
-        })}
+              {format(date, 'd')}
+            </ButtonStyled>
+          </DateBox>
+        ))}
       </DatesBlock>
     </CalendarContainer>
   );
@@ -151,7 +156,7 @@ const MonthBlock = styled.section`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 `;
 
 const DatesBlock = styled.section`
@@ -165,5 +170,14 @@ const DateBox = styled.time`
   padding: 0.5rem;
   :hover {
     cursor: pointer;
+  }
+`;
+
+const ButtonStyled = styled.button`
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  :hover {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 `;
