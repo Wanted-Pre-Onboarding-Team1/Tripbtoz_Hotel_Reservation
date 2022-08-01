@@ -1,0 +1,7004 @@
+{
+  "hotel_list": [
+    {
+      "hotel_name": "에코랜드 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 3
+      }
+    },
+    {
+      "hotel_name": "파르나스 호텔 제주",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "고창 웰파크시티 힐링카운티",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "사우 베이 리조트",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "알다프와 빌라스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Heron's Nest by Sea Scape Properties",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Coastal Soul by Sea Scape Properties",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangmyeong Hotel Noblesse",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Seongnam Je Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gumi Indong Zaza",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan Clover",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Haenam Ttohareune Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Yeongildae Hotel A1",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Yeondong-dong Hotel Smith",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Guest House Urban",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju Pungdengi Hostel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Glow Floor Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Gwangalli Pico Blue",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "마이티 트와이스 호텔 드레스덴",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "플라노스 비치",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아파트먼트 베스나",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아쿠아비스타 비치 리조트 바이 팬핸들 겟어웨이즈",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "OYO  시티 호텔, 쿠리치바",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Gwangalli Hotel Mango",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "OYO  호텔 몬테스, 아틀릭스코",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "이스트 게이트 부티크 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "호텔 디바",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "호텔 페르난다",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "마톰 시푸드 카페 바 위스 룸",
+      "occupancy": {
+        "base": 2,
+        "max": 6
+      }
+    },
+    {
+      "hotel_name": "그랜드 미라모르 호텔 - 올 인클루시브",
+      "occupancy": {
+        "base": 2,
+        "max": 6
+      }
+    },
+    {
+      "hotel_name": "Eulwangri Wangsan Auto Camping Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju Supsok Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gapyeong Cheongpyeong Namuyoil Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan Euro Village Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Dongho Pension and Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Mer Blue Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Ara Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chuncheon Beato Spa Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Wolpo Incense Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Semiee Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seongju TOP",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "모텔 6 사우스게이트, 미시간 - 디트로이트",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "역삼 바레",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "알티두 - 도심 아파트, 침실 2개, 알파마에 위치",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아옌다 스위트 마르네",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "더 화이트 하우스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "드 실로이아 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Jeongjaejongtaek Hanok Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong Hotel LOD 1",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Junghwasan-dong Rodeo",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sokcho Two Wheels Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Sangnamdong Yaja",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Namwon Hotel Chunhyang",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeryong Hotel Venus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "포우사다 도스 플라타노스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "스페이스빌리티 비치",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Jaesongdong M6",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mia Atti House 3",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "RG Sungshin Women's University",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Sinandong Zeus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taean Seohae Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 3
+      }
+    },
+    {
+      "hotel_name": "Incheon Azera Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geojedo Gohyeon Y",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Nampodong Chowon Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Bomnal",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Lulu",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suncheon E",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Ilsan Time",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geumsan Wolyeongsan Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sillim Honey",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yaja Yeonsinnae Station",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Dunsan Soo",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Midas",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "홀리데이 인 시카고-마트 플라자",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "칠 앤드 고 아파트호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "로리앙 팔라스 리조트 & 스파",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "모텔 6 파밍턴 힐스, 미시간 - 노스웨스트 - 파밍턴 힐스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "WunderLocke",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "하드 록 호텔 마르베야",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Goyang Hotel the Wynn",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ilsan Mikasa Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongseongro Arion",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yongjeon Hotel BEN",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Hotel Check-in",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangyang Galcheon Family Resort",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangsan Seoksan Haru Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Gwangcheon-dong Milky Way",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan Palace Untel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wonju Stay Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Samsan Hotel Nangman Stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gochang Hilton Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Geumamdong Carlton Hill Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo Venice",
+      "occupancy": {
+        "base": 2,
+        "max": 6
+      }
+    },
+    {
+      "hotel_name": "Cheonan Nyxfox",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Myeongseodong Hotel Andante",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Goyang Luxe",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Awsome",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Haman W",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Mundeok Hotel XYM",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ansan Hotel 727",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Boseong Beolgyo Sydney",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Anyang Positano",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seogwipo The Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Oceanview Motel Sokcho",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongdeok Ganggu Port YAM",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gumi Hyeonggokdong 5wol Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Osan YAM Osan Station",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hotel 166 Suwon",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimcheon Supsok Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "YAM Bupyeong Station Point",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Hanam MVP Business Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uijeongbu Yeou",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongdo Rivera Drive-in",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bundang Plein",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Yeongnam Alps Into",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Ulsan Ilsan VIP Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Hyeonpung The Dijon Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Jukdo Gallery Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Asan Carnegie",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Chilgok Palgongsan W Drive-in",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Ulsan Seongnam-dong V",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Orago",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Belino",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Hilton",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Junghwasan-dong Guardian Angel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Gaudi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Western Wonpyeongdong Lancelot",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jinju Four Seasons",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geochang Dubai",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geochang Cheonoh",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Rosen",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Junghwasandong Hotel Star",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bucheon A Plus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong Hotel Demer",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Terminal G7",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon D-day",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju Soulmate",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uijeongbu Boom",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong Bergen Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Bus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gumi Fun",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong Spa Tower",
+      "occupancy": {
+        "base": 2,
+        "max": 3
+      }
+    },
+    {
+      "hotel_name": "The Tree Riverside Resort Kaeng Krachan",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju No25 Cheongju Seongangil",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Brown Dot Cheongju Terminal",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sinchon Number 25 Sinchon Branch",
+      "occupancy": {
+        "base": 2,
+        "max": 3
+      }
+    },
+    {
+      "hotel_name": "Boryeong Penta Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongdeok Blue Road Town Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gongju Sangsin Heuljip Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seogwipo Gonmul Swimpang Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Cheongnamdae Pool Villa",
+      "occupancy": {
+        "base": 2,
+        "max": 6
+      }
+    },
+    {
+      "hotel_name": "Gangneung Jumunjin Deungdae Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung Lua Garden Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangyang Sosohaniyagi Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wanju Hanok Pension Hyurim",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sancheong Pool Villa Y",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taean Paradise Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seoul Bukhansan Glamping",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taean Hakampohaneul Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taean Solbatgil Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Yeonhwa Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Samcheok Ddabong Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung Naiad Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju Central Park Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Goseong Oz Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Boeun Songnisan OK Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Goseong Guest Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung Healing Yearn Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uljin Serendipity Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung Gyeongpo Tiara Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bonghwa Sogang Hanok Gotaek Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung Refresh Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bellissimo Castle",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sancheong Dream Healing Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Dalbit Eunhasu Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jongno Punggyeong Hanok Stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Dongbindong Hotel OK",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jangan White",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Love Bird",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Hadan No 25 Hadan",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suncheon Palma",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo Feel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Seo-myeon Hyu",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hotel La Reine Blanche",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Cheomdan The City Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jecheon Cheongpung Bali Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Muan Hotel The K",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Myeonmok I-zone",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Jinjangdong Hidden Bay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Haru",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Station Hotel Malu",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu K-boutique Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dury Jenny",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Deagu North Terminal Ganada",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yongin Sun Stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Kojaja",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gumi Indong Hotel Comma",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gapyeong Zen Stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Shinchon Chic",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chungju 4 Seasons",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeungpyeong Young Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Chungjangro Regency",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon ING",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Sinjeong-dong Marilyn",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Yeongildae Queen Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongdeungpo Hotel Yolo",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Iksan SOL Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 6
+      }
+    },
+    {
+      "hotel_name": "Hadong The W Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Living",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Yeungnam Alps Blue Tang",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yanggu Hyundai Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jincheon Sun & Moon Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suncheon Da Vinci Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "A Motel Wonju",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Daldong The S",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Yeungnam Alps Potent",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Paju Euro",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Jeonggwan Hotel Seven Bricks",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongdaegu Station IN THE Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "씨 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gapyeong Flower Noel Valley Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon L Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Okgye Hotel in Gumi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Mora Hotel 979",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sinchon Forestar",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Jinjangdong Ground 7",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hwagok Dean",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uljin Donga",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bangbae Hotel 2001",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Hotel Namu",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seosan Time Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jamsil BNW",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Songjung Apple",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Cacao",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong Valentine",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongsan Rivera",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bucheon Palace",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Sasang MU",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Jukjeon B and B",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hwagok Blue",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yucheon Titikaka",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Hotel Sixty",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suyu Lush",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Hwamyeong-dong Abba",
+      "occupancy": {
+        "base": 2,
+        "max": 6
+      }
+    },
+    {
+      "hotel_name": "Seoul National University Violinh",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chuncheon Soyanggang Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "고하우스 코파카바나 1005 A",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hwagok Grace",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Duryu Fox",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hotel Adele in Gyeongju",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Chocolate",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Bucheon Cacao",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Hwagok Theme",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Yaja Konkuk University",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Ansan Rosa Bell Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "쿡스 클럽 코르푸 -  어른 전용",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongju Alto Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongseong-ro Honeymoon",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Okdong Equus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Indeokwon Brownstone",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongcheon-dong Hotel A4",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chuncheon Metro",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wonju 2in",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "동대문 부티크 나인",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "OYO  호텔 엘 파라이소, 우이망기요",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "트리보 트렌드 아남 인터내셔널",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "DA NANG 1962 INN",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아파르타멘토스 소호 - 오아시스 세르카 알 마르",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아스티 호텔 & 스파",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cestello Suite",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "호텔 하르디네스 에반스 바이 GH 스위트",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangmyeong Cancun",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gumi Bonggok-dong Q9",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suncheon Hotel Plaza",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Nurida Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Morning Calm",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yongin Everland Station G7 Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Okcheon Rivera",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Iksan Khan Drive Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Hotel Maru",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Hotel Hora",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangsan Seoksan Candeo",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Premier Hotel JA",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Gakhwadong YAM Dong-gwangju",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Hotel Vole",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jinju Brown Dot Jinjuseong Branch",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ansan Gojandong Hill House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Yangdong Jjak",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Miryang Martin",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Cozy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gumi Indong GM",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Jjack",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seongnam Moran Hotel Supil",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Green Hill",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sanbon Yaja Sanbon Station",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongsong S",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Ara",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan Poong Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Bungmunro Tomato",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sanbon W",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uijeongbu M",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju SUM Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Iteul",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gumi Okgye Line",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "하버사이드 하우스 홀리데이 홈",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Ilsan I",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Mongyuhwawon Hanok Stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Seri Inn Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Slobbie Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Gyungbuk National University Line",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geojedo Okpo Geoje Business",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon ORA",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "비치 럭셔리 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chungju Goungjeon",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sacheon Valley Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Gangseo Jisadong Prime Good",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Pasta",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Some Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Chungwoonjang",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Jinhae Hotel Two Heart",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Jeonggwan Raum Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pocheon Hotel Lak Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Suyeong 2U",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung K Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Pyeongridong Geeky",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimje S",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Rock Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changnyeong Bugok Gagopa",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Masan Hapseongdong Tong",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan La Tree Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan KTX Station Hotel Foss",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Myeongji Zeta Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gongju Bandi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "K7 PC Cheongju Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Hotel Sarang",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Boryeong Woori Beach",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suyu High",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Mandeok The Gentle",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daebudo Winter Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangju K Plus Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Naju Gung Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Namyangju River Beach",
+      "occupancy": {
+        "base": 2,
+        "max": 5
+      }
+    },
+    {
+      "hotel_name": "Ulsan Jung-gu Venice",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Naju Dream Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Gijang Hill",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Hotel W",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Reunion Hotel Piano",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Chojeongyaksu S",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeoksam Hotel The Muse",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Goheung Myeongpum Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taean Bali",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangsan Deokgye Sun Well",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Anshan Jungang Station Chocolate",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju Valt Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon S7",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Yeongnam Alps Dragonfly",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongdaegu Station K Mini Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sangbong M",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Buan Golden Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Jinhae Yongwon Hotel VIN",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongju E",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimje Toms Drive-in Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jincheon Stay Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Hyeonpung Hidden",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chuncheon Hotel Eton",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geumsan Gung Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu San Self Check-in Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jecheon J",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan KTX Station G and G",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Namyangju Hotel 9",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yaja Sungshin Women's University",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Oncheonjang Victoria",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Okpo In-us",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangpyeong Lexy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangsan Bukbu-dong G",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suyu Jjak",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wanju Syap",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suncheon Hotel V7",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Yeongsung Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Deokjin-dong Hotel Hidden",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongdaegu Station Ocean",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gochang Hotel Moyangseong",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Daemyeongdong Greenville",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Gyeongbukdae Young",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hapjeong Seowonjang",
+      "occupancy": {
+        "base": 4,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yaksu Prince Motel",
+      "occupancy": {
+        "base": 4,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wangsimni Jouvence",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon W Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Cheomdan Millenium",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Picasso",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seosan Daus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "호텔 뮤리",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "부티크호텔k 동대문점",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "코너 호텔 잠실",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "미나 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "일 프라이테니노",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "30A 비치 하우스 – 사니벨 바이 팬핸들 겟어웨이",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "포춘 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "바로사 드림",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "스위트 & 아파트먼츠 우 트리 흐루세크",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아옌다 산 안토니오 플라자",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Casa Vacacional con Piscina en Orlando",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Indeokwon Bali",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ramada Plaza by Wyndham Sukhumvit 48",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Dream of Anyang Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "빌라 아테나",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangju Jangheung Joatel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "캡티팅 1-B드 아파트먼트 인 버밍엄 센터",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "사팡카 드림 하우스  2",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "OYO 90474 Skycity Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sokcho Stay Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "포우사다 빌리지 테오",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chuncheon Soo",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "빌라 알리세",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "이탈리안 판시요누 - 카사 디 다카",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taylor House by Sea Scape Properties",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sand By Me by Sea Scape Properties",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "유니크  1 베드룸 아파트먼트 인 퍼스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "레머스 풀 아파트먼트",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "리센스 투 칠 아파트먼트",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ilsan Rateuri",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju Sopung Stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Namwon Sugokdang Hanok Stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "시늄 어반 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Luge Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Beautiful Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung The Sharp Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo Ocean Stay Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NO 25 Choeup",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taebaek Woojin",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geochang Saehanjang",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan Hotel Withus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bundang Las Vegas",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Sangmu Alice Business Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Samcheok Cook Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Kwang Hye Won Some Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Songtan Hotel Corner Inn",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Jinhae Yuramjang",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Damyang Healing",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geojedo Jangpyeong Prada",
+      "occupancy": {
+        "base": 2,
+        "max": 5
+      }
+    },
+    {
+      "hotel_name": "Jindo Daedong",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo Well",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Seven",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아파르타멘티 스위노이시-발틱 파크 몰로",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Buyeo Hongsan 3F Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongchon Amusement Park 2stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Yeongdo G2",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geojedo Gohyeon The Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Mundeok HIT",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Samcheok Theme",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Osan Honors Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Baegakgwan",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Uadong Major",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suncheon Jeongwon Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Siheung World Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Manin",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeoksam Blanc",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yongin Singal Hotel Oda",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Buyeo Prince",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Kkul",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Tteul Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Boseong Sujin Hanok Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Hosu Garden Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taean Seaman House Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chilgok Nk137 Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seogwipo Chogain inn Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geojedo Iris Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ganghwado I Am Spa and Kids Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangyang Surf Lab",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Aewol Zapari House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hyeopjae Howl Stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Dongdaemun Ko-stay House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seoul Yeonhuijang Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Onoo Box Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju Fuzzy Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아파트 룩수오소 프라이아 다 피파 바이 카르페디엠",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongpyeong Paradise",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Naju M",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sinchon Seongdo",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Nonhyeon All In",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geojedo Gohyeon S Plus",
+      "occupancy": {
+        "base": 4,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Namhae Napoli",
+      "occupancy": {
+        "base": 4,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geochang CF",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju New Bali",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Gwangjang Koa Nana",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yucheon Cozaza",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Goheung Swiss Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Boom",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jungnang Some",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Boryeong IF",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Boryeong Island Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Bungmunro Time",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sangju Good",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeungpyeong Sopung",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Rlee Suite",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jincheon Palace",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Samsan Qu",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Yeongtong Bali Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Sajik Page",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Dangjin a",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangpyeong Zio",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Sangnamdong Zeta",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Dunsan Hotel Days",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Western",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wanju Ace",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Tirollia",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seongbuk Nabi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo Maldives",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Yeongdo Sinwon",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan Zaza Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeonsinnae Hotel Mantova",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangpyeong Heim Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Luna",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hwagok Seoleim",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Sangnam-dong Angel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Dangjin Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daebudo M",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seosan SKY Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Daejeon Daeheung Encore",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Bebe",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yesan Grand Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Oncheonjang Interpark",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan ING",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimpo Imeritz",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan A",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Sangdo-dong Xym1",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Sinandong Adria",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Damyang Gallery Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hansung University May",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Banana Biztel Jukdo Market Pohang",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chungju Inus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Miasageori Station Daldongne",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon RG",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Pyeongni-dong Rush",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Boutique Hotel Gung",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Hotel Yeohaeng",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Station Shire",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Myeongji W",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Haeundae Inca",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Picasso",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Station New V",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uijeongbu Fusion",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Myeongseodong Hotel V",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yongjeon Piano",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongdaegu Station Leaders",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gil-dong TOP",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sincheon Rosemary",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulan Jung-gu Palace",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yansan Bukbu-dong Wa",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Goyang Page",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Okdong Stay",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongdaegu New York",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongsan Love way",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Station Bali",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gumi Okgye Well Time",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bucheon Sheel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Dangjin Sapgyoho Beach Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung Darling Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Sangdodong Hotel Palace",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Neukkim Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "섀드웰에 위치한 모던한 숙소 - 침실 1개, 발코니",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "모던 홈 바이 리스 워크",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "브라이트  1 베드 플랫 인 웨스트 햄프스테드 위스 발코니",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "포토벨로 로드의 모퉁이에 위치한 예쁜 숙소 - 침실 2개",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "중심지에 위치한 넓은 스마트 아파트 - 침실 2개",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "알레시아스 플랫 포르텔로 3",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "드리미 스튜디오 아파트먼트 앳 타만사리 파필리오",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "블루즈 리조트 보네이레",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "로밧 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pocheon Heal Forest Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아도니스 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "룸스 코즈무스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "디럭스 소네스타 콘도  아메니티스 & 비치",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taean Changli Gung Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Inn",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Naju Western Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Samsan Hotel Grand Gem",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Damyang Chuwolsan Happy Land",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo 1beonji Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gurye Purunsol",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Alps Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Jinhae TOP",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Hotel 3&4",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Haman Galleria",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangju Songchu No 25",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Apple Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Masan Hapseongdong MU",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Pampas Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongcheon CL Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Hotel Nine",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Hue Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju The Ace",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Design Hotel 2ne1 Jukdo Market Pohang",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yongmun Hotel Zaza",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suncheon Hotel Romeo",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Hugh",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ansan Yogi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cute Cozy Bungalow Down Town Jacuzzi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uiwang Hotel Nine",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Seonhwa Iteul",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Samsan Ora",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongdaegu Station Boutique Wink",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Patio",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Munchang Luis",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Ua-dong Hotel Zen",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon IU",
+      "occupancy": {
+        "base": 4,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon The Zaza",
+      "occupancy": {
+        "base": 4,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju Hotel Stars",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Ohnpax Residence",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan U-design Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uiryeong Crystal",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Palyongdong Hotel Cozy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wando Romance",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Miryang Tourist Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Daegu Gwaneumdong Hotel A One",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pyeongtaek Daewon Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geojedo Okpo Yaksu",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Jewelry",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Samsan Haeya Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan J",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Geojedo Okpo Hyu",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yongin Yangji Bali",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Hyeoksindosi Aurum",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "로빈슨 플레젠제",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chuncheon Manhattan",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Deagu Seobu Station Venus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chungju Lie Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seosan Emperor Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo Economy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Annam",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Youngdo M",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ansan Cacao",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yongin Valentine",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chungju Vision Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pyeongtaek Mong 2",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Boryeong Grand",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Ilsan Pomm",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "REMBRANDT STYLE NAHA",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Indeogwon Valt Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Paju Java",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Iksan Yegrina",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sinchon Rui",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gochang Nextel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Anyang Line",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Namyangju Dabake Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimhae Eobangdong Carpe",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Gosa Yaja Hanokmaeul",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ansan Boom",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hoegi Cherry",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pocheon Zara Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sinchon Daisy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Ritz",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Achasan Station Cozy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seongsu Victoria",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangsan Bukbudong Benz",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangmyeong Wellness",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chungju Design Palwol",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Kkuljam PC Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Choeup Jjang",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Nowon Film 372 Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Good Time at Gyeryong Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Dunsan Gallery",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chungju G",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Munchang Concert",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Myeongpum Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Fox Drive-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Hadan K",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Masan Chocolate",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Palgongsan Zzara Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sangbong Thema",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Dangjin Healing Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Changwon Sangnam-dong M",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sillim Yaja Sillim 2",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Wolpyeong M House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Okdong Rich",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Badapunggyeong",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Dorothy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Konkun University Theme",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Sinandong Hotel Napoli",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Goseong ON",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Seomyeon Hotel 25H 1",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Seonhwa Alice",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hotel Lavida Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong Sun of Inca",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Mandeok Winter Sonata",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Eumseong Aria Drive-in",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Jaesong-dong Seven",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Cheomdan Abata Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Songtan W Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mungyeong Olleh",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongdeungpo Red",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jecheon Rain",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Uadong Herb",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Cheongwon Gung",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Sinjeongdong Hayanseong",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Goejeong GT",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Hwajeongdong Square",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwnagju Sinandong Cook",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Xi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Guri Lush",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangnam Lexy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Donghae King",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Dal-dong Mi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Pie",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimhae Jangyu Poly M",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hadong Sol Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Masan Cafe",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Red Dragonfly Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 5
+      }
+    },
+    {
+      "hotel_name": "Gwangju Chungjang-ro Design I",
+      "occupancy": {
+        "base": 2,
+        "max": 5
+      }
+    },
+    {
+      "hotel_name": "Dangjin Blue Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 5
+      }
+    },
+    {
+      "hotel_name": "Bucheon Donquihotel 2",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "마리호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "라반다 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "모던한 주택 - 침실 3개, 아름다운 전망",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "시티홀호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "티 리조트 달랏",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "알 비콜레토",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "NULL",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangsan Tongdosa W",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Elegant Townhouse Prime Location",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아토 데 룩소 엠 발네아리오 캄보리우 - SC",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "424-Apt. 403",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "우틸러스 아파트먼트 비스타 파라 오 마르",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ansan Lime",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "스테이.플러스 마라 홀리데이 홈",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Blixx",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ansan Hotel Stay 25",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "마나카 샬레스 두 발레",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "뷰티풀 하우스 인 루럴 빌리지 위스 핫 터",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bethel Hotel zum Weinberg",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Hotel About",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Hwajeon Old House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju 6758 Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Dalbit Stay Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Sup Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Haedong Vill Hostel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongdeok Gaemitongkku Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangwhado Farmer's Breakfast Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "라 루나 오텔 쿤다",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "OYO 90476 Casa Azlinda Muslim Homestay I",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sancheong Sunrise Morning Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Gaonnuri Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Landscape House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Hyu Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 2
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Gooreum Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pyeongchang Mayfair Chalestar Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Haenam Dongil Pension and Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Taean Leisure House Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Shinchon Dorothy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Naju Breeze Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jinju Seongju",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimje M Hotel Drive-in",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Time Oncheon Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongdeungpo Hotel Galaxy",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan One Plus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon La Mer",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Badanaeum",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Sujeongdong Hill",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Ocheon S Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Love's UP 2",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Party Motel and Guest House",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimcheon YS Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mia Hue",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Dongducheon Hive",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Uadong Raemian",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chang-dong M Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Iksan Healing",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "APAHOTEL KAMATA-EKIMAE",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wonju Dream Park Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo Greece",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Kyungsan OK",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Unam-dong Sopung",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Any",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "369 Mugeo-dong Ulsan",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Daejamdong Dynas",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Hanam E",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Yeongtong SG Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Feel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangpyeong NOT A Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Marie Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung Bong Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Samsan Java",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeju Queen Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Stay Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bucheon Milford",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Seonosong Core",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Okdong Sapphire",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Chungjang-ro J Untel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Yonghodong Chicago",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimcheon Kan",
+      "occupancy": {
+        "base": 2,
+        "max": 3
+      }
+    },
+    {
+      "hotel_name": "Cheonho Plus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong Jawoori",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Anyang Combi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangpyeong Herb",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Seonhwa California",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Yeongju-dong The Locci",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Pungamdong Best",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Gachang Red",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suncheon Samoa",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yaja Gangnam Nonhyeon",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mia Kanu",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju King",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon SS",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Sangmu T",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Iksan Nabiya",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimje Fila Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Hill Star Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Inhudong Amor",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Luna Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suncheon Abichon",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimje Sun",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Daldong Kara",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bulgwang Aubeson",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong London Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Geumho Sunshine",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Jukdodong Cass",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongdeok Show",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimcheon Milano",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangsan Mulgeum Time",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pocheon Mu",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yongin Singal Ace",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangpyeong Liebe",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Art",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gangneung Nice",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Junghwasandong Hotel Intro",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Sanjeong-dong Taegeuk",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "시필드 팜하우스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "802 더 커먼스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "카슬로 호텔 & 펍",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "시젠야 하코",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "쇼샤혼 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "424 Gold Way-Apt. 301, Studio Apartment",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "호텔 이비사 플라자",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "PH 19 게스트하우스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "브라이트  1  베드룸 아파트먼트 인 웨스트 런던",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "술탄 백패커스 호스텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "파라다이스 아파트 페티예",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Stunning 1-bed Apartment in Roma Near Colosseum",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "러블리  2  베드룸 아파트먼트 불리아그메니",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seosan Coolcool Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Lovely 1-bed Apartment in Roma With Terrace",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Remedies Inn",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Randor Hotel Hiroshima Prestige",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Hotel Gateun Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeongcheon YAM Yeongcheon Terminal",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Iksan Donghae Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Geumho Hotel Honey25",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wanju J Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Hanam Olle Business Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Khan",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Guri Love Era",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo Hotel Lium",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Palgongsan Star Is Born Drive-in",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Iksan Tubucktel Mohyeon Branch",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jecheon View Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Haedodong Lilac",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Delos",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Some",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Daesa MAC",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Boryeong J Beachtel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheonan Tokyo Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 5
+      }
+    },
+    {
+      "hotel_name": "Chuncheon Mime",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hwaseong Gaetbeol Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "호텔 델 센트로",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daebudo 1985 Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hwaseong Apple Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeosu Geumodo Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangyang Geu Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongdaegu Station Royal",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangyang Benz",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Uadong Scent",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Munhyeon-dong Mokhwa",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Daejamdong Business A",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong Zen",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tyche Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yongjeon Good Time",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Les hauts de Castets",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwnagju Pungamdong S",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Bundang Mill",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan World Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Feel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeouido Rada",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seocho Hotel ART",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hwagok Cello",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Jaesong-dong Romance",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yongmun Sky",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Green",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Rosella",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Samsung",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Masan 2U",
+      "occupancy": {
+        "base": 2,
+        "max": 3
+      }
+    },
+    {
+      "hotel_name": "Hwaseong Mead Meli",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Guangming Cherbourg Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chuncheon Hole in One",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangyang Susan Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "수수로스 델 코라손 오베르제 리조트",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongyang Queen Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yuseong Odyssey",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yeoksam Rich Well",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Asan Palm Spring",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Yangju Palace Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wright By The Pier by Sea Scape Properties",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jangan JW",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mia Boom",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seosan Chowon Park",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Deokjindong Hotel Wannabe",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongyang Paradise",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan W2",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mungyeong Jeomchon C",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jecheon Equus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Sinchon With",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Samsan Blue",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Sasang Hotel Ire",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Dongnae Blue Hill",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suyu Windsor",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "대천 제이앤아이호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "음성 자이언트 호텔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "호텔 아르고 서울",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "누사 젯어웨이, 미뉴츠 프롬 스팅스 스트리트",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "셀레스테 마운틴 로지",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "빌라 뒤 세드르",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "라비에 인",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "맘마콜레테",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "스튜디오 바로스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Sangnam-dong Rivers",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "레지덴차 미올라 S.a.s.",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "바마 브리지 캐러밴 파크",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mokpo Plus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimje Hansol",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Cheongju Geumgwansup Byeoljang Pension",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hwaseong Habibie Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Jinjangdong Samsungjang Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Changwon Jinhae Hotel Lrui",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uijeongbu Hotel Cima",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeryong Java",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gyeongju B and W",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gimcheon Gavin",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Deokcheon Healing",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Chilgok Palgongsan Yeije",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Wolgok Hotel Baro",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Mia Beolkkul",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Seoul National University Wheel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suyu Palace Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Pohang Jukdodong Sky Hill",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Plus",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yongmun MAC",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Oncheonjang Bono",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Yongjeon Richtel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daegu Dongdaegu Station A4",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Yeongtong O2",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Suwon Guundong Rampart",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Eumseong Supsogui Ilgopnanjangi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Wolpyeong Hotel Continew",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Guri POP",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangmyeong J",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon O2",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Sangmu Q",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "호텔 아리스톤스",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "데지라드",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "굿 스팟 온 펄",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "카바나나스 델 라카르",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "노마즈 네투 & 서브웨이",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "다이아몬드 피크 레인 20",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "더 스튜던트 호텔 드레스덴",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "아술 마르가리타 비치 리조트",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "골든 튤립 오니루 스위트",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "이리다노스 아파트먼트",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "스마트렌탈 푸에르타 델 솔",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Guri Boutique Hotel Yeogi",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "H 에비뉴 호텔 강남 역삼점",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeonju Junghwasandong Twosome",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Mono Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Hapcheon Top",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Jeongjadong Some",
+      "occupancy": {
+        "base": 2,
+        "max": 3
+      }
+    },
+    {
+      "hotel_name": "Busan Suyeong Time",
+      "occupancy": {
+        "base": 2,
+        "max": 3
+      }
+    },
+    {
+      "hotel_name": "Jinju Rock Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 3
+      }
+    },
+    {
+      "hotel_name": "레 비에 델 모스토",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan CAR Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gunsan Some",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeongeup Some Self Check-in Motel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Uljin Yes",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Daejeon Jung-ri Some",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Ulsan Jeongja-dong Venice",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Songjeong Bay Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Jeongeup H Hotel",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Andong Yeon",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Busan Gupo Cats",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Incheon Donggyeong",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Tongyeong Crown",
+      "occupancy": {
+        "base": 2,
+        "max": 4
+      }
+    },
+    {
+      "hotel_name": "Gwangju Cheomdan Picasso",
+      "occupancy": {
+        "base": 2,
+        "max": 5
+      }
+    }
+  ]
+}
