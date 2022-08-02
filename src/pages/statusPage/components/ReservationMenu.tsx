@@ -7,10 +7,10 @@ function ReservationMenu() {
   return (
     <MenuBlock>
       <MenuDivStyled>
-        <button type="button">
+        <MenuButtonStyled type="button">
           <BsArrowLeft />
-        </button>
-        <h1>예약내역</h1>
+        </MenuButtonStyled>
+        <MenuH1Styled>예약내역</MenuH1Styled>
       </MenuDivStyled>
       <MenuUListStyled>
         <MenuListStyled>예정된 예약</MenuListStyled>
@@ -53,20 +53,6 @@ const MenuDivStyled = styled.div`
   height: 60px;
   border-bottom: 4px solid ${palette.statusPageBackground};
 
-  button {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    font-size: 25px;
-  }
-
-  h1 {
-    width: 100%;
-    padding-top: 20px;
-    text-align: center;
-    font-size: 19px;
-  }
-
   @media (max-width: 1023px) {
     display: flex;
   }
@@ -76,18 +62,32 @@ const MenuDivStyled = styled.div`
     align-items: center;
     width: 100%;
     height: 17vw;
+  }
+`;
 
-    button {
-      left: 0;
-      width: 17vw;
-      height: 17vw;
-      font-size: 7vw;
-    }
+const MenuButtonStyled = styled.button`
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
 
-    h1 {
-      padding-top: 0;
-      font-size: 5vw;
-    }
+  @media (max-width: 767px) {
+    left: 0;
+    width: 17vw;
+    height: 17vw;
+    font-size: 7vw;
+  }
+`;
+
+const MenuH1Styled = styled.h1`
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 19px;
+
+  @media (max-width: 767px) {
+    padding-top: 0;
+    font-size: 5vw;
   }
 `;
 
