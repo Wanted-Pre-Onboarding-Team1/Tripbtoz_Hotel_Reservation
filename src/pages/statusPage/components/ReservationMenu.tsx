@@ -30,7 +30,7 @@ const BasicBlock = styled.section`
   background-color: ${palette.backgroundColor};
 
   @media (max-width: 1023px) {
-    width: 760px;
+    width: 100%;
     padding: 0;
   }
 
@@ -41,6 +41,7 @@ const BasicBlock = styled.section`
 
 const MenuBlock = styled(BasicBlock)`
   margin-right: 30px;
+
   @media (max-width: 1023px) {
     margin: 0;
     height: max-content;

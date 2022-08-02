@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { palette } from 'lib/palette';
+import DetailedHotelInfo from 'components/DetailedHotelInfo';
 import {
   upcomingStrings,
   canceledStrings,
@@ -15,7 +16,17 @@ interface StringSets {
   pasts: string[];
 }
 
-function ReservationList() {
+interface OccupancyInfo {
+  base: number;
+  max: number;
+}
+
+interface HotelsInfo {
+  hotel_name: string;
+  occupancy: OccupancyInfo;
+}
+
+function ReservationList({ dummyList }: { dummyList: HotelsInfo[] }) {
   const location = useLocation();
 
   const returnNoResult = (locationString: string, stringSets: StringSets) => {
@@ -43,16 +54,33 @@ function ReservationList() {
     }
   };
 
+  const hotelsInfo = dummyList.map((dummyInfo: HotelsInfo, index: number) => {
+    return (
+      <DetailedHotelInfo
+        hotelName={dummyInfo.hotel_name}
+        occupancy={dummyInfo.occupancy}
+        key={`${dummyInfo.hotel_name[0]}_${index}`}
+      />
+    );
+  });
+
   return (
     <ReservationListBlock>
-      <DivStyled>
-        <AiOutlineCloseCircle />
-      </DivStyled>
-      {returnNoResult(location.pathname, {
-        upcomings: upcomingStrings,
-        cancels: canceledStrings,
-        pasts: pastStrings,
-      })}
+      <>
+        {(!dummyList || dummyList.length === 0) && (
+          <NoResultBox>
+            <DivStyled>
+              <AiOutlineCloseCircle />
+            </DivStyled>
+            {returnNoResult(location.pathname, {
+              upcomings: upcomingStrings,
+              cancels: canceledStrings,
+              pasts: pastStrings,
+            })}
+          </NoResultBox>
+        )}
+        {(dummyList || (dummyList as HotelsInfo[]).length > 0) && hotelsInfo}
+      </>
     </ReservationListBlock>
   );
 }
@@ -78,7 +106,7 @@ const BasicBlock = styled.section`
 
 const ReservationListBlock = styled(BasicBlock)`
   min-width: 700px;
-  height: 450px;
+  height: max-content;
 
   @media (max-width: 1023px) {
     width: 760px;
@@ -87,7 +115,19 @@ const ReservationListBlock = styled(BasicBlock)`
   @media (max-width: 767px) {
     min-width: 0;
     width: 100%;
-    height: 100%;
+  }
+`;
+
+const NoResultBox = styled(BasicBlock)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+
+  @media (max-width: 767px) {
+    height: 100vh;
   }
 `;
 
