@@ -24,15 +24,18 @@ function ReservationMenu() {
 export default ReservationMenu;
 
 const BasicBlock = styled.section`
-  /* flex: 1; */
   min-width: 250px;
   height: 170px;
   padding: 10px 0;
   background-color: ${palette.backgroundColor};
 
   @media (max-width: 1023px) {
-    width: 770px;
+    width: 760px;
     padding: 0;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
   }
 `;
 
@@ -67,6 +70,25 @@ const MenuDivStyled = styled.div`
   @media (max-width: 1023px) {
     display: flex;
   }
+
+  @media (max-width: 767px) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 17vw;
+
+    button {
+      left: 0;
+      width: 17vw;
+      height: 17vw;
+      font-size: 7vw;
+    }
+
+    h1 {
+      padding-top: 0;
+      font-size: 5vw;
+    }
+  }
 `;
 
 const MenuUListStyled = styled.ul`
@@ -98,11 +120,19 @@ const MenuListStyled = styled.li`
     align-items: flex-end;
     width: 100%;
     border-bottom: 2px solid ${palette.statusPageBackground};
+    padding-left: 0;
     padding-bottom: 10px;
     color: ${palette.disabledFontColor};
 
     :hover {
       filter: none;
     }
+  }
+
+  @media (max-width: 767px) {
+    align-items: center;
+    height: 13vw;
+    padding-bottom: 0;
+    font-size: 4vw;
   }
 `;

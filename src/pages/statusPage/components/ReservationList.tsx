@@ -69,6 +69,10 @@ const BasicBlock = styled.section`
     width: 770px;
     padding: 0;
   }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 const ReservationListBlock = styled(BasicBlock)`
@@ -76,16 +80,30 @@ const ReservationListBlock = styled(BasicBlock)`
   height: 450px;
 
   @media (max-width: 1023px) {
-    width: 770px;
+    width: 760px;
+  }
+
+  @media (max-width: 767px) {
+    min-width: 0;
+    width: 100%;
+    height: 100%;
   }
 `;
 
 const PStyled = styled.p`
   font-size: 18px;
   line-height: 1.5;
+
+  @media (max-width: 767px) {
+    font-size: 4vw;
+  }
 `;
 
 const DivStyled = styled.div`
   font-size: 75px;
   color: ${palette.disabledFontColor};
+
+  @media (max-width: 767px) {
+    font-size: 17vw;
+  }
 `;

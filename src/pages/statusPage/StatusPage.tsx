@@ -80,4 +80,8 @@ const ElementBlock = styled.article`
     justify-content: flex-start;
     box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
   }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
