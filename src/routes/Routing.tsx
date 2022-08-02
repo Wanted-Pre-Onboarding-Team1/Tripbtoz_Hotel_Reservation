@@ -12,7 +12,7 @@ function Routing() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path={Path.status} element={<StatusPage />} />
-        <Route path={Path.detail} element={<CalendarLayout />} />
+        <Route path={Path.detail} element={<DetailPage />} />
       </Routes>
     </BrowserRouter>
   );
