@@ -1,34 +1,32 @@
 /* eslint-disable react/button-has-type */
 import React, { useState } from 'react';
-import {
-  AiFillAlert as ChevronLeftIcon,
-  AiFillAmazonCircle as ChevronRightIcon,
-} from 'react-icons/ai';
+import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 import {
   add,
+  addDays,
   eachDayOfInterval,
   endOfMonth,
   format,
   isEqual,
-  isSameDay,
   parse,
-  parseISO,
   startOfToday,
 } from 'date-fns';
 import styled from 'styled-components';
-import { palette } from 'lib/palette';
+import { palette } from 'lib/styles/palette';
+
+interface ReservationDate {
+  checkin: Date;
+  checkout: Date | null;
+}
 
 export default function MyCalender() {
   // 오늘
   const today = startOfToday();
 
   // 선택된날
-  const [selectedDay, setSelectedDay] = useState<{
-    startDay: Date | null;
-    endDay: Date | null;
-  }>({
-    startDay: null,
-    endDay: null,
+  const [selectedDay, setSelectedDay] = useState<ReservationDate>({
+    checkin: addDays(today, 7),
+    checkout: addDays(today, 8),
   });
 
   // 현재 달
@@ -43,7 +41,7 @@ export default function MyCalender() {
   });
 
   const handelClickDay = (day: Date) => {
-    if (selectedDay.startDay === null)
+    if (selectedDay.checkin === null)
       setSelectedDay((prev) => ({ ...prev, startDay: day }));
     else setSelectedDay((prev) => ({ ...prev, endDay: day }));
   };
@@ -67,10 +65,10 @@ export default function MyCalender() {
               {format(firstDayCurrentMonth, ' yyyy년 MM월')}
             </MonthStyled>
             <button type="button" onClick={previousMonth}>
-              <ChevronLeftIcon size={15} />
+              <AiFillCaretLeft size={15} />
             </button>
             <button onClick={nextMonth} type="button">
-              <ChevronRightIcon size={15} />
+              <AiFillCaretRight size={15} />
             </button>
           </CalenderInfoBox>
           <WeekStyled>
@@ -87,8 +85,8 @@ export default function MyCalender() {
               <ActiveDay
                 key={day.toString()}
                 isActive={
-                  isEqual(selectedDay.startDay as Date, day) ||
-                  isEqual(selectedDay.endDay as Date, day)
+                  isEqual(selectedDay.checkin as Date, day) ||
+                  isEqual(selectedDay.checkout as Date, day)
                 }
               >
                 <button type="button" onClick={() => handelClickDay(day)}>
@@ -101,8 +99,8 @@ export default function MyCalender() {
           </DayStyled>
         </div>
         <section>
-          {selectedDay.startDay && format(selectedDay.startDay, 'MMM dd, yyy')}~
-          {selectedDay.endDay && format(selectedDay.endDay, 'MMM dd, yyy')}
+          {selectedDay.checkin && format(selectedDay.checkin, 'MMM dd, yyy')}~
+          {selectedDay.checkout && format(selectedDay.checkout, 'MMM dd, yyy')}
         </section>
       </div>
     </CalenderLayout>
