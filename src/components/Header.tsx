@@ -13,7 +13,7 @@ function Header() {
     <>
       <HeaderContainer>
         <InnerContainer>
-          <LinkStyled to={Path.main}>
+          <LinkStyled to={Path.main} className="logo">
             <img src={logo} alt="tripbtoz logo" />
           </LinkStyled>
           {currentPagePath !== Path.status && (
@@ -37,6 +37,10 @@ const HeaderContainer = styled.header`
   padding: 8px 48px;
   font-size: 1.2rem;
   border-bottom: 1px solid ${palette.hoverColor};
+  @media (max-width: 480px) {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -61,6 +65,15 @@ const LinkStyled = styled(Link)`
       :hover {
         background-color: ${palette.pointColor};
         color: ${palette.backgroundColor};
+      }
+    `}
+  ${({ className }) =>
+    className === 'logo' &&
+    css`
+      img {
+        @media (max-width: 480px) {
+          width: 80%;
+        }
       }
     `}
 `;
