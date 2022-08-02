@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DetailPage from 'pages/detailPage/DetailPage';
 import MainPage from 'pages/mainPage/MainPage';
 import StatusPage from 'pages/statusPage/StatusPage';
-import Hyeok from 'calender/JonghyeokCalender/Hyeok';
-
+import CalendarLayout from 'calender/ChihangCalender/CalendarLayout';
 import Path from './Path';
 
 function Routing() {
@@ -13,8 +12,7 @@ function Routing() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path={Path.status} element={<StatusPage />} />
-        <Route path={Path.detail} element={<DetailPage />} />
-        <Route path={Path.Hyeok} element={<Hyeok />} />
+        <Route path={Path.detail} element={<CalendarLayout />} />
       </Routes>
     </BrowserRouter>
   );
