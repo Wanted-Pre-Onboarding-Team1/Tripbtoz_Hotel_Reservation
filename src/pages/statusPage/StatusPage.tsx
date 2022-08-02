@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BsArrowLeft } from 'react-icons/bs';
 import { palette } from 'lib/palette';
+import ReservationMenu from './components/ReservationMenu';
 
 const dummyData = [
   {
@@ -45,19 +45,7 @@ function StatusPage() {
   return (
     <StatusContainer>
       <ElementBlock>
-        <MenuBlock>
-          <div>
-            <button type="button">
-              <BsArrowLeft />
-            </button>
-            <h1>예약된 내역</h1>
-          </div>
-          <ul>
-            <li>예정된 예약</li>
-            <li>취소된 예약</li>
-            <li>투숙 완료</li>
-          </ul>
-        </MenuBlock>
+        <ReservationMenu />
         <ReservationListBlock>foo</ReservationListBlock>
       </ElementBlock>
     </StatusContainer>
@@ -83,7 +71,7 @@ const ElementBlock = styled.article`
   display: flex;
   justify-content: center;
   width: max-content;
-  height: 100vh;
+  height: 100%;
 
   @media (max-width: 1023px) {
     flex-direction: column;
@@ -94,19 +82,10 @@ const ElementBlock = styled.article`
 `;
 
 const BasicBlock = styled.section`
-  /* flex: 1; */
   min-width: 250px;
   height: 170px;
   padding: 10px 0;
   background-color: ${palette.backgroundColor};
-
-  ul {
-    width: 100%;
-    height: 100%;
-    li {
-      height: 50px;
-    }
-  }
 
   @media (max-width: 1023px) {
     width: 770px;
@@ -114,15 +93,7 @@ const BasicBlock = styled.section`
   }
 `;
 
-const MenuBlock = styled(BasicBlock)`
-  margin-right: 30px;
-  @media (max-width: 1023px) {
-    margin: 0;
-  }
-`;
-
 const ReservationListBlock = styled(BasicBlock)`
-  /* flex: 2; */
   min-width: 700px;
   height: 450px;
 
