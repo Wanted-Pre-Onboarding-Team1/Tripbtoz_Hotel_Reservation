@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { palette } from 'lib/palette';
 import ReservationMenu from './components/ReservationMenu';
+import ReservationList from './components/ReservationList';
 
 const dummyData = [
   {
@@ -46,7 +47,7 @@ function StatusPage() {
     <StatusContainer>
       <ElementBlock>
         <ReservationMenu />
-        <ReservationListBlock>foo</ReservationListBlock>
+        <ReservationList />
       </ElementBlock>
     </StatusContainer>
   );
@@ -78,26 +79,5 @@ const ElementBlock = styled.article`
     align-items: center;
     justify-content: flex-start;
     box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
-  }
-`;
-
-const BasicBlock = styled.section`
-  min-width: 250px;
-  height: 170px;
-  padding: 10px 0;
-  background-color: ${palette.backgroundColor};
-
-  @media (max-width: 1023px) {
-    width: 770px;
-    padding: 0;
-  }
-`;
-
-const ReservationListBlock = styled(BasicBlock)`
-  min-width: 700px;
-  height: 450px;
-
-  @media (max-width: 1023px) {
-    width: 770px;
   }
 `;
