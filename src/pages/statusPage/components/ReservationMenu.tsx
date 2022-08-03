@@ -2,8 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { BsArrowLeft } from 'react-icons/bs';
 import { palette } from 'lib/palette';
+import { menus } from '../utils/constants';
 
 function ReservationMenu() {
+  const menuButtons = menus.map((menuHeader: string, index: number) => {
+    return (
+      <MenuListStyled key={`${menuHeader}_${index}}`}>
+        <button type="button" onClick={() => console.log('foo')}>
+          {menuHeader}
+        </button>
+      </MenuListStyled>
+    );
+  });
   return (
     <MenuBlock>
       <MenuDivStyled>
@@ -12,11 +22,7 @@ function ReservationMenu() {
         </MenuButtonStyled>
         <MenuH1Styled>예약내역</MenuH1Styled>
       </MenuDivStyled>
-      <MenuUListStyled>
-        <MenuListStyled>예정된 예약</MenuListStyled>
-        <MenuListStyled>취소된 예약</MenuListStyled>
-        <MenuListStyled>투숙 완료</MenuListStyled>
-      </MenuUListStyled>
+      <MenuUListStyled>{menuButtons}</MenuUListStyled>
     </MenuBlock>
   );
 }
@@ -102,23 +108,25 @@ const MenuUListStyled = styled.ul`
 `;
 
 const MenuListStyled = styled.li`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   height: 50px;
   padding-left: 25px;
   background-color: ${palette.backgroundColor};
   font-size: 16px;
-  cursor: pointer;
   transition: filter 0.3s linear;
 
   :hover {
     filter: brightness(0.98);
   }
 
+  button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
   @media (max-width: 1023px) {
-    justify-content: center;
-    align-items: flex-end;
     width: 100%;
     border-bottom: 2px solid ${palette.statusPageBackground};
     padding-left: 0;
@@ -128,12 +136,21 @@ const MenuListStyled = styled.li`
     :hover {
       filter: none;
     }
+
+    button {
+      justify-content: center;
+      align-items: flex-end;
+      color: ${palette.disabledFontColor};
+    }
   }
 
   @media (max-width: 767px) {
-    align-items: center;
     height: 13vw;
     padding-bottom: 0;
     font-size: 4vw;
+
+    button {
+      align-items: center;
+    }
   }
 `;
