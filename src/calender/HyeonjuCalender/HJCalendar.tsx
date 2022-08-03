@@ -1,14 +1,11 @@
 /* eslint-disable no-case-declarations */
 import {
   format,
-  parse,
   eachDayOfInterval,
   startOfMonth,
   endOfMonth,
-  startOfDay,
   startOfWeek,
   endOfWeek,
-  addDays,
   addMonths,
   isBefore,
   isAfter,
@@ -19,26 +16,34 @@ import styled from 'styled-components';
 import HJDateBox from './HJDateBox';
 
 const WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-interface Reservation {
-  checkin: Date;
-  checkout: Date | null;
+
+interface CalendarProps {
+  today: Date;
+  onDateClick?: MouseEventHandler<HTMLTimeElement>;
+  clickedDates?: (Date | null)[];
+  showPrevMonth?: boolean;
+  showNextMonth?: boolean;
+  continuousStyling?: boolean;
 }
 
-export default function HJCalendar() {
-  const today = startOfDay(Date.now());
-
+export default function HJCalendar({
+  today,
+  onDateClick,
+  clickedDates,
+  showPrevMonth = true,
+  showNextMonth = true,
+  continuousStyling = true,
+}: CalendarProps) {
   const [currentDate, setCurrentDate] = React.useState(today);
   const currentMonth = format(currentDate, 'MMM yyyy');
 
-  const [reserveDate, setReserveDate] = React.useState<Reservation>({
-    checkin: addDays(today, 7),
-    checkout: addDays(today, 8),
-  });
-  const { checkin, checkout } = reserveDate;
-
   const datesOfCurrentMonth = eachDayOfInterval({
-    start: startOfWeek(startOfMonth(currentDate)),
-    end: endOfWeek(endOfMonth(currentDate)),
+    start: showPrevMonth
+      ? startOfWeek(startOfMonth(currentDate))
+      : startOfMonth(currentDate),
+    end: showNextMonth
+      ? endOfWeek(endOfMonth(currentDate))
+      : endOfMonth(currentDate),
   });
   const firstDayOfCurrentMonth = datesOfCurrentMonth[0].getDay() + 1;
 
@@ -62,35 +67,8 @@ export default function HJCalendar() {
     }
   };
 
-  const handleDateClick: MouseEventHandler<HTMLTimeElement> = (event) => {
-    const targetDateTime = event.currentTarget.dateTime;
-    const clickedDate = parse(targetDateTime, 'yyyy MMM d', new Date());
-
-    if (isBefore(clickedDate, today)) return;
-
-    if (isBefore(clickedDate, checkin)) {
-      setReserveDate({
-        checkin: clickedDate,
-        checkout: null,
-      });
-    }
-
-    if (isAfter(clickedDate, checkin)) {
-      checkout &&
-        setReserveDate({
-          checkin: clickedDate,
-          checkout: null,
-        });
-      !checkout &&
-        setReserveDate((previous) => ({
-          checkin: previous.checkin,
-          checkout: clickedDate,
-        }));
-    }
-  };
-
   return (
-    <CalendarContainer>
+    <Calendar>
       <MonthBlock>
         <h2>{currentMonth}</h2>
         <div>
@@ -120,28 +98,40 @@ export default function HJCalendar() {
         ))}
         {datesOfCurrentMonth.map((date, index) => (
           <HJDateBox
-            key={`date_${date}`}
+            key={`date_${date}_${index}`}
             date={date}
             dateTime={format(date, 'yyyy MMM d')}
             currentDate={currentDate}
-            onClick={handleDateClick}
+            onClick={onDateClick}
             style={{
               gridColumnStart: index === 0 ? firstDayOfCurrentMonth : '',
               background:
-                isEqual(date, checkin) ||
-                isEqual(date, checkout as Date) ||
-                (isAfter(date, checkin) && isBefore(date, checkout as Date))
-                  ? 'rgba(0,0,0,0.1)'
-                  : '',
+                continuousStyling && clickedDates && clickedDates.length === 2
+                  ? (clickedDates
+                      .map((clickedItem) =>
+                        isEqual(date, clickedItem as Date) ||
+                        (isAfter(date, clickedDates[0] as Date) &&
+                          isBefore(date, clickedDates[1] as Date))
+                          ? 'rgba(0,0,0,0.1)'
+                          : '',
+                      )
+                      .find((item) => item === 'rgba(0,0,0,0.1)') as string)
+                  : ((clickedDates as Date[])
+                      .map((clickedItem) =>
+                        isEqual(date, clickedItem as Date)
+                          ? 'rgba(0,0,0,0.1)'
+                          : '',
+                      )
+                      .find((item) => item === 'rgba(0,0,0,0.1)') as string),
             }}
           />
         ))}
       </DatesBlock>
-    </CalendarContainer>
+    </Calendar>
   );
 }
 
-const CalendarContainer = styled.section`
+const Calendar = styled.section`
   width: 100%;
   max-width: 900px;
   padding: 1rem;
