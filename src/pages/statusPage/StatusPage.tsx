@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { palette } from 'lib/palette';
+import { palette } from 'lib/styles/palette';
 import ReservationMenu from './components/ReservationMenu';
 import ReservationList from './components/ReservationList';
 
@@ -63,7 +63,7 @@ const StatusContainer = styled.main`
   justify-content: center;
   height: 100%;
   padding: 30px 0;
-  background-color: ${palette.statusPageBackground};
+  background-color: ${palette.grayBackgroundColor};
 
   @media (max-width: 1023px) {
     padding: 0;
