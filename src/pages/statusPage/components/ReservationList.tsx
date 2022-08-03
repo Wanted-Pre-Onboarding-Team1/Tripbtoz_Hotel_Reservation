@@ -93,30 +93,14 @@ const BasicBlock = styled.section`
   justify-content: center;
   align-items: center;
   background-color: ${palette.backgroundColor};
-
-  /* @media (max-width: 1023px) {
-    width: 770px;
-    padding: 0;
-  }
-
-  @media (max-width: 767px) {
-    width: 100%;
-  } */
 `;
 
 const ReservationListBlock = styled(BasicBlock)`
-  /* min-width: 700px; */
-  /* width: 100%; */
   height: max-content;
 
-  /* @media (max-width: 1023px) {
-    width: 760px;
+  @media (max-width: 480px) {
+    min-height: 100%;
   }
-
-  @media (max-width: 767px) {
-    min-width: 0;
-    width: 100%;
-  } */
 `;
 
 const NoResultBox = styled(BasicBlock)`
@@ -126,26 +110,14 @@ const NoResultBox = styled(BasicBlock)`
   align-items: center;
   width: 100%;
   height: 450px;
-
-  /* @media (max-width: 767px) {
-    height: 100vh;
-  } */
 `;
 
 const PStyled = styled.p`
   font-size: 18px;
   line-height: 1.5;
-
-  /* @media (max-width: 767px) {
-    font-size: 4vw;
-  } */
 `;
 
 const DivStyled = styled.div`
   font-size: 75px;
   color: ${palette.disabledFontColor};
-
-  /* @media (max-width: 767px) {
-    font-size: 17vw;
-  } */
 `;

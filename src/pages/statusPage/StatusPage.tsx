@@ -48,8 +48,8 @@ function StatusPage() {
       <ElementBlock>
         <ReservationMenu />
         <ListContainer>
-          <ReservationList dummyList={dummyData} />
-          {/* <ReservationList dummyList={[]} /> */}
+          {/* <ReservationList dummyList={dummyData} /> */}
+          <ReservationList dummyList={[]} />
         </ListContainer>
       </ElementBlock>
     </StatusContainer>
@@ -74,8 +74,11 @@ const StatusContainer = styled.main`
 const ListContainer = styled.article`
   flex: 2;
   width: 100%;
-  /* height: 50%; */
   overflow-y: auto;
+
+  @media (max-width: 480px) {
+    height: 100%;
+  }
 `;
 
 const ElementBlock = styled.article`
@@ -83,7 +86,6 @@ const ElementBlock = styled.article`
   justify-content: center;
   max-width: 1200px;
   width: 100%;
-  /* height: max-content; */
   padding: 0 30px;
 
   @media (max-width: 480px) {
@@ -91,7 +93,6 @@ const ElementBlock = styled.article`
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
     padding: 0;
   }
 `;

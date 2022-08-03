@@ -24,7 +24,6 @@ function ReservationMenu() {
 export default ReservationMenu;
 
 const BasicBlock = styled.section`
-  /* min-width: 250px; */
   height: 170px;
   padding: 10px 0;
   background-color: ${palette.backgroundColor};
@@ -37,43 +36,31 @@ const BasicBlock = styled.section`
 `;
 
 const MenuBlock = styled(BasicBlock)`
-  /* width: 100%; */
   flex: 1;
   margin-right: 30px;
 
   @media (max-width: 480px) {
     flex: 0;
     margin: 0;
-    /* height: max-content; */
   }
 `;
 
 const MenuDivStyled = styled.div`
   display: none;
   position: relative;
-  /* height: 60px; */
   border-bottom: 4px solid ${palette.statusPageBackground};
-
-  /* @media (max-width: 1023px) {
-    display: flex;
-  } */
 
   @media (max-width: 480px) {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* max-height: 60px;
-    height: 17vw;
-    min-height: 50px; */
     height: 60px;
   }
 `;
 
 const MenuButtonStyled = styled.button`
   position: absolute;
-  /* width: 60px;
-  height: 60px; */
   font-size: 25px;
 
   @media (max-width: 480px) {
@@ -95,7 +82,6 @@ const MenuH1Styled = styled.h1`
 
   @media (max-width: 480px) {
     padding-top: 0;
-    /* font-size: 5vw; */
   }
 `;
 
@@ -129,18 +115,10 @@ const MenuListStyled = styled.li`
     width: 100%;
     border-bottom: 2px solid ${palette.statusPageBackground};
     padding-left: 0;
-    /* padding-bottom: 10px; */
     color: ${palette.disabledFontColor};
 
     :hover {
       filter: none;
     }
   }
-
-  /* @media (max-width: 767px) {
-    align-items: center;
-    height: 13vw;
-    padding-bottom: 0;
-    font-size: 4vw;
-  } */
 `;
