@@ -21,9 +21,11 @@ function Routing() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        {statusPageRoutes}
-        <Route path={Path.detail} element={<DetailPage />} />
+        <Route element={<Header />}>
+          <Route path="/" element={<MainPage />} />
+          {statusPageRoutes}
+          <Route path={Path.detail} element={<DetailPage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

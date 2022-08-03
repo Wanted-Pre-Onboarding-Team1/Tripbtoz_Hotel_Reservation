@@ -16,12 +16,12 @@ function Header() {
           <LinkStyled to={Path.main} className="logo">
             <img src={logo} alt="tripbtoz logo" />
           </LinkStyled>
-          {currentPagePath !== Path.status && (
-            <LinkStyled to={Path.status} className="reservation">
+          {currentPagePath !== Path.bookings && (
+            <LinkStyled to={Path.bookings} className="reservation">
               예약 확인
             </LinkStyled>
           )}
-          {currentPagePath === Path.status && (
+          {currentPagePath === Path.bookings && (
             <HeadingStyled>예약 내역</HeadingStyled>
           )}
         </InnerContainer>
