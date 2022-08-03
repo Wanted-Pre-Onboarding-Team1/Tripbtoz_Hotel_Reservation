@@ -1,8 +1,10 @@
 enum Path {
   main = '/',
-  status = '/status',
   detail = '/detail',
-  Hyeok = '/hyeok',
+  bookings = '/bookings',
+  upcoming = '/bookings/upcoming',
+  canceled = '/bookings/canceled',
+  past = '/bookings/past',
 }
 
 export default Path;
