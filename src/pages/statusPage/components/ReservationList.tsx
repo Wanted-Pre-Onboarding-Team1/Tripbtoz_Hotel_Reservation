@@ -96,6 +96,7 @@ const BasicBlock = styled.section`
 `;
 
 const ReservationListBlock = styled(BasicBlock)`
+  position: relative;
   height: max-content;
 
   @media (max-width: 480px) {

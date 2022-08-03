@@ -48,8 +48,8 @@ function StatusPage() {
       <ElementBlock>
         <ReservationMenu />
         <ListContainer>
-          {/* <ReservationList dummyList={dummyData} /> */}
-          <ReservationList dummyList={[]} />
+          <ReservationList dummyList={dummyData} />
+          {/* <ReservationList dummyList={[]} /> */}
         </ListContainer>
       </ElementBlock>
     </StatusContainer>
