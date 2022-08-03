@@ -4,6 +4,7 @@ import DetailPage from 'pages/detailPage/DetailPage';
 import MainPage from 'pages/mainPage/MainPage';
 import StatusPage from 'pages/statusPage/StatusPage';
 import Header from 'components/Header';
+import CalendarLayout from 'calender/ChihangCalender/CalendarLayout';
 import Path from './Path';
 
 function Routing() {

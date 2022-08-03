@@ -1,4 +1,4 @@
-import { palette } from 'lib/palette';
+import { palette } from 'lib/styles/palette';
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import Path from 'routes/Path';
@@ -34,7 +34,7 @@ function Header() {
 export default Header;
 
 const HeaderContainer = styled.header`
-  padding: 8px 48px;
+  padding: 0 48px;
   font-size: 1.2rem;
   border-bottom: 1px solid ${palette.hoverColor};
   @media (max-width: 480px) {
