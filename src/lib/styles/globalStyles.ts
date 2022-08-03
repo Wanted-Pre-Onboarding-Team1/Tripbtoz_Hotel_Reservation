@@ -8,7 +8,7 @@ body,
 #root {
   height: 100%;
   background-color: ${palette.backgroundColor};
-
+  overflow: hidden;
 }
 * {
   box-sizing: border-box;
