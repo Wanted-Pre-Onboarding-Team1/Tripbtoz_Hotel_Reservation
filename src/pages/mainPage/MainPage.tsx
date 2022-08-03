@@ -1,10 +1,13 @@
 import React from 'react';
 import HotelList from './components/HotelList';
 
-export default function MainPage() {
+function MainPage() {
+  const [hotelList, setHotelList] = React.useState();
   return (
     <div>
       <HotelList />
     </div>
   );
 }
+
+export default MainPage;

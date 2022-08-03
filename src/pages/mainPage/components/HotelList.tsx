@@ -9,15 +9,14 @@ function HotelList() {
         <StyledPoint>316</StyledPoint>개
       </StyledText>
       <StyledArticle>
-        <Styledimg src="" />
+        <Styledimg
+          src="https://source.unsplash.com/collection/3989638/"
+          alt="hotel"
+        />
         <StyledTitle>
-          <div>5.0성급</div>
-          <div>웨스틴 조선 서울</div>
-          <div>중수 소공로 106 서울특별시</div>
-          <div>
-            *****
-            <span>총 2,961건의 리뷰</span>
-          </div>
+          <StyledGrade>5.0성급</StyledGrade>
+          <StyledName>웨스틴 조선 서울</StyledName>
+          <StyledOccupancy>기준 2인 | 최대 4인</StyledOccupancy>
         </StyledTitle>
         <StyledPrice>
           407,000원<StyledTex>세금 및 수수료 불포함</StyledTex>
@@ -45,7 +44,7 @@ const StyledText = styled.div`
   border-radius: 10px;
   padding: 40px 20px;
   box-shadow: 2px 3px 5px 0 #f3f3f3;
-  font-size: large;
+  font-size: 1.2rem;
 `;
 
 const StyledPoint = styled.span`
@@ -55,7 +54,7 @@ const StyledPoint = styled.span`
 const StyledArticle = styled.article`
   display: flex;
   width: 100%;
-  height: 30%;
+  height: 20%;
   margin-bottom: 10px;
   border: 1px solid #f3f3f3;
   border-radius: 10px;
@@ -70,29 +69,52 @@ const StyledArticle = styled.article`
 `;
 
 const Styledimg = styled.img`
-  flex: 1;
+  width: 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   @media screen and (max-width: 480px) {
     display: none;
   }
 `;
 
 const StyledTitle = styled.div`
-  flex: 2;
+  flex: 1;
+  margin: 20px 0 0 20px;
   @media screen and (max-width: 480px) {
   }
 `;
 
+const StyledGrade = styled.div`
+  width: max-content;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 4px 7px;
+  font-size: 1rem;
+  box-shadow: 0 1px 1px 0;
+`;
+const StyledName = styled.div`
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+`;
+const StyledOccupancy = styled.div`
+  color: gray;
+`;
+
 const StyledPrice = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  flex: 1;
+  margin: 0 20px 20px 0;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5rem;
   align-items: flex-end;
 `;
 
 const StyledTex = styled.div`
-  font-size: 12px;
+  margin-top: 10px;
+  font-size: 0.7rem;
   color: gray;
 `;
