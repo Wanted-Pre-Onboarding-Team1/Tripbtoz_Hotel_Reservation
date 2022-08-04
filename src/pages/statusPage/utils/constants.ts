@@ -9,3 +9,5 @@ export const pastStrings = [
   '아직 다녀온 스테이가 없어요.',
   '함께 여행 기록을 쌓아봐요.',
 ];
+
+export const menus = ['예정된 예약', '취소된 예약', '투숙 완료'];
