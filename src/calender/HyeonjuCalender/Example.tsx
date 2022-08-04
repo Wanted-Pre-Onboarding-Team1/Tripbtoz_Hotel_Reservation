@@ -49,7 +49,7 @@ export default function Example() {
         onDateClick={handleDateClick}
         clickedDates={[checkin, checkout]}
         showPrevMonth={false}
-        continuousStyling={false}
+        continuousStyling={true}
       />
     </div>
   );
