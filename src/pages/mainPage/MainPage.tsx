@@ -2,6 +2,7 @@ import { HttpRequest } from 'lib/api/httpRequest';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import HotelList from './components/HotelList';
+import { Spinner } from './components/Spiner';
 import useIntersectObserver from './hooks/useIntersertObserver';
 
 const HOTEL_PAGE = 10;
@@ -78,7 +79,11 @@ function MainPage() {
           <HotelList key={index} value={value} />
         ))}
       </div>
-      {isLoading && <StyledLoading>loading...</StyledLoading>}
+      {isLoading && (
+        <StyledLoading>
+          <Spinner />
+        </StyledLoading>
+      )}
       <div style={{ height: '10px' }} ref={observerRef} />
     </StyledArticle>
   );
@@ -109,13 +114,10 @@ const StyledPoint = styled.span`
   font-weight: 500;
 `;
 
-const StyledLoading = styled.div`
+const StyledLoading = styled.body`
   display: flex;
-  justify-content: center;
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
-  /* background-color: black;
-  opacity: 0.2; */
   align-items: center;
 `;
