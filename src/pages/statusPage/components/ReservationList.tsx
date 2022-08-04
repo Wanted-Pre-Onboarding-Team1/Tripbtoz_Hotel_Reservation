@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { palette } from 'lib/palette';
+import { palette } from 'lib/styles/palette';
 import DetailedHotelInfo from 'components/DetailedHotelInfo';
 import {
   upcomingStrings,

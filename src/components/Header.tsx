@@ -8,6 +8,12 @@ import logo from 'assets/image/logo.png';
 function Header() {
   const location = useLocation();
   const currentPagePath = location.pathname;
+  const bookingPaths: string[] = [
+    Path.bookings,
+    Path.upcoming,
+    Path.canceled,
+    Path.past,
+  ];
 
   return (
     <>
@@ -16,12 +22,12 @@ function Header() {
           <LinkStyled to={Path.main} className="logo">
             <img src={logo} alt="tripbtoz logo" />
           </LinkStyled>
-          {currentPagePath !== Path.bookings && (
+          {!bookingPaths.includes(currentPagePath) && (
             <LinkStyled to={Path.bookings} className="reservation">
               예약 확인
             </LinkStyled>
           )}
-          {currentPagePath === Path.bookings && (
+          {bookingPaths.includes(currentPagePath) && (
             <HeadingStyled>예약 내역</HeadingStyled>
           )}
         </InnerContainer>

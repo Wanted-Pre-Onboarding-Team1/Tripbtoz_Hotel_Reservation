@@ -7,22 +7,22 @@ const defaultOption = {
 };
 
 const useIntersectObserver = (options = defaultOption) => {
-  const observeTargetRef = React.useRef();
+  const observerRef = React.useRef<any>();
   const [isTargetVisible, setTargetVisible] = React.useState(false);
 
   React.useEffect(() => {
-    const onTargetVisible = ([entry]) => {
+    const onTargetVisible = ([entry]: any) => {
       setTargetVisible(entry.isIntersecting);
     };
     const observer = new IntersectionObserver(onTargetVisible, options);
 
-    observeTargetRef.current && observer.observe(observeTargetRef.current);
+    observerRef.current && observer.observe(observerRef.current);
     return () => {
       observer.disconnect();
     };
   }, [options]);
 
-  return { isTargetVisible, observeTargetRef };
+  return { isTargetVisible, observerRef };
 };
 
 export default useIntersectObserver;

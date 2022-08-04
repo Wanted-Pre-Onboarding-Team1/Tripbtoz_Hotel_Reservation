@@ -18,7 +18,6 @@ export function Calendar({ currentMonth }: any) {
   // monthStart가 속한 주의 시작일
   const endDate = endOfWeek(monthEnd);
   // monthEnd가 속한 주의 마지막일
-
   const month = [];
   // 한달의 배열 4나5주를 가짐
   let week = [];
