@@ -119,5 +119,6 @@ const StyledLoading = styled.body`
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
+  opacity: 0.9;
   align-items: center;
 `;

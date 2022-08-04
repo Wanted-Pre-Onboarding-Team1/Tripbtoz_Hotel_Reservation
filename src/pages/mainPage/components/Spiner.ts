@@ -10,8 +10,8 @@ to{
 `;
 
 const Spinner = styled.div`
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border: 1px solid #aa3def;
   border-radius: 50%;
   border-top: none;
