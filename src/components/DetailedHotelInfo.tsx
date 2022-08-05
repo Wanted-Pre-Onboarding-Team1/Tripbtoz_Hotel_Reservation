@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import hotelImage from 'assets/image/hotel.jpg';
 import { palette } from 'lib/styles/palette';
@@ -14,6 +15,10 @@ interface HotelsInfo {
 }
 
 function DetailedHotelInfo({ hotelName, occupancy }: HotelsInfo) {
+  const location = useLocation();
+  const isParamAboutBooking =
+    location.pathname === '/bookings' ||
+    location.pathname === '/bookings/upcoming';
   return (
     <DetailBlock>
       <h1 className="sr-only">호텔 예약 페이지입니다.</h1>
@@ -26,9 +31,11 @@ function DetailedHotelInfo({ hotelName, occupancy }: HotelsInfo) {
             기준 {occupancy.base}인 | 최대 {occupancy.max}인
           </GuestInformation>
         </HotelInformation>
-        <ButtonBox>
-          <ReservationButton type="button">예약 취소</ReservationButton>
-        </ButtonBox>
+        {isParamAboutBooking && (
+          <ButtonBox>
+            <ReservationButton type="button">예약 취소</ReservationButton>
+          </ButtonBox>
+        )}
       </DetailBox>
     </DetailBlock>
   );
