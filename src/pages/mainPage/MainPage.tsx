@@ -37,7 +37,7 @@ function MainPage() {
         setIsInitialLoading(false);
         return;
       }
-      setHotelList((prevMovieList: any) => [...prevMovieList, ...data]);
+      setHotelList((prevHotelList: any) => [...prevHotelList, ...data]);
     };
     setIsLoading(true);
     isTargetVisible &&
