@@ -11,10 +11,15 @@ import saveLocalStorage from '../hooks/useSaveInformation';
 export default function SaveButton({
   hotelName,
   person,
-  date,
   canceled,
   past,
+  start,
+  end,
 }: any) {
+  const date = {
+    checkin: start,
+    checkout: end,
+  };
   const onClickButton = saveLocalStorage(
     hotelName,
     person,
