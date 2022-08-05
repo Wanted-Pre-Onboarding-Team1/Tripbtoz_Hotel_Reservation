@@ -6,11 +6,11 @@ function HotelList({ value }: any) {
 
   React.useEffect(() => {
     const imageObject = new Image();
-    imageObject.src = 'https://source.unsplash.com/collection/3989638/';
+    imageObject.src = 'https://source.unsplash.com/collection/3989638/200*300';
     imageObject.onload = () => {
       setIsLoading(false);
     };
-  }, ['https://source.unsplash.com/collection/3989638/']);
+  }, ['https://source.unsplash.com/collection/3989638/200*300']);
 
   return (
     <div>
@@ -18,7 +18,7 @@ function HotelList({ value }: any) {
         <StyledList>
           <StyledArticle>
             <Styledimg
-              src="https://source.unsplash.com/collection/3989638/"
+              src="https://source.unsplash.com/collection/3989638/200*300"
               alt="hotel"
             />
             <StyledTitle>
@@ -75,6 +75,7 @@ const Styledimg = styled.img`
   width: 30%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  object-fit: cover;
   @media screen and (max-width: 480px) {
     display: none;
   }

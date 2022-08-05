@@ -9,36 +9,40 @@ import Search from './components/Search';
 import useIntersectObserver from './hooks/useIntersertObserver';
 
 const HOTEL_PAGE = 10;
-// 페이지당 10개씩 호출하기로 한 약속
 
 function MainPage() {
   const today = startOfToday();
   const [hotelList, setHotelList] = React.useState<string[]>();
-  // 호텔리스트 저장
   const { isTargetVisible, observerRef } = useIntersectObserver();
-  // 무한 스크롤 훅
   const [isInitialLoading, setIsInitialLoading] = React.useState<boolean>(true);
-  // 가져올 데이터가 있을 때와 없을 때
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
-  // 데이터 로딩상태
   const hotelRequest = new HttpRequest();
+<<<<<<< HEAD
+
+=======
   // API 요청
   const [params, setParams] = React.useState({
     title: '',
     person: 5,
     date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
   });
+>>>>>>> 573fd3c61a32597745166373a45f8adb68cb8724
   const getCurrentPageNumber = (currentHotelList: any) => {
     const pageNumber = (currentHotelList?.length as number) / HOTEL_PAGE;
     return Number.isInteger(pageNumber) ? pageNumber : Math.ceil(pageNumber);
   };
-  // 데이터 전체의 수를 파악해 페이지별로 나우어 줌 159개의 수를 가지고 있다면 15페이지로 나눈 후
-  // 나머지 9는 올림하여 16페이지로 만들어 줌
 
   const currentPage = getCurrentPageNumber(hotelList);
 
   useEffect(() => {
     const callback = ({ data }: any) => {
+<<<<<<< HEAD
+      if (!hotelList) {
+        setHotelList(data);
+        setIsInitialLoading(false);
+        return;
+      }
+=======
       setHotelList(data);
       setIsInitialLoading(false);
     };
@@ -57,11 +61,11 @@ function MainPage() {
 
   useEffect(() => {
     const callback = ({ data }: any) => {
+>>>>>>> 573fd3c61a32597745166373a45f8adb68cb8724
       setHotelList((prevMovieList: any) => [...prevMovieList, ...data]);
     };
     setIsLoading(true);
     isTargetVisible &&
-      !isInitialLoading &&
       hotelRequest.getWithParams({
         url: 'hotel_list',
         config: {
@@ -75,7 +79,11 @@ function MainPage() {
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
+<<<<<<< HEAD
+  }, [isTargetVisible, isInitialLoading, currentPage]);
+=======
   }, [isTargetVisible, isInitialLoading, currentPage, params]);
+>>>>>>> 573fd3c61a32597745166373a45f8adb68cb8724
 
   return (
     <StyledArticle>
