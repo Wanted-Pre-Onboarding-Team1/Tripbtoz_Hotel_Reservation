@@ -30,50 +30,80 @@
 
 ```
 📦src
- ┣ 📂asstes
- ┃ ┗ 📂imgs
- ┃ ┃ ┣ 📜engall.png
- ┃ ┃ ┗ 📜index.ts
+ ┣ 📂assets
+ ┃ ┗ 📂image
+ ┃ ┃ ┣ 📜hotel.jpg
+ ┃ ┃ ┗ 📜logo.png
+ ┣ 📂calender
+ ┃ ┣ 📂ChaeyoungCalender
+ ┃ ┃ ┗ 📜test.tsx
+ ┃ ┣ 📂ChihangCalender
+ ┃ ┃ ┣ 📂hook
+ ┃ ┃ ┃ ┗ 📜index.ts
+ ┃ ┃ ┣ 📂util
+ ┃ ┃ ┃ ┗ 📜index.ts
+ ┃ ┃ ┣ 📜Calendar.tsx
+ ┃ ┃ ┣ 📜CalendarLayout.tsx
+ ┃ ┃ ┗ 📜test.tsx
+ ┃ ┣ 📂HyeonjuCalender
+ ┃ ┃ ┣ 📜Example.tsx
+ ┃ ┃ ┣ 📜HJCalendar.tsx
+ ┃ ┃ ┣ 📜HJDateBox.tsx
+ ┃ ┃ ┗ 📜test.tsx
+ ┃ ┣ 📂JihoCalender
+ ┃ ┃ ┗ 📜MyCalender.tsx
+ ┃ ┗ 📂JonghyeokCalender
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┣ 📂utils
+ ┃ ┃ ┃ ┃ ┗ 📜WEEK.ts
+ ┃ ┃ ┃ ┗ 📜Calendar.tsx
+ ┃ ┃ ┗ 📜Hyeok.tsx
  ┣ 📂components
+ ┃ ┣ 📜DetailedHotelInfo.tsx
  ┃ ┗ 📜Header.tsx
  ┣ 📂database
  ┃ ┗ 📜database.json
  ┣ 📂hooks
- ┃ ┣ 📜httpRequest.ts
- ┃ ┗ 📜useScheduleForm.ts
- ┣ 📂libs
+ ┃ ┗ 📜useMediaQuery.ts
+ ┣ 📂lib
  ┃ ┣ 📂api
- ┃ ┃ ┗ 📜schedule.ts
- ┃ ┗ 📂utils
- ┃ ┃ ┗ 📜Constants.ts
+ ┃ ┃ ┗ 📜httpRequest.ts
+ ┃ ┣ 📂styles
+ ┃ ┃ ┣ 📜commonStyles.ts
+ ┃ ┃ ┣ 📜globalStyles.ts
+ ┃ ┃ ┗ 📜palette.ts
+ ┃ ┗ 📜palette.ts
  ┣ 📂pages
- ┃ ┣ 📂addSchedulePage
+ ┃ ┣ 📂detailPage
+ ┃ ┃ ┗ 📜DetailPage.tsx
+ ┃ ┣ 📂mainPage
  ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┣ 📜AMPM.tsx
- ┃ ┃ ┃ ┣ 📜DayOfWeek.tsx
- ┃ ┃ ┃ ┣ 📜Option.tsx
- ┃ ┃ ┃ ┗ 📜SelectBox.tsx
- ┃ ┃ ┣ 📂utils
- ┃ ┃ ┃ ┗ 📜index.ts
- ┃ ┃ ┗ 📜AddSchedulePage.tsx
- ┃ ┗ 📂schedulePage
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┣ 📜Dayslot.tsx
- ┃ ┃ ┃ ┗ 📜Timeslot.tsx
+ ┃ ┃ ┃ ┣ 📜HotelList.tsx
+ ┃ ┃ ┃ ┣ 📜PersonBox.tsx
+ ┃ ┃ ┃ ┣ 📜Search.tsx
+ ┃ ┃ ┃ ┗ 📜Spiner.ts
  ┃ ┃ ┣ 📂hooks
- ┃ ┃ ┃ ┗ 📜useWeekList.ts
- ┃ ┃ ┗ 📜SchedulePage.tsx
+ ┃ ┃ ┃ ┣ 📜useIntersertObserver.ts
+ ┃ ┃ ┃ ┗ 📜useToggle.ts
+ ┃ ┃ ┗ 📜MainPage.tsx
+ ┃ ┗ 📂statusPage
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┣ 📜ReservationList.tsx
+ ┃ ┃ ┃ ┗ 📜ReservationMenu.tsx
+ ┃ ┃ ┣ 📂utils
+ ┃ ┃ ┃ ┣ 📜constants.ts
+ ┃ ┃ ┃ ┗ 📜helpers.ts
+ ┃ ┃ ┗ 📜StatusPage.tsx
  ┣ 📂routes
  ┃ ┣ 📜Path.ts
  ┃ ┗ 📜Routing.tsx
  ┣ 📂types
- ┃ ┣ 📜customTypes.d.ts
- ┃ ┣ 📜imgges.d.ts
- ┃ ┗ 📜schedule.d.ts
+ ┃ ┗ 📜image.d.ts
  ┣ 📜App.css
  ┣ 📜App.tsx
  ┣ 📜index.css
- ┗ 📜index.tsx
+ ┣ 📜index.tsx
+ ┗ 📜robots.txt
 ```
 
 <br />
@@ -97,7 +127,13 @@
 <br />
 
 ## **6.구현된 기능**
-
+- 캘린더 체크인, 아웃 선택/성인 기본2인 아동 0 선택
+- 호텔명으로 검색
+- 무한스크롤 한 페이지당 데이터 10개
+- 예약 된 호텔은 검색 금지
+- 호텔 예약 로컬에 저장
+- 예약현황 페이지 예약취소 기능
+- 모바일 반응형 적용(480px에 적용)
 
 <br />
 
@@ -107,11 +143,7 @@
 ```
 <br />
 
-## **8. 시간이 더 있으면 넣고 싶었던 기능**
-
-<br />
-
-## **9. 프로젝트 설치 · 실행 방법**
+## **8. 프로젝트 설치 · 실행 방법**
 
 ### # 프로젝트 클론
 
