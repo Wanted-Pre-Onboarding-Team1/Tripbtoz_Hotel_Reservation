@@ -23,26 +23,15 @@ function MainPage() {
 
   useEffect(() => {
     const callback = ({ data }: any) => {
-      setHotelList(data);
-      setIsInitialLoading(false);
-    };
-    hotelRequest.getWithParams({
-      url: 'hotel_list',
-      config: {
-        _page: 0,
-        _limit: HOTEL_PAGE,
-      },
-      callback,
-    });
-  }, []);
-
-  useEffect(() => {
-    const callback = ({ data }: any) => {
+      if (!hotelList) {
+        setHotelList(data);
+        setIsInitialLoading(false);
+        return;
+      }
       setHotelList((prevMovieList: any) => [...prevMovieList, ...data]);
     };
     setIsLoading(true);
     isTargetVisible &&
-      !isInitialLoading &&
       hotelRequest.getWithParams({
         url: 'hotel_list',
         config: {
