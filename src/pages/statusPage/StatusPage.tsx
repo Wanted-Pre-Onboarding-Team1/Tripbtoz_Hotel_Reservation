@@ -74,6 +74,7 @@ const StatusContainer = styled.main`
 const ListContainer = styled.article`
   flex: 2;
   width: 100%;
+  overflow-x: hidden;
   overflow-y: auto;
 
   @media (max-width: 480px) {
