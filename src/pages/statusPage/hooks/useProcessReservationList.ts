@@ -1,7 +1,7 @@
 import React from 'react';
 import { isBefore } from 'date-fns';
 
-const useProcessReservationList = () => {
+const useProcessReservationList = (isReloadNeeded: boolean) => {
   const [totalHotelLists, setTotalLists] = React.useState<any[]>([]);
   React.useEffect(() => {
     const storagedList = Object.keys(localStorage).map((key: string) => {
@@ -21,7 +21,7 @@ const useProcessReservationList = () => {
     setTotalLists((previousList: any[]) =>
       previousList.slice(previousList.length).concat(storagedList),
     );
-  }, []);
+  }, [isReloadNeeded]);
 
   return { totalHotelLists };
 };

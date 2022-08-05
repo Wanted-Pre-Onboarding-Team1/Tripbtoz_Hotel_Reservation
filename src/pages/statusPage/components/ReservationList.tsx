@@ -12,7 +12,18 @@ import {
 } from '../utils/constants';
 import { returnNoResult, classifyListItems } from '../utils/helpers';
 
-function ReservationList({ hotelList }: { hotelList: any[] }) {
+interface ReservationListType {
+  hotelList: any[];
+  isReloadNeeded: boolean;
+  setReloadNeedState: () => void;
+}
+
+// function ReservationList({ hotelList }: { hotelList: any[] }) {
+function ReservationList({
+  hotelList,
+  isReloadNeeded,
+  setReloadNeedState,
+}: ReservationListType) {
   const location = useLocation();
 
   const noResults = returnNoResult(location.pathname, {
@@ -36,6 +47,8 @@ function ReservationList({ hotelList }: { hotelList: any[] }) {
         hotelName={reservationInfo[0].hotelname}
         occupancy={reservationInfo[2].person}
         bookingDates={reservationInfo[1].date}
+        isReloadNeeded={isReloadNeeded}
+        setReloadNeedState={setReloadNeedState}
         key={`${reservationInfo[0].hotelname}_${index}`}
       />
     );

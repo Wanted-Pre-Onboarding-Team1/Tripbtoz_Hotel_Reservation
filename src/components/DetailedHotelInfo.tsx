@@ -14,9 +14,18 @@ interface HotelsInfo {
   hotelName: string;
   occupancy: number;
   bookingDates: DateObject;
+  isReloadNeeded: boolean;
+  setReloadNeedState: () => void;
 }
 
-function DetailedHotelInfo({ hotelName, occupancy, bookingDates }: HotelsInfo) {
+// function DetailedHotelInfo({ hotelName, occupancy, bookingDates }: HotelsInfo) {
+function DetailedHotelInfo({
+  hotelName,
+  occupancy,
+  bookingDates,
+  isReloadNeeded,
+  setReloadNeedState,
+}: HotelsInfo) {
   const location = useLocation();
   const isParamAboutBooking =
     location.pathname === '/bookings' ||
@@ -28,6 +37,21 @@ function DetailedHotelInfo({ hotelName, occupancy, bookingDates }: HotelsInfo) {
   const occupancyInterval = `예약 기간: ${dateFormatter(
     bookingDates.checkin,
   )} ~ ${dateFormatter(bookingDates.checkout)}`;
+  const handleClick = React.useCallback(cancleReservation, [isReloadNeeded]);
+  function cancleReservation() {
+    const originalInfo = JSON.parse(localStorage.getItem(hotelName) as string);
+    const newInfo = originalInfo.map((info: any) => {
+      let result: any;
+      if (Object.keys(info)[0] === 'canceled') {
+        result = { canceled: true };
+      } else {
+        result = info;
+      }
+      return result;
+    });
+    setReloadNeedState();
+    localStorage.setItem(hotelName, JSON.stringify(newInfo));
+  }
   return (
     <DetailBlock>
       <h1 className="sr-only">호텔 예약 페이지입니다.</h1>
@@ -41,7 +65,9 @@ function DetailedHotelInfo({ hotelName, occupancy, bookingDates }: HotelsInfo) {
         </HotelInformation>
         {isParamAboutBooking && (
           <ButtonBox>
-            <ReservationButton type="button">예약 취소</ReservationButton>
+            <ReservationButton type="button" onClick={handleClick}>
+              예약 취소
+            </ReservationButton>
           </ButtonBox>
         )}
       </DetailBox>

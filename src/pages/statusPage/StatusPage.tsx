@@ -7,14 +7,23 @@ import ReservationList from './components/ReservationList';
 import useProcessReservationList from './hooks/useProcessReservationList';
 
 function StatusPage() {
-  const { totalHotelLists } = useProcessReservationList();
+  const [isReloadNeeded, setReloadNeedState] = React.useState<boolean>(false);
+  const { totalHotelLists } = useProcessReservationList(isReloadNeeded);
+
+  const changeReloadState = () => {
+    setReloadNeedState(!isReloadNeeded);
+  };
 
   return (
     <StatusContainer>
       <ElementBlock>
         <ReservationMenu />
         <ListContainer>
-          <ReservationList hotelList={totalHotelLists} />
+          <ReservationList
+            hotelList={totalHotelLists}
+            isReloadNeeded={isReloadNeeded}
+            setReloadNeedState={changeReloadState}
+          />
           {/* <ReservationList hotelList={[]} /> */}
         </ListContainer>
       </ElementBlock>
