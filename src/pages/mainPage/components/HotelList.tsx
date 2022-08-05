@@ -73,6 +73,7 @@ const StyledTitle = styled.div`
 
 const Styledimg = styled.img`
   width: 30%;
+  height: 215px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   object-fit: cover;
