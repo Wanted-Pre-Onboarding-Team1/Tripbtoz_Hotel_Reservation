@@ -2,38 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { palette } from 'lib/styles/palette';
 import { HotelObject } from 'types/hotelList';
-import { isBefore } from 'date-fns';
+
 import ReservationMenu from './components/ReservationMenu';
 import ReservationList from './components/ReservationList';
+import useProcessReservationList from './hooks/useProcessReservationList';
 
 function StatusPage() {
-  const [totalHotelLists, setTotalLists] = React.useState<any[]>([]);
-  React.useEffect(() => {
-    const storagedList = Object.keys(localStorage).map((key: string) => {
-      return JSON.parse(localStorage.getItem(key) as string);
-    });
-    storagedList.forEach((listItem: any, index: number) => {
-      if (isBefore(new Date(listItem[1].checkout), new Date())) {
-        localStorage.setItem(
-          listItem[0].hotelname,
-          JSON.stringify([
-            ...storagedList[index].slice(0, storagedList[index].length - 1),
-            { past: true },
-          ]),
-        );
-      }
-    });
-    setTotalLists((previousList: any[]) =>
-      previousList.slice(previousList.length).concat(storagedList),
-    );
-  }, []);
+  const { totalHotelLists } = useProcessReservationList();
+
   return (
     <StatusContainer>
       <ElementBlock>
         <ReservationMenu />
         <ListContainer>
           <ReservationList hotelList={totalHotelLists} />
-          {/* <ReservationList dummyList={[]} /> */}
+          {/* <ReservationList hotelList={[]} /> */}
         </ListContainer>
       </ElementBlock>
     </StatusContainer>
