@@ -1,16 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { hotelListType } from 'types/hotelList';
+import SaveButton from './SaveButton';
 
-function HotelList({ value }: any) {
+function HotelList({ value, person, date }: any) {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
     const imageObject = new Image();
-    imageObject.src = 'https://source.unsplash.com/collection/3989638/';
+    imageObject.src = 'https://source.unsplash.com/collection/3989638/200*300';
     imageObject.onload = () => {
       setIsLoading(false);
     };
-  }, ['https://source.unsplash.com/collection/3989638/']);
+  }, ['https://source.unsplash.com/collection/3989638/200*300']);
 
   return (
     <div>
@@ -18,7 +20,7 @@ function HotelList({ value }: any) {
         <StyledList>
           <StyledArticle>
             <Styledimg
-              src="https://source.unsplash.com/collection/3989638/"
+              src="https://source.unsplash.com/collection/3989638/200*300"
               alt="hotel"
             />
             <StyledTitle>
@@ -29,7 +31,11 @@ function HotelList({ value }: any) {
               </StyledOccupancy>
             </StyledTitle>
             <StyledPrice>
-              100,000원<StyledTex>세금 및 수수료 불포함</StyledTex>
+              <SaveButton
+                hotelName={value.hotel_name}
+                person={person}
+                date={date}
+              />
             </StyledPrice>
           </StyledArticle>
         </StyledList>
@@ -73,8 +79,10 @@ const StyledTitle = styled.div`
 
 const Styledimg = styled.img`
   width: 30%;
+  height: 215px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  object-fit: cover;
   @media screen and (max-width: 480px) {
     display: none;
   }

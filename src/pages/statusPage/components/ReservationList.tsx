@@ -92,7 +92,7 @@ const BasicBlock = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${palette.backgroundColor};
+  background-color: white;
 `;
 
 const ReservationListBlock = styled(BasicBlock)`
