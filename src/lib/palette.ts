@@ -4,4 +4,6 @@ export const palette: { [key: string]: string } = {
   backgroundColor: '#fafafa',
   statusPageBackground: '#eeeeee',
   disabledFontColor: '#b69c9c',
+  subTextColor: '#9fa1a7',
+  grayTextColor: '#5e5e5e',
 };
