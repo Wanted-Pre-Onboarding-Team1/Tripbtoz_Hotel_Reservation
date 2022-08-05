@@ -6,26 +6,18 @@ import { Spinner } from './components/Spiner';
 import useIntersectObserver from './hooks/useIntersertObserver';
 
 const HOTEL_PAGE = 10;
-// 페이지당 10개씩 호출하기로 한 약속
 
 function MainPage() {
   const [hotelList, setHotelList] = React.useState<string[]>();
-  // 호텔리스트 저장
   const { isTargetVisible, observerRef } = useIntersectObserver();
-  // 무한 스크롤 훅
   const [isInitialLoading, setIsInitialLoading] = React.useState<boolean>(true);
-  // 가져올 데이터가 있을 때와 없을 때
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
-  // 데이터 로딩상태
   const hotelRequest = new HttpRequest();
-  // API 요청
 
   const getCurrentPageNumber = (currentHotelList: any) => {
     const pageNumber = (currentHotelList?.length as number) / HOTEL_PAGE;
     return Number.isInteger(pageNumber) ? pageNumber : Math.ceil(pageNumber);
   };
-  // 데이터 전체의 수를 파악해 페이지별로 나우어 줌 159개의 수를 가지고 있다면 15페이지로 나눈 후
-  // 나머지 9는 올림하여 16페이지로 만들어 줌
 
   const currentPage = getCurrentPageNumber(hotelList);
 
@@ -43,7 +35,6 @@ function MainPage() {
       callback,
     });
   }, []);
-  // 맨 처음 가져오는 10개의 객체
 
   useEffect(() => {
     const callback = ({ data }: any) => {
@@ -64,9 +55,6 @@ function MainPage() {
       setIsLoading(false);
     }, 500);
   }, [isTargetVisible, isInitialLoading, currentPage]);
-  // 데이터를 상태에 업데이트 가져올 데이터가 있을 때와 없을 때의 로직
-
-  console.log('hotelList:::', hotelList);
 
   return (
     <StyledArticle>
