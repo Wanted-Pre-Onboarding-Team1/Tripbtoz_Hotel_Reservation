@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { palette } from 'lib/palette';
+import { palette } from 'lib/styles/palette';
 import DetailedHotelInfo from 'components/DetailedHotelInfo';
 import {
   upcomingStrings,
@@ -93,28 +93,14 @@ const BasicBlock = styled.section`
   justify-content: center;
   align-items: center;
   background-color: ${palette.backgroundColor};
-
-  @media (max-width: 1023px) {
-    width: 770px;
-    padding: 0;
-  }
-
-  @media (max-width: 767px) {
-    width: 100%;
-  }
 `;
 
 const ReservationListBlock = styled(BasicBlock)`
-  min-width: 700px;
+  position: relative;
   height: max-content;
 
-  @media (max-width: 1023px) {
-    width: 760px;
-  }
-
-  @media (max-width: 767px) {
-    min-width: 0;
-    width: 100%;
+  @media (max-width: 480px) {
+    min-height: 100%;
   }
 `;
 
@@ -125,26 +111,14 @@ const NoResultBox = styled(BasicBlock)`
   align-items: center;
   width: 100%;
   height: 450px;
-
-  @media (max-width: 767px) {
-    height: 100vh;
-  }
 `;
 
 const PStyled = styled.p`
   font-size: 18px;
   line-height: 1.5;
-
-  @media (max-width: 767px) {
-    font-size: 4vw;
-  }
 `;
 
 const DivStyled = styled.div`
   font-size: 75px;
   color: ${palette.disabledFontColor};
-
-  @media (max-width: 767px) {
-    font-size: 17vw;
-  }
 `;

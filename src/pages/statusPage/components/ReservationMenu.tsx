@@ -1,22 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { BsArrowLeft } from 'react-icons/bs';
-import { palette } from 'lib/palette';
+import { palette } from 'lib/styles/palette';
+import { menus } from '../utils/constants';
+import { switchParams } from '../utils/helpers';
 
 function ReservationMenu() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const menuButtons = menus.map((menuHeader: string, index: number) => {
+    return (
+      <MenuListStyled key={`${menuHeader}_${index}}`}>
+        <NavLinkStyled
+          to={switchParams(menuHeader)}
+          className={
+            location.pathname === '/bookings' && menuHeader[0] === '예'
+              ? 'active'
+              : ''
+          }
+        >
+          {menuHeader}
+        </NavLinkStyled>
+      </MenuListStyled>
+    );
+  });
+
+  const handleClick = React.useCallback(goMain, []);
+
+  function goMain() {
+    navigate('/');
+  }
+
   return (
     <MenuBlock>
       <MenuDivStyled>
-        <MenuButtonStyled type="button">
+        <MenuButtonStyled type="button" onClick={handleClick}>
           <BsArrowLeft />
         </MenuButtonStyled>
         <MenuH1Styled>예약내역</MenuH1Styled>
       </MenuDivStyled>
-      <MenuUListStyled>
-        <MenuListStyled>예정된 예약</MenuListStyled>
-        <MenuListStyled>취소된 예약</MenuListStyled>
-        <MenuListStyled>투숙 완료</MenuListStyled>
-      </MenuUListStyled>
+      <MenuUListStyled>{menuButtons}</MenuUListStyled>
     </MenuBlock>
   );
 }
@@ -24,59 +49,53 @@ function ReservationMenu() {
 export default ReservationMenu;
 
 const BasicBlock = styled.section`
-  min-width: 250px;
   height: 170px;
   padding: 10px 0;
   background-color: ${palette.backgroundColor};
 
-  @media (max-width: 1023px) {
+  @media (max-width: 480px) {
     width: 100%;
+    height: max-content;
     padding: 0;
-  }
-
-  @media (max-width: 767px) {
-    width: 100%;
   }
 `;
 
 const MenuBlock = styled(BasicBlock)`
+  flex: 1;
   margin-right: 30px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 480px) {
+    flex: 0;
     margin: 0;
-    height: max-content;
   }
 `;
 
 const MenuDivStyled = styled.div`
   display: none;
   position: relative;
-  height: 60px;
-  border-bottom: 4px solid ${palette.statusPageBackground};
+  border-bottom: 4px solid ${palette.grayBackgroundColor};
 
-  @media (max-width: 1023px) {
+  @media (max-width: 480px) {
     display: flex;
-  }
-
-  @media (max-width: 767px) {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 17vw;
+    height: 60px;
   }
 `;
 
 const MenuButtonStyled = styled.button`
   position: absolute;
-  width: 60px;
-  height: 60px;
   font-size: 25px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 480px) {
+    top: calc(50% + 2px);
     left: 0;
+    max-width: 60px;
     width: 17vw;
+    max-height: 60px;
     height: 17vw;
-    font-size: 7vw;
+    transform: translateY(-50%);
   }
 `;
 
@@ -86,9 +105,8 @@ const MenuH1Styled = styled.h1`
   text-align: center;
   font-size: 19px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 480px) {
     padding-top: 0;
-    font-size: 5vw;
   }
 `;
 
@@ -96,44 +114,58 @@ const MenuUListStyled = styled.ul`
   width: 100%;
   height: 100%;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 480px) {
     display: flex;
   }
 `;
 
 const MenuListStyled = styled.li`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  width: 100%;
   height: 50px;
-  padding-left: 25px;
-  background-color: ${palette.backgroundColor};
   font-size: 16px;
-  cursor: pointer;
   transition: filter 0.3s linear;
 
-  :hover {
-    filter: brightness(0.98);
-  }
-
-  @media (max-width: 1023px) {
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    border-bottom: 2px solid ${palette.statusPageBackground};
-    padding-left: 0;
-    padding-bottom: 10px;
-    color: ${palette.disabledFontColor};
+  .active {
+    border-left: 4px solid ${palette.borderHighlightColor};
+    padding-left: 21px;
+    background-color: ${palette.highlightBackgroundColor};
+    color: ${palette.borderHighlightColor};
 
     :hover {
       filter: none;
     }
   }
 
-  @media (max-width: 767px) {
-    align-items: center;
-    height: 13vw;
-    padding-bottom: 0;
-    font-size: 4vw;
+  @media (max-width: 480px) {
+    .active {
+      border-left: none;
+      border-bottom: 2px solid black;
+      padding: 0;
+      background: none;
+      font-weight: 700;
+      color: black;
+    }
+  }
+`;
+
+const NavLinkStyled = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 25px;
+  transition: filter 0.3s ease;
+
+  :hover {
+    filter: brightness(0.98);
+  }
+
+  @media (max-width: 480px) {
+    justify-content: center;
+    padding-left: 0;
+    color: ${palette.disabledFontColor};
+
+    :hover {
+      filter: none;
+    }
   }
 `;

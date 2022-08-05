@@ -1,29 +1,32 @@
 import { palette } from 'lib/styles/palette';
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import Path from 'routes/Path';
+import Path, { bookingPaths } from 'routes/Path';
 import styled, { css } from 'styled-components';
 import logo from 'assets/image/logo.png';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 function Header() {
   const location = useLocation();
+  const isMobile = useMediaQuery('(max-width: 480px)');
   const currentPagePath = location.pathname;
+  const isBookingPage = bookingPaths.includes(currentPagePath);
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer
+        style={isBookingPage && isMobile ? { display: 'none' } : {}}
+      >
         <InnerContainer>
           <LinkStyled to={Path.main} className="logo">
             <img src={logo} alt="tripbtoz logo" />
           </LinkStyled>
-          {currentPagePath !== Path.bookings && (
+          {!isBookingPage && (
             <LinkStyled to={Path.bookings} className="reservation">
               예약 확인
             </LinkStyled>
           )}
-          {currentPagePath === Path.bookings && (
-            <HeadingStyled>예약 내역</HeadingStyled>
-          )}
+          {isBookingPage && <HeadingStyled>예약 내역</HeadingStyled>}
         </InnerContainer>
       </HeaderContainer>
       <Outlet />

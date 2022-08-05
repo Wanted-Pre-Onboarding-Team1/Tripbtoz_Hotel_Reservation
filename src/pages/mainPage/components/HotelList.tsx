@@ -2,23 +2,39 @@ import React from 'react';
 import styled from 'styled-components';
 
 function HotelList({ value }: any) {
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    const imageObject = new Image();
+    imageObject.src = 'https://source.unsplash.com/collection/3989638/';
+    imageObject.onload = () => {
+      setIsLoading(false);
+    };
+  }, ['https://source.unsplash.com/collection/3989638/']);
+
   return (
-    <StyledList>
-      <StyledArticle>
-        <Styledimg
-          src="https://source.unsplash.com/collection/3989638/"
-          alt="hotel"
-        />
-        <StyledTitle>
-          <StyledGrade>5.0성급</StyledGrade>
-          <StyledName>{value.hotel_name}</StyledName>
-          <StyledOccupancy>{value.occupancy.base}</StyledOccupancy>
-        </StyledTitle>
-        <StyledPrice>
-          100,000원<StyledTex>세금 및 수수료 불포함</StyledTex>
-        </StyledPrice>
-      </StyledArticle>
-    </StyledList>
+    <div>
+      {!isLoading && (
+        <StyledList>
+          <StyledArticle>
+            <Styledimg
+              src="https://source.unsplash.com/collection/3989638/"
+              alt="hotel"
+            />
+            <StyledTitle>
+              <StyledGrade>5.0성급</StyledGrade>
+              <StyledName>{value.hotel_name}</StyledName>
+              <StyledOccupancy>
+                기준{value.occupancy.base}인 | 최대{value.occupancy.max}인
+              </StyledOccupancy>
+            </StyledTitle>
+            <StyledPrice>
+              100,000원<StyledTex>세금 및 수수료 불포함</StyledTex>
+            </StyledPrice>
+          </StyledArticle>
+        </StyledList>
+      )}
+    </div>
   );
 }
 
@@ -27,6 +43,7 @@ export default HotelList;
 const StyledList = styled.section`
   width: 60%;
   margin: 0 auto;
+  cursor: pointer;
   @media screen and (max-width: 480px) {
     width: 90%;
   }
@@ -49,6 +66,8 @@ const StyledTitle = styled.div`
   flex: 1;
   margin: 20px 0 0 20px;
   @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -83,6 +102,10 @@ const StyledName = styled.div`
 `;
 const StyledOccupancy = styled.div`
   color: gray;
+  @media screen and (max-width: 480px) {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+  }
 `;
 
 const StyledPrice = styled.div`

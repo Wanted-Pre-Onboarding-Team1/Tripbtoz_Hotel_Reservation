@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { palette } from 'lib/palette';
+import { palette } from 'lib/styles/palette';
 import ReservationMenu from './components/ReservationMenu';
 import ReservationList from './components/ReservationList';
 
@@ -48,8 +48,8 @@ function StatusPage() {
       <ElementBlock>
         <ReservationMenu />
         <ListContainer>
-          {/* <ReservationList dummyList={dummyData} /> */}
-          <ReservationList dummyList={[]} />
+          <ReservationList dummyList={dummyData} />
+          {/* <ReservationList dummyList={[]} /> */}
         </ListContainer>
       </ElementBlock>
     </StatusContainer>
@@ -61,32 +61,38 @@ export default StatusPage;
 const StatusContainer = styled.main`
   display: flex;
   justify-content: center;
-  height: 100%;
+  width: 100%;
+  height: calc(100% - 86px);
   padding: 30px 0;
-  background-color: ${palette.statusPageBackground};
+  background-color: ${palette.grayBackgroundColor};
 
-  @media (max-width: 1023px) {
+  @media (max-width: 480px) {
     padding: 0;
   }
 `;
 
 const ListContainer = styled.article`
+  flex: 2;
   width: 100%;
   overflow-y: auto;
+
+  @media (max-width: 480px) {
+    height: 100%;
+  }
 `;
 
 const ElementBlock = styled.article`
   display: flex;
   justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 30px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 480px) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.5);
-  }
-
-  @media (max-width: 767px) {
     width: 100%;
+    padding: 0;
   }
 `;

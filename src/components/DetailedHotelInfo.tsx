@@ -17,16 +17,16 @@ function DetailedHotelInfo({ hotelName, occupancy }: HotelsInfo) {
   return (
     <DetailBlock>
       <h1 className="sr-only">호텔 예약 페이지입니다.</h1>
+      <Image src={hotelImage} alt="호텔 방 내부 사진" />
       <DetailBox>
-        <Image src={hotelImage} alt="호텔 방 내부 사진" />
         <HotelInformation>
           <HotelName>{hotelName}</HotelName>
           <GuestInformation>
             기준 {occupancy.base}인 | 최대 {occupancy.max}인
           </GuestInformation>
         </HotelInformation>
+        <ReservationButton type="button">예약 취소</ReservationButton>
       </DetailBox>
-      <ReservationButton type="button">예약 취소</ReservationButton>
     </DetailBlock>
   );
 }
@@ -35,8 +35,6 @@ export default DetailedHotelInfo;
 
 const DetailBlock = styled.article`
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   /* width: 60vw;
   min-width: 768px; */
   width: 100%;
@@ -44,14 +42,18 @@ const DetailBlock = styled.article`
 `;
 
 const DetailBox = styled.section`
+  position: relative;
   display: flex;
+  flex-direction: column;
+  width: 60%;
 `;
 
 const Image = styled.img`
   width: 245px;
-  height: auto;
+  height: 130px;
   border-radius: 4px;
   margin: 30px;
+  object-fit: cover;
 `;
 
 const HotelInformation = styled.div`
@@ -73,6 +75,10 @@ const GuestInformation = styled.p`
 `;
 
 const ReservationButton = styled.button`
+  display: inline;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   min-width: 106px;
   height: 32px;
   margin: 30px;

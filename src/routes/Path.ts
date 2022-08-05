@@ -7,4 +7,11 @@ enum Path {
   past = '/bookings/past',
 }
 
+export const bookingPaths: string[] = [
+  Path.bookings,
+  Path.upcoming,
+  Path.canceled,
+  Path.past,
+];
+
 export default Path;
