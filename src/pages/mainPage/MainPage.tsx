@@ -2,35 +2,35 @@ import { addDays, startOfToday } from 'date-fns';
 import { HttpRequest } from 'lib/api/httpRequest';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { hotelListType } from 'types/hotelList';
+import { useLocation } from 'react-router-dom';
+import QueryString from 'qs';
 import HotelList from './components/HotelList';
 import { Spinner } from './components/Spiner';
 import Search from './components/Search';
 import useIntersectObserver from './hooks/useIntersertObserver';
 
 const HOTEL_PAGE = 10;
+// 페이지당 10개씩 호출하기로 한 약속
 
 function MainPage() {
-  const today = startOfToday();
-  const [hotelList, setHotelList] = React.useState<hotelListType[]>();
+  const location = useLocation();
+  const query = QueryString.parse(location.search, {
+    ignoreQueryPrefix: true,
+  });
+
+  const [hotelList, setHotelList] = React.useState<string[]>();
+  // 호텔리스트 저장
   const { isTargetVisible, observerRef } = useIntersectObserver();
+  // 무한 스크롤 훅
   const [isInitialLoading, setIsInitialLoading] = React.useState<boolean>(true);
+  // 가져올 데이터가 있을 때와 없을 때
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  // 데이터 로딩상태
   const hotelRequest = new HttpRequest();
   // API 요청
-  const [params, setParams] = React.useState({
-    title: '',
-    person: 2,
-    date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
-  });
-  const onChangeParams = (name: string, value: any) => {
-    setParams({ ...params, [name]: value });
-  };
 
-  const onChangeDateOfParams = (name: string, value: any) => {
-    setParams((prev) => ({ ...prev, date: { ...prev.date, [name]: value } }));
-  };
-
+  // 데이터 전체의 수를 파악해 페이지별로 나우어 줌 159개의 수를 가지고 있다면 15페이지로 나눈 후
+  // 나머지 9는 올림하여 16페이지로 만들어 줌
   const getCurrentPageNumber = (currentHotelList: any) => {
     const pageNumber = (currentHotelList?.length as number) / HOTEL_PAGE;
     return Number.isInteger(pageNumber) ? pageNumber : Math.ceil(pageNumber);
@@ -40,37 +40,47 @@ function MainPage() {
 
   useEffect(() => {
     const callback = ({ data }: any) => {
-      if (!hotelList) {
-        setHotelList(data);
-        setIsInitialLoading(false);
-        return;
-      }
-      setHotelList((prevHotelList: any) => [...prevHotelList, ...data]);
+      setHotelList(data);
+      setIsInitialLoading(false);
+    };
+    hotelRequest.getWithParams({
+      url: 'hotel_list',
+      config: {
+        _page: 0,
+        _limit: HOTEL_PAGE,
+        hotel_name_like: query?.title,
+        'occupancy.max_gte': query?.person,
+      },
+      callback,
+    });
+  }, []);
+  // 맨 처음 가져오는 10개의 객체
+
+  useEffect(() => {
+    const callback = ({ data }: any) => {
+      setHotelList((prevMovieList: any) => [...prevMovieList, ...data]);
     };
     setIsLoading(true);
     isTargetVisible &&
+      !isInitialLoading &&
       hotelRequest.getWithParams({
         url: 'hotel_list',
         config: {
           _page: currentPage + 1,
           _limit: HOTEL_PAGE,
-          hotel_name_like: params.title,
-          'occupancy.max_gte': params.person,
+          hotel_name_like: query?.title,
+          'occupancy.max_gte': query?.person,
         },
         callback,
       });
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
-  }, [isTargetVisible, isInitialLoading, currentPage, params]);
+  }, [isTargetVisible, isInitialLoading, currentPage]);
 
   return (
     <StyledArticle>
-      <Search
-        params={params}
-        onChangeParams={onChangeParams}
-        onChangeDateOfParams={onChangeDateOfParams}
-      />
+      <Search />
       <StyledText>
         <StyledPoint>1000</StyledPoint>개의 호텔 중 예약가능 호텔
         <StyledPoint>1000</StyledPoint>개
@@ -80,8 +90,9 @@ function MainPage() {
           <HotelList
             key={index}
             value={value}
-            person={params.person}
-            date={params.date}
+            person={query.person}
+            start={query.start}
+            end={query.end}
           />
         ))}
       </div>
@@ -120,7 +131,7 @@ const StyledPoint = styled.span`
   font-weight: 500;
 `;
 
-const StyledLoading = styled.div`
+const StyledLoading = styled.body`
   display: flex;
   width: 100vw;
   height: 100vh;

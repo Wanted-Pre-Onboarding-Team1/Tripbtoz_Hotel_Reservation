@@ -1,5 +1,5 @@
 import MainCalender from 'calender/JihoCalender/MainCalender';
-import { differenceInDays, format } from 'date-fns';
+import { addDays, differenceInDays, format, startOfToday } from 'date-fns';
 import useOutSideClick from 'hooks/useOutsideClick';
 import { palette } from 'lib/palette';
 import { FlexBetween, FlexCenter } from 'lib/styles/commonStyles';
@@ -9,18 +9,27 @@ import {
   AiOutlineSearch,
   AiOutlineTeam,
 } from 'react-icons/ai';
+import { Navigate, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { IParam } from 'types/params';
 import useToggle from '../hooks/useToggle';
 import PersonBox from './PersonBox';
 
-interface SearchProps {
-  onChangeDateOfParams: (name: string, value: any) => void;
-  onChangeParams: (name: string, value: any) => void;
-  params: IParam;
-}
+function Search() {
+  const navigate = useNavigate();
+  const today = startOfToday();
+  const [params, setParams] = React.useState({
+    title: '',
+    person: 2,
+    date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
+  });
+  const onChangeParams = (name: string, value: any) => {
+    setParams({ ...params, [name]: value });
+  };
 
-function Search({ onChangeParams, params, onChangeDateOfParams }: SearchProps) {
+  const onChangeDateOfParams = (name: string, value: any) => {
+    setParams({ ...params, date: { ...params.date, [name]: value } });
+  };
+
   const [isCalender, onToggleIsCalender] = useToggle();
   const [isPerson, onToggleIsPerson] = useToggle();
   const [targetCalender] = useOutSideClick(isCalender, onToggleIsCalender);
@@ -77,7 +86,11 @@ function Search({ onChangeParams, params, onChangeDateOfParams }: SearchProps) {
           />
         </ToggleDiv>
         <SubmitStyled>
-          <SubmitIcon size={38} />
+          <a
+            href={`/?title=${params.title}&person=${params.person}&start=${params.date.checkin}&end=${params.date.checkout}`}
+          >
+            <SubmitIcon size={38} />
+          </a>
         </SubmitStyled>
       </SearchBox>
     </SearchSection>
