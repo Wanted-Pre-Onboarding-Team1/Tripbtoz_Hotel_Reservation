@@ -68,15 +68,6 @@ function ReservationList({ hotelList }: { hotelList: any[] }) {
     return result;
   };
 
-  // const hotelsInfo = hotelList.map((dummyInfo: HotelsInfo, index: number) => {
-  //   return (
-  //     <DetailedHotelInfo
-  //       hotelName={dummyInfo.hotel_name}
-  //       occupancy={dummyInfo.occupancy}
-  //       key={`${dummyInfo.hotel_name[0]}_${index}`}
-  //     />
-  //   );
-  // });
   const hotelsInfo = classifyListItems().map(
     (reservationInfo: any[], index: number) => {
       return (

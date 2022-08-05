@@ -12,40 +12,20 @@ function StatusPage() {
     const storagedList = Object.keys(localStorage).map((key: string) => {
       return JSON.parse(localStorage.getItem(key) as string);
     });
+    storagedList.forEach((listItem: any, index: number) => {
+      if (isBefore(new Date(listItem[1].checkout), new Date())) {
+        localStorage.setItem(
+          listItem[0].hotelname,
+          JSON.stringify([
+            ...storagedList[index].slice(0, storagedList[index].length - 1),
+            { past: true },
+          ]),
+        );
+      }
+    });
     setTotalLists((previousList: any[]) =>
       previousList.slice(previousList.length).concat(storagedList),
     );
-    // console.log(new Date(storagedList[0][1].date.checkin));
-    // console.log(
-    //   storagedList.map((listItem: any) =>
-    //     console.log(storagedList[3].canceled),
-    //   ),
-    // );
-    // localStorage.setItem(
-    //   'Gunsan Clover',
-    //   JSON.stringify([
-    //     { hotelname: 'Gunsan Clover' },
-    //     {
-    //       date: {
-    //         checkin: '2022-07-02T15:00:00.000Z',
-    //         checkout: '2022-07-13T15:00:00.000Z',
-    //       },
-    //     },
-    //     { person: 2 },
-    //     { canceled: false },
-    //     { past: false },
-    //   ]),
-    // );
-    // console.log(
-    //   storagedList.filter((listItem: any) => {
-    //     console.log(
-    //       new Date(listItem[1].checkout),
-    //       new Date(),
-    //       isBefore(new Date(listItem[1].checkout), new Date()),
-    //     );
-    //     return isBefore(new Date(listItem[1].checkout), new Date());
-    //   }),
-    // );
   }, []);
   return (
     <StatusContainer>
