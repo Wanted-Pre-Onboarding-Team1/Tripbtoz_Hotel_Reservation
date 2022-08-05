@@ -25,7 +25,9 @@ export function getAvailableHotels(hotelList: any[], date: { checkin: Date, chec
     let availableHotels = hotelList ? [...hotelList] : [];
 
     for (let i = 0; i < reservedHotelNames.length; i++) {
-        const reserveDate = reservedHotels[i][reservedHotelNames[i]][0].date;
+        // 저장 데이터에 호텔명이 추가된 것으로 인해 임시 주석 처리 및 인덱스 0 -> 1 변경
+        // const reserveDate = reservedHotels[i][reservedHotelNames[i]][0].date;
+        const reserveDate = reservedHotels[i][reservedHotelNames[i]][1].date;
         const reservedHotel = reservedHotelNames[i];
 
         availableHotels = availableHotels?.filter((hotel) => {

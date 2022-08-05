@@ -1,55 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 import { palette } from 'lib/styles/palette';
+
 import ReservationMenu from './components/ReservationMenu';
 import ReservationList from './components/ReservationList';
-
-const dummyData = [
-  {
-    hotel_name: '에코랜드 호텔',
-    occupancy: {
-      base: 2,
-      max: 3,
-    },
-  },
-  {
-    hotel_name: '파르나스 호텔 제주',
-    occupancy: {
-      base: 2,
-      max: 2,
-    },
-  },
-  {
-    hotel_name: '고창 웰파크시티 힐링카운티',
-    occupancy: {
-      base: 2,
-      max: 2,
-    },
-  },
-  {
-    hotel_name: '사우 베이 리조트',
-    occupancy: {
-      base: 2,
-      max: 2,
-    },
-  },
-  {
-    hotel_name: '알다프와 빌라스',
-    occupancy: {
-      base: 2,
-      max: 4,
-    },
-  },
-];
+import useProcessReservationList from './hooks/useProcessReservationList';
 
 function StatusPage() {
+  const [isReloadNeeded, setReloadNeedState] = React.useState<boolean>(false);
+  const { totalHotelLists } = useProcessReservationList(isReloadNeeded);
+
+  const changeReloadState = () => {
+    setReloadNeedState(!isReloadNeeded);
+  };
+
   return (
     <StatusContainer>
       <ElementBlock>
         <ReservationMenu />
         <ListContainer>
-          <ReservationList dummyList={dummyData} />
-          {/* <ReservationList dummyList={[]} /> */}
+          <ReservationList
+            hotelList={totalHotelLists}
+            isReloadNeeded={isReloadNeeded}
+            setReloadNeedState={changeReloadState}
+          />
+          {/* <ReservationList hotelList={[]} /> */}
         </ListContainer>
       </ElementBlock>
     </StatusContainer>

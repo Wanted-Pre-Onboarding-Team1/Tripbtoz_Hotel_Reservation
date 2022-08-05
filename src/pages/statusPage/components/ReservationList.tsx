@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { isBefore } from 'date-fns';
 import styled from 'styled-components';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { palette } from 'lib/styles/palette';
@@ -9,57 +10,46 @@ import {
   canceledStrings,
   pastStrings,
 } from '../utils/constants';
+import { returnNoResult, classifyListItems } from '../utils/helpers';
 
-interface StringSets {
-  upcomings: string[];
-  cancels: string[];
-  pasts: string[];
+interface ReservationListType {
+  hotelList: any[];
+  isReloadNeeded: boolean;
+  setReloadNeedState: () => void;
 }
 
-interface OccupancyInfo {
-  base: number;
-  max: number;
-}
-
-interface HotelsInfo {
-  hotel_name: string;
-  occupancy: OccupancyInfo;
-}
-
-function ReservationList({ dummyList }: { dummyList: HotelsInfo[] }) {
+// function ReservationList({ hotelList }: { hotelList: any[] }) {
+function ReservationList({
+  hotelList,
+  isReloadNeeded,
+  setReloadNeedState,
+}: ReservationListType) {
   const location = useLocation();
 
-  const returnNoResult = (locationString: string, stringSets: StringSets) => {
-    const { upcomings, cancels, pasts } = stringSets;
-    switch (locationString) {
-      case '/bookings':
-      case '/bookings/upcoming':
-        return upcomings.map((upcomingString: string, index: number) => (
-          <PStyled key={`${upcomingString[0]}_${index}`}>
-            {upcomingString}
-          </PStyled>
-        ));
-      case '/bookings/canceled':
-        return cancels.map((canceledString: string, index: number) => (
-          <PStyled key={`${canceledString[0]}_${index}`}>
-            {canceledString}
-          </PStyled>
-        ));
-      case '/bookings/past':
-        return pasts.map((pastString: string, index: number) => (
-          <PStyled key={`${pastString[0]}_${index}`}>{pastString}</PStyled>
-        ));
-      default:
-        return '오류가 발생했습니다';
-    }
-  };
+  const noResults = returnNoResult(location.pathname, {
+    upcomings: upcomingStrings,
+    cancels: canceledStrings,
+    pasts: pastStrings,
+  }).map((resultString: string, index: number) => (
+    <PStyled key={`${resultString[0]}_${index}`}>{resultString}</PStyled>
+  ));
 
-  const hotelsInfo = dummyList.map((dummyInfo: HotelsInfo, index: number) => {
+  const filterCondition = (dateString: string, todayDate: Date) =>
+    isBefore(new Date(dateString), todayDate);
+
+  const userReservationInfo = classifyListItems(
+    hotelList,
+    location.pathname,
+    filterCondition,
+  ).map((reservationInfo: any[], index: number) => {
     return (
       <DetailedHotelInfo
-        hotelName={dummyInfo.hotel_name}
-        occupancy={dummyInfo.occupancy}
-        key={`${dummyInfo.hotel_name[0]}_${index}`}
+        hotelName={reservationInfo[0].hotelname}
+        occupancy={reservationInfo[2].person}
+        bookingDates={reservationInfo[1].date}
+        isReloadNeeded={isReloadNeeded}
+        setReloadNeedState={setReloadNeedState}
+        key={`${reservationInfo[0].hotelname}_${index}`}
       />
     );
   });
@@ -67,19 +57,15 @@ function ReservationList({ dummyList }: { dummyList: HotelsInfo[] }) {
   return (
     <ReservationListBlock>
       <>
-        {(!dummyList || dummyList.length === 0) && (
+        {(!hotelList || hotelList.length === 0) && (
           <NoResultBox>
             <DivStyled>
               <AiOutlineCloseCircle />
             </DivStyled>
-            {returnNoResult(location.pathname, {
-              upcomings: upcomingStrings,
-              cancels: canceledStrings,
-              pasts: pastStrings,
-            })}
+            {noResults}
           </NoResultBox>
         )}
-        {(dummyList || (dummyList as HotelsInfo[]).length > 0) && hotelsInfo}
+        {(hotelList || (hotelList as any[]).length > 0) && userReservationInfo}
       </>
     </ReservationListBlock>
   );

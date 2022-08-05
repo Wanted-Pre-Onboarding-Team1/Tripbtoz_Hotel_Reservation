@@ -34,6 +34,8 @@ function HotelList({ value, person, start, end }: any) {
               <SaveButton
                 hotelName={value.hotel_name}
                 person={person}
+                canceled={false}
+                past={false}
                 start={start}
                 end={end}
               />

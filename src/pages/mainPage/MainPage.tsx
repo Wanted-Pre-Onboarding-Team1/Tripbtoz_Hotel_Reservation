@@ -90,7 +90,9 @@ function MainPage() {
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
-  }, [isTargetVisible, isInitialLoading, currentPage]);
+    // 무한 리렌더링 해결을 위한 임시 주석 처리
+    // }, [isTargetVisible, isInitialLoading, currentPage]);
+  }, [isTargetVisible, isInitialLoading]);
 
   return (
     <StyledArticle>
