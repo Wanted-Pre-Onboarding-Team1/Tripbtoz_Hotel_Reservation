@@ -57,7 +57,7 @@ function ReservationList({
   return (
     <ReservationListBlock>
       <>
-        {(!hotelList || hotelList.length === 0) && (
+        {userReservationInfo.length === 0 && (
           <NoResultBox>
             <DivStyled>
               <AiOutlineCloseCircle />
@@ -65,7 +65,7 @@ function ReservationList({
             {noResults}
           </NoResultBox>
         )}
-        {(hotelList || (hotelList as any[]).length > 0) && userReservationInfo}
+        {userReservationInfo.length > 0 && userReservationInfo}
       </>
     </ReservationListBlock>
   );
