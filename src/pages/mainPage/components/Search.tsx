@@ -20,10 +20,7 @@ function Search() {
       <SearchBox>
         <HotelNameBox>
           <SearchIcon size={38} />
-          <HotelNameInput
-            type="text"
-            placeholder="지역명, 호텔명, 펜션명 검색"
-          />
+          <HotelNameInput type="text" placeholder="호텔명 검색" />
         </HotelNameBox>
         <CheckInBox onClick={onToggleIsCalender}>
           <CalendarIcon size={38} />
@@ -71,6 +68,10 @@ const SearchSection = styled.div`
   padding: 0 48px;
   font-size: 16px;
   font-weight: 700;
+  @media screen and (max-width: 480px) {
+    width: 90%;
+    padding: 0;
+  }
 `;
 const SearchBox = styled.div`
   position: relative;
@@ -79,6 +80,10 @@ const SearchBox = styled.div`
   border-radius: 4px;
   height: 58px;
   display: flex;
+  @media screen and (max-width: 480px) {
+    border: transparent;
+    background-color: inherit;
+  }
 `;
 
 const HotelNameBox = styled.div`
@@ -88,17 +93,31 @@ const HotelNameBox = styled.div`
   position: relative;
   vertical-align: center;
   flex: 1 1 0%;
+  @media screen and (max-width: 480px) {
+    justify-content: center;
+    width: 50%;
+    height: max-content;
+    border: 1px solid gray;
+    border-radius: 15px;
+  }
 `;
 
 const SearchIcon = styled(AiOutlineSearch)`
   padding: 4px;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const HotelNameInput = styled.input`
   font-size: 18px;
   padding: 8px;
-
   font-weight: 700;
+  @media screen and (max-width: 480px) {
+    width: 90%;
+    background-color: inherit;
+    font-size: 14px;
+  }
 `;
 
 const CheckInBox = styled(FlexCenter)`
@@ -113,10 +132,16 @@ const CheckInBox = styled(FlexCenter)`
 const DateLabel = styled.div`
   font-size: 14px;
   color: ${palette.subTextColor};
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const CalendarIcon = styled(AiOutlineCalendar)`
   padding: 4px;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const CheckInOutStyled = styled(FlexBetween)`
@@ -130,6 +155,9 @@ const RoomPersonBox = styled(FlexCenter)`
 
 const PersonIcon = styled(AiOutlineTeam)`
   padding: 4px;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const RoomPersonStyled = styled.div`
@@ -139,10 +167,16 @@ const RoomPersonStyled = styled.div`
 
 const SubmitIcon = styled(AiOutlineSearch)`
   color: white;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const SubmitStyled = styled.div`
   padding: 10px 20px 10px 20px;
   background-color: ${palette.pointColor};
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 export default Search;

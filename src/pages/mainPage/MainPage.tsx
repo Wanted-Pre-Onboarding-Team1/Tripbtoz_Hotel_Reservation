@@ -32,25 +32,12 @@ function MainPage() {
 
   useEffect(() => {
     const callback = ({ data }: any) => {
-      setHotelList(data);
-      setIsInitialLoading(false);
-    };
-    hotelRequest.getWithParams({
-      url: 'hotel_list',
-      config: {
-        _page: 0,
-        _limit: HOTEL_PAGE,
-        hotel_name_like: params.title,
-        'occupancy.max_gte': params.person,
-      },
-      callback,
-    });
-  }, []);
-  // 맨 처음 가져오는 10개의 객체
-
-  useEffect(() => {
-    const callback = ({ data }: any) => {
-      setHotelList((prevMovieList: any) => [...prevMovieList, ...data]);
+      if (!hotelList) {
+        setHotelList(data);
+        setIsInitialLoading(false);
+        return;
+      }
+      setHotelList((prevHotelList: any) => [...prevHotelList, ...data]);
     };
     setIsLoading(true);
     isTargetVisible &&
@@ -116,7 +103,7 @@ const StyledPoint = styled.span`
   font-weight: 500;
 `;
 
-const StyledLoading = styled.body`
+const StyledLoading = styled.div`
   display: flex;
   width: 100vw;
   height: 100vh;
