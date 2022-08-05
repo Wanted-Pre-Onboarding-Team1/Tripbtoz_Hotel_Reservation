@@ -3,6 +3,7 @@ import { addDays, startOfToday } from 'date-fns';
 import { HttpRequest } from 'lib/api/httpRequest';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { hotelListType } from 'types/hotelList';
 import HotelList from './components/HotelList';
 import { Spinner } from './components/Spiner';
 import Search from './components/Search';
@@ -12,7 +13,7 @@ const HOTEL_PAGE = 10;
 
 function MainPage() {
   const today = startOfToday();
-  const [hotelList, setHotelList] = React.useState<string[]>();
+  const [hotelList, setHotelList] = React.useState<hotelListType[]>();
   const { isTargetVisible, observerRef } = useIntersectObserver();
   const [isInitialLoading, setIsInitialLoading] = React.useState<boolean>(true);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
@@ -20,7 +21,7 @@ function MainPage() {
   // API 요청
   const [params, setParams] = React.useState({
     title: '',
-    person: 5,
+    person: 2,
     date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
   });
   const getCurrentPageNumber = (currentHotelList: any) => {
@@ -65,7 +66,12 @@ function MainPage() {
       </StyledText>
       <div>
         {hotelList?.map((value: any, index: number) => (
-          <HotelList key={index} value={value} />
+          <HotelList
+            key={index}
+            value={value}
+            person={params.person}
+            date={params.date}
+          />
         ))}
       </div>
       {isLoading && (

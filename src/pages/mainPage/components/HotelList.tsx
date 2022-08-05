@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { hotelListType } from 'types/hotelList';
+import SaveButton from './SaveButton';
 
-function HotelList({ value }: any) {
+function HotelList({ value, person, date }: any) {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
@@ -29,7 +31,11 @@ function HotelList({ value }: any) {
               </StyledOccupancy>
             </StyledTitle>
             <StyledPrice>
-              100,000원<StyledTex>세금 및 수수료 불포함</StyledTex>
+              <SaveButton
+                hotelName={value.hotel_name}
+                person={person}
+                date={date}
+              />
             </StyledPrice>
           </StyledArticle>
         </StyledList>
