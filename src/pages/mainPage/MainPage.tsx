@@ -1,12 +1,17 @@
+import MyCalender from 'calender/JihoCalender/MyCalender';
+import { addDays, startOfToday } from 'date-fns';
 import { HttpRequest } from 'lib/api/httpRequest';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import HotelList from './components/HotelList';
+import Search from './components/Search';
 import useIntersectObserver from './hooks/useIntersertObserver';
 
 const HOTEL_PAGE = 10;
 
 function MainPage() {
+  const today = startOfToday();
+
   const [hotelList, setHotelList] = React.useState<any>();
   // 호텔리스트 저장
   const { isTargetVisible, observerRef } = useIntersectObserver();
@@ -17,7 +22,11 @@ function MainPage() {
   // 로딩상태
   const hotelRequest = new HttpRequest();
   // API 요청
-
+  const [params, setParams] = React.useState({
+    title: '',
+    person: 5,
+    date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
+  });
   const getCurrentPageNumber = (currentHotelList: any) => {
     const pageNumber = (currentHotelList?.length as number) / HOTEL_PAGE;
     return Number.isInteger(pageNumber) ? pageNumber : Math.ceil(pageNumber);
@@ -35,6 +44,8 @@ function MainPage() {
       config: {
         _page: 1,
         _limit: HOTEL_PAGE,
+        hotel_name_like: params.title,
+        'occupancy.max_gte': params.person,
       },
       callback,
     });
@@ -52,16 +63,19 @@ function MainPage() {
         config: {
           _page: currentPage + 1,
           _limit: HOTEL_PAGE,
+          hotel_name_like: params.title,
+          'occupancy.max_gte': params.person,
         },
         callback,
       });
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
-  }, [isTargetVisible, isInitialLoading, currentPage]);
+  }, [isTargetVisible, isInitialLoading, currentPage, params]);
 
   return (
     <StyledArticle>
+      <Search />
       <StyledText>
         <StyledPoint>1000</StyledPoint>개의 호텔 중 예약가능 호텔
         <StyledPoint>{hotelList?.length}</StyledPoint>개
