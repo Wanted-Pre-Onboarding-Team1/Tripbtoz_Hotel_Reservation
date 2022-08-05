@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { palette } from 'lib/styles/palette';
-import { HotelObject } from 'types/hotelList';
 
 import ReservationMenu from './components/ReservationMenu';
 import ReservationList from './components/ReservationList';
