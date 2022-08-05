@@ -1,74 +1,58 @@
 import React from 'react';
 import styled from 'styled-components';
 import { palette } from 'lib/styles/palette';
+import { HotelObject } from 'types/hotelList';
+import { isBefore } from 'date-fns';
 import ReservationMenu from './components/ReservationMenu';
 import ReservationList from './components/ReservationList';
 
-const dummyData = [
-  {
-    hotel_name: '에코랜드 호텔',
-    occupancy: {
-      base: 2,
-      max: 3,
-    },
-  },
-  {
-    hotel_name: '파르나스 호텔 제주',
-    occupancy: {
-      base: 2,
-      max: 2,
-    },
-  },
-  {
-    hotel_name: '고창 웰파크시티 힐링카운티',
-    occupancy: {
-      base: 2,
-      max: 2,
-    },
-  },
-  {
-    hotel_name: '사우 베이 리조트',
-    occupancy: {
-      base: 2,
-      max: 2,
-    },
-  },
-  {
-    hotel_name: '알다프와 빌라스',
-    occupancy: {
-      base: 2,
-      max: 4,
-    },
-  },
-];
-
-type PossiblePropertyValues = string | number | boolean;
-
-interface HotelObjectProperty {
-  [key: string]: PossiblePropertyValues;
-}
-
-interface HotelObject {
-  [key: string]: PossiblePropertyValues | HotelObjectProperty;
-}
-
 function StatusPage() {
-  const [totalHotelLists, setTotalLists] = React.useState<HotelObject[]>([]);
+  const [totalHotelLists, setTotalLists] = React.useState<any[]>([]);
   React.useEffect(() => {
     const storagedList = Object.keys(localStorage).map((key: string) => {
       return JSON.parse(localStorage.getItem(key) as string);
     });
-    setTotalLists((previousList: HotelObject[]) =>
+    setTotalLists((previousList: any[]) =>
       previousList.slice(previousList.length).concat(storagedList),
     );
     // console.log(new Date(storagedList[0][1].date.checkin));
+    // console.log(
+    //   storagedList.map((listItem: any) =>
+    //     console.log(storagedList[3].canceled),
+    //   ),
+    // );
+    // localStorage.setItem(
+    //   'Gunsan Clover',
+    //   JSON.stringify([
+    //     { hotelname: 'Gunsan Clover' },
+    //     {
+    //       date: {
+    //         checkin: '2022-07-02T15:00:00.000Z',
+    //         checkout: '2022-07-13T15:00:00.000Z',
+    //       },
+    //     },
+    //     { person: 2 },
+    //     { canceled: false },
+    //     { past: false },
+    //   ]),
+    // );
+    // console.log(
+    //   storagedList.filter((listItem: any) => {
+    //     console.log(
+    //       new Date(listItem[1].checkout),
+    //       new Date(),
+    //       isBefore(new Date(listItem[1].checkout), new Date()),
+    //     );
+    //     return isBefore(new Date(listItem[1].checkout), new Date());
+    //   }),
+    // );
   }, []);
   return (
     <StatusContainer>
       <ElementBlock>
         <ReservationMenu />
         <ListContainer>
-          <ReservationList dummyList={dummyData} />
+          <ReservationList hotelList={totalHotelLists} />
           {/* <ReservationList dummyList={[]} /> */}
         </ListContainer>
       </ElementBlock>

@@ -1,9 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { isBefore } from 'date-fns';
 import styled from 'styled-components';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { palette } from 'lib/styles/palette';
 import DetailedHotelInfo from 'components/DetailedHotelInfo';
+import { HotelObject } from 'types/hotelList';
 import {
   upcomingStrings,
   canceledStrings,
@@ -16,17 +18,7 @@ interface StringSets {
   pasts: string[];
 }
 
-interface OccupancyInfo {
-  base: number;
-  max: number;
-}
-
-interface HotelsInfo {
-  hotel_name: string;
-  occupancy: OccupancyInfo;
-}
-
-function ReservationList({ dummyList }: { dummyList: HotelsInfo[] }) {
+function ReservationList({ hotelList }: { hotelList: any[] }) {
   const location = useLocation();
 
   const returnNoResult = (locationString: string, stringSets: StringSets) => {
@@ -54,20 +46,54 @@ function ReservationList({ dummyList }: { dummyList: HotelsInfo[] }) {
     }
   };
 
-  const hotelsInfo = dummyList.map((dummyInfo: HotelsInfo, index: number) => {
-    return (
-      <DetailedHotelInfo
-        hotelName={dummyInfo.hotel_name}
-        occupancy={dummyInfo.occupancy}
-        key={`${dummyInfo.hotel_name[0]}_${index}`}
-      />
-    );
-  });
+  const classifyListItems = () => {
+    let result = [];
+    const today = new Date();
+    switch (location.pathname) {
+      case '/bookings/canceled':
+        result = hotelList.filter((listItem: any) => listItem[3].canceled);
+        break;
+      case '/bookings/past':
+        result = hotelList.filter(
+          (listItem: any) =>
+            isBefore(new Date(listItem[1].checkout), today) || listItem[4].past,
+        );
+        break;
+      default:
+        result = hotelList.filter(
+          (listItem: any) => !listItem[3].canceled && !listItem[4].past,
+        );
+        break;
+    }
+    return result;
+  };
+
+  // const hotelsInfo = hotelList.map((dummyInfo: HotelsInfo, index: number) => {
+  //   return (
+  //     <DetailedHotelInfo
+  //       hotelName={dummyInfo.hotel_name}
+  //       occupancy={dummyInfo.occupancy}
+  //       key={`${dummyInfo.hotel_name[0]}_${index}`}
+  //     />
+  //   );
+  // });
+  const hotelsInfo = classifyListItems().map(
+    (reservationInfo: any[], index: number) => {
+      return (
+        <DetailedHotelInfo
+          hotelName={reservationInfo[0].hotelname}
+          occupancy={reservationInfo[2].person}
+          bookingDates={reservationInfo[1].date}
+          key={`${reservationInfo[0].hotelname}_${index}`}
+        />
+      );
+    },
+  );
 
   return (
     <ReservationListBlock>
       <>
-        {(!dummyList || dummyList.length === 0) && (
+        {(!hotelList || hotelList.length === 0) && (
           <NoResultBox>
             <DivStyled>
               <AiOutlineCloseCircle />
@@ -79,7 +105,7 @@ function ReservationList({ dummyList }: { dummyList: HotelsInfo[] }) {
             })}
           </NoResultBox>
         )}
-        {(dummyList || (dummyList as HotelsInfo[]).length > 0) && hotelsInfo}
+        {(hotelList || (hotelList as any[]).length > 0) && hotelsInfo}
       </>
     </ReservationListBlock>
   );

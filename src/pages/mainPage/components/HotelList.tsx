@@ -36,7 +36,7 @@ function HotelList({ value, person, date }: any) {
                 person={person}
                 date={date}
                 canceled={false}
-                past={false}
+                past
               />
             </StyledPrice>
           </StyledArticle>

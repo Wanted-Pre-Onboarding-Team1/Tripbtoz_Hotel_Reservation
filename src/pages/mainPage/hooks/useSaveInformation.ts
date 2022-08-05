@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 
+interface DateObject {
+  checkin: string;
+  checkout: string;
+}
+
 export default function useSaveInformation(
-  hotelname: any,
-  person: any,
-  date: any,
+  hotelname: string,
+  person: number,
+  date: DateObject,
   canceled: boolean,
   past: boolean,
 ) {

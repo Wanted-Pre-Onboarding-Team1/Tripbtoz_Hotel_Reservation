@@ -1,24 +1,33 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { format } from 'date-fns';
 import styled from 'styled-components';
 import hotelImage from 'assets/image/hotel.jpg';
 import { palette } from 'lib/styles/palette';
 
-interface OccupancyInfo {
-  base: number;
-  max: number;
+interface DateObject {
+  checkin: string;
+  checkout: string;
 }
 
 interface HotelsInfo {
   hotelName: string;
-  occupancy: OccupancyInfo;
+  occupancy: number;
+  bookingDates: DateObject;
 }
 
-function DetailedHotelInfo({ hotelName, occupancy }: HotelsInfo) {
+function DetailedHotelInfo({ hotelName, occupancy, bookingDates }: HotelsInfo) {
   const location = useLocation();
   const isParamAboutBooking =
     location.pathname === '/bookings' ||
     location.pathname === '/bookings/upcoming';
+  const occupancyString = `예약 ${occupancy}인`;
+  const dateFormatter = (rawDate: string) => {
+    return format(new Date(rawDate), 'yyyy-MM-dd');
+  };
+  const occupancyInterval = `예약 기간: ${dateFormatter(
+    bookingDates.checkin,
+  )} ~ ${dateFormatter(bookingDates.checkout)}`;
   return (
     <DetailBlock>
       <h1 className="sr-only">호텔 예약 페이지입니다.</h1>
@@ -27,9 +36,8 @@ function DetailedHotelInfo({ hotelName, occupancy }: HotelsInfo) {
         <HotelInformation>
           <StyledGrade>5.0성급</StyledGrade>
           <HotelName>{hotelName}</HotelName>
-          <GuestInformation>
-            기준 {occupancy.base}인 | 최대 {occupancy.max}인
-          </GuestInformation>
+          <GuestInformation>{occupancyString}</GuestInformation>
+          <GuestInformation>{occupancyInterval}</GuestInformation>
         </HotelInformation>
         {isParamAboutBooking && (
           <ButtonBox>
@@ -105,7 +113,8 @@ const HotelName = styled.h2`
 
 const GuestInformation = styled.p`
   color: ${palette.grayTextColor};
-  font-size: 12px;
+  margin-top: 10px;
+  font-size: 14px;
 `;
 
 const ButtonBox = styled.div`
