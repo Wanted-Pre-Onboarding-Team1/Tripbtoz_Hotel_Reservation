@@ -9,13 +9,11 @@ import {
   AiOutlineSearch,
   AiOutlineTeam,
 } from 'react-icons/ai';
-import { Navigate, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import useToggle from '../hooks/useToggle';
 import PersonBox from './PersonBox';
 
 function Search() {
-  const navigate = useNavigate();
   const today = startOfToday();
   const [params, setParams] = React.useState({
     title: '',
@@ -27,7 +25,7 @@ function Search() {
   };
 
   const onChangeDateOfParams = (name: string, value: any) => {
-    setParams({ ...params, date: { ...params.date, [name]: value } });
+    setParams((prev) => ({ ...prev, date: { ...prev.date, [name]: value } }));
   };
 
   const [isCalender, onToggleIsCalender] = useToggle();

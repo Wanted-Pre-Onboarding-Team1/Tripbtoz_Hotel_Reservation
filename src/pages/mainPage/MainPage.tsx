@@ -1,25 +1,25 @@
-import { addDays, startOfToday } from 'date-fns';
 import { HttpRequest } from 'lib/api/httpRequest';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import QueryString from 'qs';
+import { hotelListType } from 'types/hotelList';
 import HotelList from './components/HotelList';
 import { Spinner } from './components/Spiner';
 import Search from './components/Search';
 import useIntersectObserver from './hooks/useIntersertObserver';
+import { getAvailableHotels } from './utils/getStorageHotels';
 
 const HOTEL_PAGE = 10;
 // 페이지당 10개씩 호출하기로 한 약속
 
 function MainPage() {
+  const [hotelList, setHotelList] = React.useState<hotelListType[]>();
   const location = useLocation();
   const query = QueryString.parse(location.search, {
     ignoreQueryPrefix: true,
   });
 
-  const [hotelList, setHotelList] = React.useState<string[]>();
-  // 호텔리스트 저장
   const { isTargetVisible, observerRef } = useIntersectObserver();
   // 무한 스크롤 훅
   const [isInitialLoading, setIsInitialLoading] = React.useState<boolean>(true);
@@ -37,6 +37,20 @@ function MainPage() {
   };
 
   const currentPage = getCurrentPageNumber(hotelList);
+  const availableHotels = getAvailableHotels(hotelList as any[], {
+    checkin: query.start as unknown as Date,
+    checkout: query.end as unknown as Date,
+  });
+
+  if (
+    hotelList &&
+    availableHotels &&
+    hotelList.length !== availableHotels.length
+  ) {
+    console.log('hotelList', hotelList);
+    console.log('Available', availableHotels);
+    setHotelList(availableHotels);
+  }
 
   useEffect(() => {
     const callback = ({ data }: any) => {
