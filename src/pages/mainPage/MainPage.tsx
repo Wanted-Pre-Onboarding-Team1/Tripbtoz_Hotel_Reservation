@@ -1,4 +1,3 @@
-import MyCalender from 'calender/JihoCalender/MyCalender';
 import { addDays, startOfToday } from 'date-fns';
 import { HttpRequest } from 'lib/api/httpRequest';
 import React, { useEffect } from 'react';
@@ -25,9 +24,17 @@ function MainPage() {
   // API 요청
   const [params, setParams] = React.useState({
     title: '',
-    person: 5,
+    person: 2,
     date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
   });
+  const onChangeParams = (name: string, value: any) => {
+    setParams({ ...params, [name]: value });
+  };
+
+  const onChangeDateOfParams = (name: string, value: any) => {
+    setParams((prev) => ({ ...prev, date: { ...prev.date, [name]: value } }));
+  };
+
   const getCurrentPageNumber = (currentHotelList: any) => {
     const pageNumber = (currentHotelList?.length as number) / HOTEL_PAGE;
     return Number.isInteger(pageNumber) ? pageNumber : Math.ceil(pageNumber);
@@ -79,7 +86,11 @@ function MainPage() {
 
   return (
     <StyledArticle>
-      <Search />
+      <Search
+        params={params}
+        onChangeParams={onChangeParams}
+        onChangeDateOfParams={onChangeDateOfParams}
+      />
       <StyledText>
         <StyledPoint>1000</StyledPoint>개의 호텔 중 예약가능 호텔
         <StyledPoint>1000</StyledPoint>개

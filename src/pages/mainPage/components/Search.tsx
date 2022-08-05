@@ -1,4 +1,6 @@
-import MyCalender from 'calender/JihoCalender/MyCalender';
+import MainCalender from 'calender/JihoCalender/MainCalender';
+import { differenceInDays, format } from 'date-fns';
+import useOutSideClick from 'hooks/useOutsideClick';
 import { palette } from 'lib/palette';
 import { FlexBetween, FlexCenter } from 'lib/styles/commonStyles';
 import React from 'react';
@@ -8,13 +10,21 @@ import {
   AiOutlineTeam,
 } from 'react-icons/ai';
 import styled from 'styled-components';
+import { IParam } from 'types/params';
 import useToggle from '../hooks/useToggle';
 import PersonBox from './PersonBox';
 
-function Search() {
+interface SearchProps {
+  onChangeDateOfParams: (name: string, value: any) => void;
+  onChangeParams: (name: string, value: any) => void;
+  params: IParam;
+}
+
+function Search({ onChangeParams, params, onChangeDateOfParams }: SearchProps) {
   const [isCalender, onToggleIsCalender] = useToggle();
   const [isPerson, onToggleIsPerson] = useToggle();
-
+  const [targetCalender] = useOutSideClick(isCalender, onToggleIsCalender);
+  const { checkin, checkout } = params.date;
   return (
     <SearchSection>
       <SearchBox>
@@ -23,39 +33,49 @@ function Search() {
           <HotelNameInput
             type="text"
             placeholder="지역명, 호텔명, 펜션명 검색"
+            value={params.title}
+            onChange={(e) => onChangeParams('title', e.target.value)}
           />
         </HotelNameBox>
-        <CheckInBox onClick={onToggleIsCalender}>
+        <CheckInBox onClick={onToggleIsCalender} ref={targetCalender}>
           <CalendarIcon size={38} />
           <CheckInOutStyled>
             <div>
               <DateLabel>체크인</DateLabel>
-              <div>8월 15일</div>
+              <div>{format(params.date.checkin, 'MM월dd일')}</div>
             </div>
-            <DateLabel>5박</DateLabel>
+            <DateLabel>
+              {checkin &&
+                checkout &&
+                differenceInDays(checkout, checkin as Date)}
+              박
+            </DateLabel>
             <div>
               <DateLabel>체크아웃</DateLabel>
-              <div>8월 15일</div>
+              <div>{checkout && format(checkout, 'MM월dd일')}</div>
             </div>
           </CheckInOutStyled>
         </CheckInBox>
-        {isCalender && (
-          <div>
-            <MyCalender />
-          </div>
-        )}
+        <ToggleDiv isToggle={isCalender}>
+          <MainCalender
+            onChangeDateOfParams={onChangeDateOfParams}
+            params={params}
+          />
+        </ToggleDiv>
         <RoomPersonBox onClick={onToggleIsPerson}>
           <PersonIcon size={38} />
           <RoomPersonStyled>
             <DateLabel>객실 / 인원</DateLabel>
-            <div>객실 1, 인원 2</div>
+            <div>객실 1, 인원 {params.person}</div>
           </RoomPersonStyled>
         </RoomPersonBox>
-        {isPerson && (
-          <div>
-            <PersonBox />
-          </div>
-        )}
+        <ToggleDiv isToggle={isPerson}>
+          <PersonBox
+            onChangeParams={onChangeParams}
+            params={params}
+            onClose={onToggleIsPerson}
+          />
+        </ToggleDiv>
         <SubmitStyled>
           <SubmitIcon size={38} />
         </SubmitStyled>
@@ -144,5 +164,9 @@ const SubmitIcon = styled(AiOutlineSearch)`
 const SubmitStyled = styled.div`
   padding: 10px 20px 10px 20px;
   background-color: ${palette.pointColor};
+`;
+
+const ToggleDiv = styled.div<{ isToggle: boolean }>`
+  display: ${({ isToggle }) => (isToggle ? 'block' : 'none')};
 `;
 export default Search;

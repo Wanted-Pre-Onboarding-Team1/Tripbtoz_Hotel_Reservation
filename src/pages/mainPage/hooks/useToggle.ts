@@ -7,6 +7,7 @@ export default function useToggle(initialValue = false): ReturnTypes {
 
   const onToggle = () => {
     setValue(!value);
+    console.log(value);
   };
 
   return [value, onToggle];

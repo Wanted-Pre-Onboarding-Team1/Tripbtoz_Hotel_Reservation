@@ -1,10 +1,23 @@
-import { Layout } from 'calender/JihoCalender/MyCalender';
+import { Layout } from 'calender/JihoCalender/MainCalender';
 import { palette } from 'lib/palette';
 import { FlexBetween, FlexCenter } from 'lib/styles/commonStyles';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { IParam } from 'types/params';
 
-function PersonBox() {
+interface PersonBoxProps {
+  onChangeParams: (name: string, value: any) => void;
+  params: IParam;
+  onClose: () => void;
+}
+
+function PersonBox({ onChangeParams, params, onClose }: PersonBoxProps) {
+  const [adNumber, setAdNumber] = useState(1);
+  const [chNumber, setChNumber] = useState(1);
+  useEffect(() => {
+    onChangeParams('person', adNumber + chNumber);
+  }, [adNumber, chNumber]);
+
   return (
     <PersonLayout>
       객실
@@ -12,9 +25,13 @@ function PersonBox() {
       <LabelStyled>
         <div>성인</div>
         <FlexBetween>
-          <ButtonStyled>-</ButtonStyled>
-          <ButtonTextStyled>1</ButtonTextStyled>
-          <ButtonStyled>+</ButtonStyled>
+          <ButtonStyled onClick={() => setAdNumber(adNumber - 1)}>
+            -
+          </ButtonStyled>
+          <ButtonTextStyled>{adNumber}</ButtonTextStyled>
+          <ButtonStyled onClick={() => setAdNumber(adNumber + 1)}>
+            +
+          </ButtonStyled>
         </FlexBetween>
       </LabelStyled>
       <hr />
@@ -24,10 +41,19 @@ function PersonBox() {
           <div>(0~17세)</div>
         </div>
         <FlexBetween>
-          <ButtonStyled>-</ButtonStyled>
-          <ButtonTextStyled>1</ButtonTextStyled>
-          <ButtonStyled>+</ButtonStyled>
+          <ButtonStyled onClick={() => setChNumber(chNumber - 1)}>
+            -
+          </ButtonStyled>
+          <ButtonTextStyled>{chNumber}</ButtonTextStyled>
+          <ButtonStyled onClick={() => setChNumber(chNumber + 1)}>
+            +
+          </ButtonStyled>
         </FlexBetween>
+      </LabelStyled>
+      <LabelStyled>
+        <OKBtn type="button" onClick={onClose}>
+          확인
+        </OKBtn>
       </LabelStyled>
     </PersonLayout>
   );
@@ -54,4 +80,13 @@ const ButtonTextStyled = styled(FlexCenter)`
   width: 50px;
 `;
 
+const OKBtn = styled.button`
+  height: 24px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 700;
+  color: ${palette.grayTextColor};
+  border: 1px solid ${palette.grayTextColor};
+`;
 export default PersonBox;
