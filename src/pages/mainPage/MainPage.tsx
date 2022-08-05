@@ -1,3 +1,5 @@
+/* eslint-disable guard-for-in */
+/* eslint-disable no-plusplus */
 import MyCalender from 'calender/JihoCalender/MyCalender';
 import { addDays, startOfToday } from 'date-fns';
 import { HttpRequest } from 'lib/api/httpRequest';
@@ -8,12 +10,13 @@ import HotelList from './components/HotelList';
 import { Spinner } from './components/Spiner';
 import Search from './components/Search';
 import useIntersectObserver from './hooks/useIntersertObserver';
+import { getAvailableHotels } from './utils/getStorageHotels';
 
 const HOTEL_PAGE = 10;
 
 function MainPage() {
   const today = startOfToday();
-  const [hotelList, setHotelList] = React.useState<hotelListType[]>();
+  const [hotelList, setHotelList] = React.useState<any[]>();
   const { isTargetVisible, observerRef } = useIntersectObserver();
   const [isInitialLoading, setIsInitialLoading] = React.useState<boolean>(true);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
@@ -30,6 +33,17 @@ function MainPage() {
   };
 
   const currentPage = getCurrentPageNumber(hotelList);
+  const availableHotels = getAvailableHotels(hotelList as any[], params.date);
+
+  if (
+    hotelList &&
+    availableHotels &&
+    hotelList.length !== availableHotels.length
+  ) {
+    console.log('hotelList', hotelList);
+    console.log('Available', availableHotels);
+    setHotelList(availableHotels);
+  }
 
   useEffect(() => {
     const callback = ({ data }: any) => {
