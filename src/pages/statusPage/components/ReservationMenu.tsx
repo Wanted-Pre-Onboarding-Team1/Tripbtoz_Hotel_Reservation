@@ -120,9 +120,10 @@ const MenuUListStyled = styled.ul`
 `;
 
 const MenuListStyled = styled.li`
+  width: 100%;
   height: 50px;
-  background-color: ${palette.backgroundColor};
   font-size: 16px;
+  transition: filter 0.3s linear;
 
   .active {
     border-left: 4px solid ${palette.borderHighlightColor};
@@ -135,36 +136,23 @@ const MenuListStyled = styled.li`
     }
   }
 
-  @media (max-width: 1023px) {
-    width: 100%;
-    border-bottom: 2px solid ${palette.grayBackgroundColor};
-    color: ${palette.disabledFontColor};
-
+  @media (max-width: 480px) {
     .active {
       border-left: none;
       border-bottom: 2px solid black;
-      padding-left: 0;
-      padding-bottom: 8px;
-      background-color: ${palette.backgroundColor};
+      padding: 0;
+      background: none;
+      font-weight: 700;
       color: black;
     }
-  }
-
-  @media (max-width: 767px) {
-    height: 13vw;
-    padding-bottom: 0;
-    font-size: 4vw;
   }
 `;
 
 const NavLinkStyled = styled(NavLink)`
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  width: 100%;
   height: 100%;
   padding-left: 25px;
-  background-color: ${palette.backgroundColor};
   transition: filter 0.3s ease;
 
   :hover {
@@ -173,17 +161,11 @@ const NavLinkStyled = styled(NavLink)`
 
   @media (max-width: 480px) {
     justify-content: center;
-    align-items: flex-end;
     padding-left: 0;
-    padding-bottom: 10px;
     color: ${palette.disabledFontColor};
 
     :hover {
       filter: none;
     }
-  }
-
-  @media (max-width: 767px) {
-    align-items: center;
   }
 `;
