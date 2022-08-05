@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-type occupancyNumber = {
-  person: number;
-};
-
-type information = {
-  hotelname: string;
-  occupancy: occupancyNumber;
-};
-
-export default function useSaveInformation(hotelname: any, person: any) {
+export default function useSaveInformation(
+  hotelname: any,
+  person: any,
+  date: any,
+) {
+  const dateObject = { date };
   const personObject = { person };
   const saveLocalStorage = () => {
-    localStorage.setItem(hotelname, JSON.stringify(personObject));
+    const dataArray = [];
+    dataArray.push(dateObject, personObject);
+    localStorage.setItem(hotelname, JSON.stringify(dataArray));
   };
   return saveLocalStorage;
 }

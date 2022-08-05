@@ -66,7 +66,12 @@ function MainPage() {
       </StyledText>
       <div>
         {hotelList?.map((value: any, index: number) => (
-          <HotelList key={index} value={value} person={params.person} />
+          <HotelList
+            key={index}
+            value={value}
+            person={params.person}
+            date={params.date}
+          />
         ))}
       </div>
       {isLoading && (
