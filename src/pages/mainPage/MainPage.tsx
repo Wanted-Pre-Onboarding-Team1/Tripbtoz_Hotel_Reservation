@@ -1,61 +1,98 @@
-import MyCalender from 'calender/JihoCalender/MyCalender';
-import { addDays, startOfToday } from 'date-fns';
 import { HttpRequest } from 'lib/api/httpRequest';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
+import QueryString from 'qs';
 import { hotelListType } from 'types/hotelList';
 import HotelList from './components/HotelList';
 import { Spinner } from './components/Spiner';
 import Search from './components/Search';
 import useIntersectObserver from './hooks/useIntersertObserver';
+import { getAvailableHotels } from './utils/getStorageHotels';
 
 const HOTEL_PAGE = 10;
+// 페이지당 10개씩 호출하기로 한 약속
 
 function MainPage() {
-  const today = startOfToday();
   const [hotelList, setHotelList] = React.useState<hotelListType[]>();
+  const location = useLocation();
+  const query = QueryString.parse(location.search, {
+    ignoreQueryPrefix: true,
+  });
+
   const { isTargetVisible, observerRef } = useIntersectObserver();
+  // 무한 스크롤 훅
   const [isInitialLoading, setIsInitialLoading] = React.useState<boolean>(true);
+  // 가져올 데이터가 있을 때와 없을 때
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  // 데이터 로딩상태
   const hotelRequest = new HttpRequest();
   // API 요청
-  const [params, setParams] = React.useState({
-    title: '',
-    person: 2,
-    date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
-  });
+
+  // 데이터 전체의 수를 파악해 페이지별로 나우어 줌 159개의 수를 가지고 있다면 15페이지로 나눈 후
+  // 나머지 9는 올림하여 16페이지로 만들어 줌
   const getCurrentPageNumber = (currentHotelList: any) => {
     const pageNumber = (currentHotelList?.length as number) / HOTEL_PAGE;
     return Number.isInteger(pageNumber) ? pageNumber : Math.ceil(pageNumber);
   };
 
   const currentPage = getCurrentPageNumber(hotelList);
+  const availableHotels = getAvailableHotels(hotelList as any[], {
+    checkin: query.start as unknown as Date,
+    checkout: query.end as unknown as Date,
+  });
+
+  if (
+    hotelList &&
+    availableHotels &&
+    hotelList.length !== availableHotels.length
+  ) {
+    console.log('hotelList', hotelList);
+    console.log('Available', availableHotels);
+    setHotelList(availableHotels);
+  }
 
   useEffect(() => {
     const callback = ({ data }: any) => {
-      if (!hotelList) {
-        setHotelList(data);
-        setIsInitialLoading(false);
-        return;
-      }
-      setHotelList((prevHotelList: any) => [...prevHotelList, ...data]);
+      setHotelList(data);
+      setIsInitialLoading(false);
+    };
+    hotelRequest.getWithParams({
+      url: 'hotel_list',
+      config: {
+        _page: 0,
+        _limit: HOTEL_PAGE,
+        hotel_name_like: query?.title,
+        'occupancy.max_gte': query?.person,
+      },
+      callback,
+    });
+  }, []);
+  // 맨 처음 가져오는 10개의 객체
+
+  useEffect(() => {
+    const callback = ({ data }: any) => {
+      setHotelList((prevMovieList: any) => [...prevMovieList, ...data]);
     };
     setIsLoading(true);
     isTargetVisible &&
+      !isInitialLoading &&
       hotelRequest.getWithParams({
         url: 'hotel_list',
         config: {
           _page: currentPage + 1,
           _limit: HOTEL_PAGE,
-          hotel_name_like: params.title,
-          'occupancy.max_gte': params.person,
+          hotel_name_like: query?.title,
+          'occupancy.max_gte': query?.person,
         },
         callback,
       });
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
-  }, [isTargetVisible, isInitialLoading, currentPage, params]);
+    // 무한 리렌더링 해결을 위한 임시 주석 처리
+    // }, [isTargetVisible, isInitialLoading, currentPage]);
+  }, [isTargetVisible, isInitialLoading]);
 
   return (
     <StyledArticle>
@@ -69,8 +106,9 @@ function MainPage() {
           <HotelList
             key={index}
             value={value}
-            person={params.person}
-            date={params.date}
+            person={query.person}
+            start={query.start}
+            end={query.end}
           />
         ))}
       </div>
@@ -109,7 +147,7 @@ const StyledPoint = styled.span`
   font-weight: 500;
 `;
 
-const StyledLoading = styled.div`
+const StyledLoading = styled.body`
   display: flex;
   width: 100vw;
   height: 100vh;

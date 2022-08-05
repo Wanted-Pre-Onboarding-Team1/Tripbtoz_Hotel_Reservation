@@ -1,4 +1,6 @@
-import MyCalender from 'calender/JihoCalender/MyCalender';
+import MainCalender from 'calender/JihoCalender/MainCalender';
+import { addDays, differenceInDays, format, startOfToday } from 'date-fns';
+import useOutSideClick from 'hooks/useOutsideClick';
 import { palette } from 'lib/palette';
 import { FlexBetween, FlexCenter } from 'lib/styles/commonStyles';
 import React from 'react';
@@ -12,49 +14,81 @@ import useToggle from '../hooks/useToggle';
 import PersonBox from './PersonBox';
 
 function Search() {
+  const today = startOfToday();
+  const [params, setParams] = React.useState({
+    title: '',
+    person: 2,
+    date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
+  });
+  const onChangeParams = (name: string, value: any) => {
+    setParams({ ...params, [name]: value });
+  };
+
+  const onChangeDateOfParams = (name: string, value: any) => {
+    setParams((prev) => ({ ...prev, date: { ...prev.date, [name]: value } }));
+  };
+
   const [isCalender, onToggleIsCalender] = useToggle();
   const [isPerson, onToggleIsPerson] = useToggle();
-
+  const [targetCalender] = useOutSideClick(isCalender, onToggleIsCalender);
+  const { checkin, checkout } = params.date;
   return (
     <SearchSection>
       <SearchBox>
         <HotelNameBox>
           <SearchIcon size={38} />
-          <HotelNameInput type="text" placeholder="호텔명 검색" />
+          <HotelNameInput
+            type="text"
+            placeholder="지역명, 호텔명, 펜션명 검색"
+            value={params.title}
+            onChange={(e) => onChangeParams('title', e.target.value)}
+          />
         </HotelNameBox>
-        <CheckInBox onClick={onToggleIsCalender}>
+        <CheckInBox onClick={onToggleIsCalender} ref={targetCalender}>
           <CalendarIcon size={38} />
           <CheckInOutStyled>
             <div>
               <DateLabel>체크인</DateLabel>
-              <div>8월 15일</div>
+              <div>{format(params.date.checkin, 'MM월dd일')}</div>
             </div>
-            <DateLabel>5박</DateLabel>
+            <DateLabel>
+              {checkin &&
+                checkout &&
+                differenceInDays(checkout, checkin as Date)}
+              박
+            </DateLabel>
             <div>
               <DateLabel>체크아웃</DateLabel>
-              <div>8월 15일</div>
+              <div>{checkout && format(checkout, 'MM월dd일')}</div>
             </div>
           </CheckInOutStyled>
         </CheckInBox>
-        {isCalender && (
-          <div>
-            <MyCalender />
-          </div>
-        )}
+        <ToggleDiv isToggle={isCalender}>
+          <MainCalender
+            onChangeDateOfParams={onChangeDateOfParams}
+            params={params}
+          />
+        </ToggleDiv>
         <RoomPersonBox onClick={onToggleIsPerson}>
           <PersonIcon size={38} />
           <RoomPersonStyled>
             <DateLabel>객실 / 인원</DateLabel>
-            <div>객실 1, 인원 2</div>
+            <div>객실 1, 인원 {params.person}</div>
           </RoomPersonStyled>
         </RoomPersonBox>
-        {isPerson && (
-          <div>
-            <PersonBox />
-          </div>
-        )}
+        <ToggleDiv isToggle={isPerson}>
+          <PersonBox
+            onChangeParams={onChangeParams}
+            params={params}
+            onClose={onToggleIsPerson}
+          />
+        </ToggleDiv>
         <SubmitStyled>
-          <SubmitIcon size={38} />
+          <a
+            href={`/?title=${params.title}&person=${params.person}&start=${params.date.checkin}&end=${params.date.checkout}`}
+          >
+            <SubmitIcon size={38} />
+          </a>
         </SubmitStyled>
       </SearchBox>
     </SearchSection>
@@ -178,5 +212,8 @@ const SubmitStyled = styled.div`
   @media screen and (max-width: 480px) {
     display: none;
   }
+`;
+const ToggleDiv = styled.div<{ isToggle: boolean }>`
+  display: ${({ isToggle }) => (isToggle ? 'block' : 'none')};
 `;
 export default Search;
