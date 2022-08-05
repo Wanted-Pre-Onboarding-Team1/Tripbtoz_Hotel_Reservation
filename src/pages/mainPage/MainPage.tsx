@@ -1,19 +1,32 @@
+import MyCalender from 'calender/JihoCalender/MyCalender';
+import { addDays, startOfToday } from 'date-fns';
 import { HttpRequest } from 'lib/api/httpRequest';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import HotelList from './components/HotelList';
 import { Spinner } from './components/Spiner';
+import Search from './components/Search';
 import useIntersectObserver from './hooks/useIntersertObserver';
 
 const HOTEL_PAGE = 10;
 
 function MainPage() {
+  const today = startOfToday();
   const [hotelList, setHotelList] = React.useState<string[]>();
   const { isTargetVisible, observerRef } = useIntersectObserver();
   const [isInitialLoading, setIsInitialLoading] = React.useState<boolean>(true);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const hotelRequest = new HttpRequest();
+<<<<<<< HEAD
 
+=======
+  // API 요청
+  const [params, setParams] = React.useState({
+    title: '',
+    person: 5,
+    date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
+  });
+>>>>>>> 573fd3c61a32597745166373a45f8adb68cb8724
   const getCurrentPageNumber = (currentHotelList: any) => {
     const pageNumber = (currentHotelList?.length as number) / HOTEL_PAGE;
     return Number.isInteger(pageNumber) ? pageNumber : Math.ceil(pageNumber);
@@ -23,11 +36,32 @@ function MainPage() {
 
   useEffect(() => {
     const callback = ({ data }: any) => {
+<<<<<<< HEAD
       if (!hotelList) {
         setHotelList(data);
         setIsInitialLoading(false);
         return;
       }
+=======
+      setHotelList(data);
+      setIsInitialLoading(false);
+    };
+    hotelRequest.getWithParams({
+      url: 'hotel_list',
+      config: {
+        _page: 0,
+        _limit: HOTEL_PAGE,
+        hotel_name_like: params.title,
+        'occupancy.max_gte': params.person,
+      },
+      callback,
+    });
+  }, []);
+  // 맨 처음 가져오는 10개의 객체
+
+  useEffect(() => {
+    const callback = ({ data }: any) => {
+>>>>>>> 573fd3c61a32597745166373a45f8adb68cb8724
       setHotelList((prevMovieList: any) => [...prevMovieList, ...data]);
     };
     setIsLoading(true);
@@ -37,16 +71,23 @@ function MainPage() {
         config: {
           _page: currentPage + 1,
           _limit: HOTEL_PAGE,
+          hotel_name_like: params.title,
+          'occupancy.max_gte': params.person,
         },
         callback,
       });
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
+<<<<<<< HEAD
   }, [isTargetVisible, isInitialLoading, currentPage]);
+=======
+  }, [isTargetVisible, isInitialLoading, currentPage, params]);
+>>>>>>> 573fd3c61a32597745166373a45f8adb68cb8724
 
   return (
     <StyledArticle>
+      <Search />
       <StyledText>
         <StyledPoint>1000</StyledPoint>개의 호텔 중 예약가능 호텔
         <StyledPoint>1000</StyledPoint>개
