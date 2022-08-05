@@ -103,7 +103,7 @@ const StyledPoint = styled.span`
   font-weight: 500;
 `;
 
-const StyledLoading = styled.body`
+const StyledLoading = styled.div`
   display: flex;
   width: 100vw;
   height: 100vh;
