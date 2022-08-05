@@ -17,16 +17,12 @@ function MainPage() {
   const [isInitialLoading, setIsInitialLoading] = React.useState<boolean>(true);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const hotelRequest = new HttpRequest();
-<<<<<<< HEAD
-
-=======
   // API 요청
   const [params, setParams] = React.useState({
     title: '',
     person: 5,
     date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
   });
->>>>>>> 573fd3c61a32597745166373a45f8adb68cb8724
   const getCurrentPageNumber = (currentHotelList: any) => {
     const pageNumber = (currentHotelList?.length as number) / HOTEL_PAGE;
     return Number.isInteger(pageNumber) ? pageNumber : Math.ceil(pageNumber);
@@ -36,32 +32,11 @@ function MainPage() {
 
   useEffect(() => {
     const callback = ({ data }: any) => {
-<<<<<<< HEAD
       if (!hotelList) {
         setHotelList(data);
         setIsInitialLoading(false);
         return;
       }
-=======
-      setHotelList(data);
-      setIsInitialLoading(false);
-    };
-    hotelRequest.getWithParams({
-      url: 'hotel_list',
-      config: {
-        _page: 0,
-        _limit: HOTEL_PAGE,
-        hotel_name_like: params.title,
-        'occupancy.max_gte': params.person,
-      },
-      callback,
-    });
-  }, []);
-  // 맨 처음 가져오는 10개의 객체
-
-  useEffect(() => {
-    const callback = ({ data }: any) => {
->>>>>>> 573fd3c61a32597745166373a45f8adb68cb8724
       setHotelList((prevMovieList: any) => [...prevMovieList, ...data]);
     };
     setIsLoading(true);
@@ -79,11 +54,7 @@ function MainPage() {
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
-<<<<<<< HEAD
-  }, [isTargetVisible, isInitialLoading, currentPage]);
-=======
   }, [isTargetVisible, isInitialLoading, currentPage, params]);
->>>>>>> 573fd3c61a32597745166373a45f8adb68cb8724
 
   return (
     <StyledArticle>
