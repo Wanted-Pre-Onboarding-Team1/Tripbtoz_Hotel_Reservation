@@ -8,8 +8,11 @@ import {
 } from 'react-toasts';
 import saveLocalStorage from '../hooks/useSaveInformation';
 
-export default function SaveButton({ hotelName, person, date }: any) {
-  const onClickButton = saveLocalStorage(hotelName, person, date);
+export default function SaveButton({ hotelName, person, start, end }: any) {
+  const onClickButton = saveLocalStorage(hotelName, person, {
+    checkin: start,
+    checkout: end,
+  });
 
   const ToastPopup = () => {
     ToastsStore.info('호텔 예약이 완료되었습니다.');

@@ -15,7 +15,6 @@ import {
   isAfter,
   isBefore,
   isEqual,
-  isSameDay,
   isSameMonth,
   isWithinInterval,
   parse,
@@ -25,13 +24,9 @@ import {
 import styled, { css } from 'styled-components';
 import { palette } from 'lib/styles/palette';
 import { FlexCenter } from 'lib/styles/commonStyles';
+import { IParam } from 'types/params';
 
 type BackgroundState = 'TRUE' | 'FALSE' | 'ONLY_LEFT' | 'ONLY_RIGHT';
-
-interface ReservationDate {
-  checkin: Date;
-  checkout: Date | null;
-}
 
 interface ActiveDayPorps {
   isActive: boolean;
@@ -41,20 +36,23 @@ interface ActiveDayPorps {
 
 const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토'];
 
-export default function MyCalender() {
+interface MainCalenderProps {
+  onChangeDateOfParams: (name: string, value: any) => void;
+  params: IParam;
+}
+
+export default function MyCalender({
+  onChangeDateOfParams,
+  params,
+}: MainCalenderProps) {
+  const { checkin, checkout } = params.date;
   // 오늘
   const today = startOfToday();
 
-  // 선택된날
-  const [selectedDay, setSelectedDay] = useState<ReservationDate>({
-    checkin: addDays(today, 7),
-    checkout: addDays(today, 8),
-  });
-
   // 왼쪽에 뜰 month와 오른쪽에 뜰 month
   const [selectedMonth, setSelectedMonth] = useState({
-    leftMonth: format(selectedDay.checkin, 'MMM-yyyy'),
-    rightMonth: format(addMonths(selectedDay.checkin, 1), 'MMM-yyyy'),
+    leftMonth: format(checkin, 'MMM-yyyy'),
+    rightMonth: format(addMonths(checkin, 1), 'MMM-yyyy'),
   });
 
   // 각 표시된 달들의 1일
@@ -77,17 +75,20 @@ export default function MyCalender() {
 
   const handelClickDay = (day: Date) => {
     if (isBefore(day, today)) return;
-    if (selectedDay.checkin !== null && selectedDay.checkout !== null)
-      setSelectedDay((prev) => ({ ...prev, checkin: day, checkout: null }));
-    if (selectedDay.checkout === null) {
-      if (isBefore(day, selectedDay.checkin))
-        setSelectedDay((prev) => ({ ...prev, checkin: day }));
-      if (isAfter(day, selectedDay.checkin))
-        setSelectedDay((prev) => ({ ...prev, checkout: day }));
+    if (checkin !== null && checkout !== null) {
+      onChangeDateOfParams('checkin', day);
+      onChangeDateOfParams('checkout', null);
+      // setSelectedDay((prev) => ({ ...prev, checkin: day, checkout: null }));
+    }
+
+    if (checkout === null) {
+      if (isBefore(day, checkin)) onChangeDateOfParams('checkin', day);
+      // setSelectedDay((prev) => ({ ...prev, checkin: day }));
+      if (isAfter(day, checkin)) onChangeDateOfParams('checkout', day);
+      // setSelectedDay((prev) => ({ ...prev, checkout: day }));
     }
   };
 
-  // setSelectedDay((prev) => ({ ...prev, checkout: day }));
   const handleMonth = (controlNumber: number) => {
     const firstDayNextMonth = addMonths(firstDayofMonth.left, controlNumber);
     setSelectedMonth({
@@ -99,20 +100,20 @@ export default function MyCalender() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const giveBackground = useCallback(
     (date: Date): BackgroundState => {
-      if (selectedDay.checkout === null) return 'FALSE';
+      if (checkout === null) return 'FALSE';
       if (
         isWithinInterval(date, {
-          start: selectedDay.checkin,
-          end: selectedDay.checkout as Date,
+          start: checkin,
+          end: checkout as Date,
         })
       ) {
-        if (isEqual(date, selectedDay.checkin)) return 'ONLY_RIGHT';
-        if (isEqual(date, selectedDay.checkout)) return 'ONLY_LEFT';
+        if (isEqual(date, checkin)) return 'ONLY_RIGHT';
+        if (isEqual(date, checkout)) return 'ONLY_LEFT';
         return 'TRUE';
       }
       return 'FALSE';
     },
-    [selectedDay.checkin, selectedDay.checkout],
+    [checkin, checkout],
   );
 
   return (
@@ -139,8 +140,8 @@ export default function MyCalender() {
                   giveBackground={giveBackground(day)}
                   isInMonth={isSameMonth(day, firstDayofMonth.left)}
                   isActive={
-                    isEqual(selectedDay.checkin as Date, day) ||
-                    isEqual(selectedDay.checkout as Date, day)
+                    isEqual(checkin as Date, day) ||
+                    isEqual(checkout as Date, day)
                   }
                 >
                   <button
@@ -178,8 +179,8 @@ export default function MyCalender() {
                   giveBackground={giveBackground(day)}
                   isInMonth={isSameMonth(day, firstDayofMonth.right)}
                   isActive={
-                    isEqual(selectedDay.checkin as Date, day) ||
-                    isEqual(selectedDay.checkout as Date, day)
+                    isEqual(checkin as Date, day) ||
+                    isEqual(checkout as Date, day)
                   }
                 >
                   <button
@@ -198,9 +199,9 @@ export default function MyCalender() {
         </CalenderMonthBox>
       </FlexCenter>
       <section>
-        {selectedDay.checkin && format(selectedDay.checkin, 'MMM dd, yyy')}
-        {differenceInDays(selectedDay.checkin, selectedDay.checkout as Date)}박
-        {selectedDay.checkout && format(selectedDay.checkout, 'MMM dd, yyy')}
+        {checkin && format(checkin, 'MMM dd, yyy')}
+        {differenceInDays(checkin, checkout as Date)}박
+        {checkout && format(checkout, 'MMM dd, yyy')}
       </section>
     </Layout>
   );
