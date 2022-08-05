@@ -1,6 +1,7 @@
 import { palette } from 'lib/styles/palette';
 import React from 'react';
 import styled from 'styled-components';
+import hotelImage from 'assets/image/hotel.jpg';
 
 export default function DetailPage() {
   return (
@@ -30,12 +31,9 @@ const DetailContainer = styled.div`
 `;
 
 const DetailBlock = styled.article`
-  position: absolute;
-  top: 20%;
-  left: 20%;
   display: flex;
-  width: 60%;
-  margin: 0 auto;
+  width: 60vw;
+  min-width: 768px;
   background-color: white;
 `;
 
