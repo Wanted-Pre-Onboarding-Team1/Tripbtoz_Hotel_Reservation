@@ -42,7 +42,27 @@ const dummyData = [
   },
 ];
 
+type PossiblePropertyValues = string | number | boolean;
+
+interface HotelObjectProperty {
+  [key: string]: PossiblePropertyValues;
+}
+
+interface HotelObject {
+  [key: string]: PossiblePropertyValues | HotelObjectProperty;
+}
+
 function StatusPage() {
+  const [totalHotelLists, setTotalLists] = React.useState<HotelObject[]>([]);
+  React.useEffect(() => {
+    const storagedList = Object.keys(localStorage).map((key: string) => {
+      return JSON.parse(localStorage.getItem(key) as string);
+    });
+    setTotalLists((previousList: HotelObject[]) =>
+      previousList.slice(previousList.length).concat(storagedList),
+    );
+    // console.log(new Date(storagedList[0][1].date.checkin));
+  }, []);
   return (
     <StatusContainer>
       <ElementBlock>
