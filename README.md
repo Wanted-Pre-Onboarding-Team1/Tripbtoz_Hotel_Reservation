@@ -1,46 +1,144 @@
-# Getting Started with Create React App
+# [Wanted Pre Onboarding FE 5th] 팀 과제 #  5
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 주제: 호텔 예약 사이트 (기업: 트립비토즈)
 
-## Available Scripts
+- 프로젝트 기간: 2022.08.01 ~ 2022.08.06
 
-In the project directory, you can run:
+<br />
 
-### `yarn start`
+## **1. 팀원 소개 **
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### # <a href="https://github.com/leejiho9898">이지호</a>
+### # <a href="https://github.com/godcl1623">이치행<a>
+### # <a href="https://github.com/devMarco14">임종혁</a>
+### # <a href="https://github.com/HyeonJu-C">천현주</a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br />
 
-### `yarn test`
+## **2. 기술 스택**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`react` `type-script` `react-router-dom` `styled-components` `axios` `json server`
 
-### `yarn build`
+<br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **3. 프로젝트 소개**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br />
 
-### `yarn eject`
+## **4. 프로젝트 구조**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+📦src
+ ┣ 📂asstes
+ ┃ ┗ 📂imgs
+ ┃ ┃ ┣ 📜engall.png
+ ┃ ┃ ┗ 📜index.ts
+ ┣ 📂components
+ ┃ ┗ 📜Header.tsx
+ ┣ 📂database
+ ┃ ┗ 📜database.json
+ ┣ 📂hooks
+ ┃ ┣ 📜httpRequest.ts
+ ┃ ┗ 📜useScheduleForm.ts
+ ┣ 📂libs
+ ┃ ┣ 📂api
+ ┃ ┃ ┗ 📜schedule.ts
+ ┃ ┗ 📂utils
+ ┃ ┃ ┗ 📜Constants.ts
+ ┣ 📂pages
+ ┃ ┣ 📂addSchedulePage
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┣ 📜AMPM.tsx
+ ┃ ┃ ┃ ┣ 📜DayOfWeek.tsx
+ ┃ ┃ ┃ ┣ 📜Option.tsx
+ ┃ ┃ ┃ ┗ 📜SelectBox.tsx
+ ┃ ┃ ┣ 📂utils
+ ┃ ┃ ┃ ┗ 📜index.ts
+ ┃ ┃ ┗ 📜AddSchedulePage.tsx
+ ┃ ┗ 📂schedulePage
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┣ 📜Dayslot.tsx
+ ┃ ┃ ┃ ┗ 📜Timeslot.tsx
+ ┃ ┃ ┣ 📂hooks
+ ┃ ┃ ┃ ┗ 📜useWeekList.ts
+ ┃ ┃ ┗ 📜SchedulePage.tsx
+ ┣ 📂routes
+ ┃ ┣ 📜Path.ts
+ ┃ ┗ 📜Routing.tsx
+ ┣ 📂types
+ ┃ ┣ 📜customTypes.d.ts
+ ┃ ┣ 📜imgges.d.ts
+ ┃ ┗ 📜schedule.d.ts
+ ┣ 📜App.css
+ ┣ 📜App.tsx
+ ┣ 📜index.css
+ ┗ 📜index.tsx
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## **5. 컨벤션**
+### # [ESLint, Airbnb세팅] 
+### # 협업을 위한 git 커밋 컨벤션 설정
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| 커밋명   | 내용                                                   |
+| -------- | ------------------------------------------------------ |
+| feat     | 새로운 기능을 추가                                     |
+| fix      | 버그 수정                                              |
+| design   | CSS 등 사용자 UI 디자인 변경                           |
+| docs     | 문서 생성, 추가, 수정(README.md)                       |
+| refactor | 코드 리팩토링                                          |
+| chore    | 간단한 코드 변경, 로직에 큰 영향을 주지 않는 작은 변경 |
+| test     | 테스트 코드 추가 및 리팩토링                           |
+| rename   | 파일 혹은 폴더명을 수정, 이동                          |
+| !HOTFIX  | 치명적인 버그의 긴급한 수정                            |
 
-## Learn More
+<br />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **6.구현된 기능**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+<br />
+
+## **7. 발생 에러**
+
+```
+```
+<br />
+
+## **8. 시간이 더 있으면 넣고 싶었던 기능**
+
+<br />
+
+## **9. 프로젝트 설치 · 실행 방법**
+
+### # 프로젝트 클론
+
+```
+$ git clone https://github.com/Wanted-Pre-Onboarding-Team1/Tripbtoz_Hotel_Reservation
+```
+
+### # 패키지 설치
+
+```
+$ yarn
+```
+### # json server 실행
+
+```
+$ yarn run server
+```
+
+### # develop 서버 실행
+
+```
+$ yarn start
+```
+
+### # branch에서 작업
+
+```
+$ git checkout -b feature/page
+```
+
