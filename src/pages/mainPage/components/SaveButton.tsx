@@ -21,10 +21,6 @@ export default function SaveButton({ hotelName, person }: any) {
 }
 
 const ReservationButton = styled.button`
-  /* display: inline; */
-  /* position: absolute; */
-  /* bottom: 0; */
-  /* right: 0; */
   font-size: 16px;
   min-width: 106px;
   height: 32px;
