@@ -2,13 +2,18 @@ import { useCallback, useEffect, useRef } from 'react';
 
 export default function useOutSideClick(isOpen: boolean, onClose: () => void) {
   const targetEl = useRef<HTMLDivElement>(null);
+  const count = useRef<number>(0);
 
   const onClickOutSide = useCallback(
     (e: MouseEvent) => {
+      count.current += 1;
       const { target } = e;
       if (target instanceof Node) {
         if (isOpen && !targetEl.current?.contains(target)) {
-          onClose();
+          if (count.current === 3) {
+            count.current = 0;
+            onClose();
+          }
         }
       }
     },
