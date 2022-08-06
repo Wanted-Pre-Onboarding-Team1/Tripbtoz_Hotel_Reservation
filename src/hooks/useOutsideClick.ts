@@ -10,10 +10,7 @@ export default function useOutSideClick(isOpen: boolean, onClose: () => void) {
       const { target } = e;
       if (target instanceof Node) {
         if (isOpen && !targetEl.current?.contains(target)) {
-          if (count.current >= 3) {
-            count.current = 0;
-            onClose();
-          }
+          onClose();
         }
       }
     },

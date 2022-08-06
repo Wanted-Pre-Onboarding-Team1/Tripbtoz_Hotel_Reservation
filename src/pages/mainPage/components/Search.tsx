@@ -28,7 +28,7 @@ function Search() {
     setParams((prev) => ({ ...prev, date: { ...prev.date, [name]: value } }));
   };
 
-  const [isCalender, onToggleIsCalender] = useToggle();
+  const [isCalender, onToggleIsCalender] = useToggle(params);
   const [isPerson, onToggleIsPerson] = useToggle();
   const [targetCalender] = useOutSideClick(isCalender, onToggleIsCalender);
   const { checkin, checkout } = params.date;
