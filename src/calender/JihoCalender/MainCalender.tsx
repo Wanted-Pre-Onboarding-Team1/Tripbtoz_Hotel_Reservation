@@ -302,6 +302,11 @@ const BackgroundDay = styled(FlexCenter)<ActiveDayPorps>`
     width: 30px;
     height: 30px;
     color: ${({ isInMonth }) => (isInMonth ? 'black' : 'rgb(184, 184, 184)')};
+
+    @media (max-width: 480px) {
+      width: 40px;
+      height: 40px;
+    }
   }
   time {
     color: ${({ isActive, isInMonth }) =>
@@ -310,5 +315,6 @@ const BackgroundDay = styled(FlexCenter)<ActiveDayPorps>`
 
   @media (max-width: 480px) {
     height: 100%;
+    padding: 0;
   }
 `;
