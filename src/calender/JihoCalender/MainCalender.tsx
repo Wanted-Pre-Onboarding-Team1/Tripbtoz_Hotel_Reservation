@@ -217,11 +217,20 @@ export const Layout = styled.div`
   width: 810px;
   margin: 0 auto;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  @media (max-width: 480px) {
+    left: 0;
+    width: 100%;
+  }
 `;
 
 const CalenderMonthBox = styled.div`
   width: 50%;
   padding: 0 16px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 const CalenderInfoBox = styled.div`
