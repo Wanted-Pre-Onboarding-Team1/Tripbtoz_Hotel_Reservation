@@ -114,7 +114,8 @@ const SearchSection = styled.div`
   font-size: 16px;
   font-weight: 700;
   @media screen and (max-width: 480px) {
-    width: 90%;
+    width: 100%;
+    margin: 0;
     padding: 0;
   }
 `;

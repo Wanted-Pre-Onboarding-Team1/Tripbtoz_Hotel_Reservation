@@ -63,6 +63,11 @@ const PersonLayout = styled(Layout)`
   width: 480px;
   right: 0;
   left: none;
+
+  @media (max-width: 480px) {
+    left: 0;
+    width: 100vw;
+  }
 `;
 const LabelStyled = styled(FlexBetween)`
   height: 24px;
