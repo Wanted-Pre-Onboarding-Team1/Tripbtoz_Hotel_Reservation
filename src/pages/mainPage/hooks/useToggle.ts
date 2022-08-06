@@ -11,14 +11,18 @@ export default function useToggle(
 
   const onToggle = () => {
     // console.log(value);
-    setValue(true);
-    if (
-      paramState.date.checkout &&
-      paramState.date.checkout !== initial.current.date.checkout
-    ) {
-      // setValue(!value);
-      setValue(false);
-      initial.current = paramState;
+    if (paramState) {
+      setValue(true);
+      if (
+        paramState.date.checkout &&
+        paramState.date.checkout !== initial.current.date.checkout
+      ) {
+        // setValue(!value);
+        setValue(false);
+        initial.current = paramState;
+      }
+    } else {
+      setValue(!value);
     }
   };
 

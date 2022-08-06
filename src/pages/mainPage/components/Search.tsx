@@ -10,6 +10,7 @@ import {
   AiOutlineTeam,
 } from 'react-icons/ai';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import useToggle from '../hooks/useToggle';
 import PersonBox from './PersonBox';
 
@@ -20,6 +21,7 @@ function Search() {
     person: 2,
     date: { checkin: addDays(today, 7), checkout: addDays(today, 8) },
   });
+  const navigate = useNavigate();
   const onChangeParams = (name: string, value: any) => {
     setParams({ ...params, [name]: value });
   };
@@ -42,6 +44,13 @@ function Search() {
             placeholder="호텔명 검색"
             value={params.title}
             onChange={(e) => onChangeParams('title', e.target.value)}
+            onKeyUp={(e: React.KeyboardEvent) => {
+              if (e.key === 'Enter') {
+                navigate(
+                  `/?title=${params.title}&person=${params.person}&start=${params.date.checkin}&end=${params.date.checkout}`,
+                );
+              }
+            }}
           />
         </HotelNameBox>
         <CheckInBox onClick={onToggleIsCalender} ref={targetCalender}>
