@@ -23,9 +23,8 @@
 
 ## **3. 프로젝트 소개**
 ![f74cb9d785841cfa](https://user-images.githubusercontent.com/99126860/183104618-3c399a8f-d18c-49da-9bca-cab25ac06365.jpg)
-![스크린샷 2022-08-05 오후 11 56 48](https://user-images.githubusercontent.com/99126860/183104108-9a76f1e6-0187-47b8-ae0f-452067ccf755.png)
-![스크린샷 2022-08-05 오후 11 57 00](https://user-images.githubusercontent.com/99126860/183104140-ed8dd4af-c979-427e-a8e1-2386261096cc.png)
-
+![스크린샷 2022-08-06 오전 10 29 13](https://user-images.githubusercontent.com/99126860/183228293-f16129ed-2514-4304-937f-179e2befc492.png)
+![스크린샷 2022-08-06 오전 10 29 30](https://user-images.githubusercontent.com/99126860/183228295-70518dc6-d746-452e-8424-1676d7b30b92.png)
 
 <br />
 
