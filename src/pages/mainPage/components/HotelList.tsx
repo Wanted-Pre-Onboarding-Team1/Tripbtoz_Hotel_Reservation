@@ -68,7 +68,6 @@ export default HotelList;
 const StyledList = styled.section`
   width: 60%;
   margin: 0 auto;
-  cursor: pointer;
   @media screen and (max-width: 480px) {
     width: 90%;
   }

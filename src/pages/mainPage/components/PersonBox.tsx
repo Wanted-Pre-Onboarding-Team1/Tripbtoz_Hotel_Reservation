@@ -12,8 +12,8 @@ interface PersonBoxProps {
 }
 
 function PersonBox({ onChangeParams, params, onClose }: PersonBoxProps) {
-  const [adNumber, setAdNumber] = useState(1);
-  const [chNumber, setChNumber] = useState(1);
+  const [adNumber, setAdNumber] = useState(2);
+  const [chNumber, setChNumber] = useState(0);
   useEffect(() => {
     onChangeParams('person', adNumber + chNumber);
   }, [adNumber, chNumber]);
