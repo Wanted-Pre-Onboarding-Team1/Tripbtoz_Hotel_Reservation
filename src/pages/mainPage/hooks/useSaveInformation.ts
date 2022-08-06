@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { addDays } from 'date-fns';
 
 interface DateObject {
   checkin: string;
@@ -12,9 +13,17 @@ export default function useSaveInformation(
   canceled: boolean,
   past: boolean,
 ) {
+  const today = new Date();
   const nameObject = { hotelname };
-  const dateObject = { date };
-  const personObject = { person };
+  const dateObject = {
+    date: date.checkin
+      ? date
+      : {
+          checkin: addDays(today, 7),
+          checkout: addDays(today, 8),
+        },
+  };
+  const personObject = { person: person || 2 };
   const canceledObject = { canceled };
   const pastObject = { past };
   const saveLocalStorage = () => {
