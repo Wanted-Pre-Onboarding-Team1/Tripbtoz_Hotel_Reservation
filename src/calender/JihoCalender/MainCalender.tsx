@@ -307,4 +307,8 @@ const BackgroundDay = styled(FlexCenter)<ActiveDayPorps>`
     color: ${({ isActive, isInMonth }) =>
       isInMonth && isActive ? 'white' : ''};
   }
+
+  @media (max-width: 480px) {
+    height: 100%;
+  }
 `;

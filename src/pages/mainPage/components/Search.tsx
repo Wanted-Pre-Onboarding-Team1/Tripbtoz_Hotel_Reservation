@@ -130,6 +130,7 @@ const SearchBox = styled.div`
     border: transparent;
     background-color: inherit;
     align-items: center;
+    padding-left: 7px;
   }
 `;
 
