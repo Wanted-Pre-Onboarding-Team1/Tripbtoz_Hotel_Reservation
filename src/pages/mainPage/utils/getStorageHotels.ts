@@ -28,10 +28,13 @@ export function getAvailableHotels(hotelList: any[], date: { checkin: Date, chec
         // 저장 데이터에 호텔명이 추가된 것으로 인해 임시 주석 처리 및 인덱스 0 -> 1 변경
         // const reserveDate = reservedHotels[i][reservedHotelNames[i]][0].date;
         const reserveDate = reservedHotels[i][reservedHotelNames[i]][1].date;
+        const isCanceled = reservedHotels[i][reservedHotelNames[i]][3].canceled;
+        const isPast = reservedHotels[i][reservedHotelNames[i]][4].past;
         const reservedHotel = reservedHotelNames[i];
+        console.log(isCanceled, isPast);
 
         availableHotels = availableHotels?.filter((hotel) => {
-            if (hotel.hotel_name !== reservedHotel) return true;
+            if (isCanceled || isPast || hotel.hotel_name !== reservedHotel) return true;
             return (
                 // 사용자가 입력한 date와 local에 저장된 date 비교해서, 날짜가 겹치지 않았을 때에만 예약 가능 호텔 목록에 추가
                 !(isAfter(new Date(date.checkin), new Date(reserveDate.checkin))
