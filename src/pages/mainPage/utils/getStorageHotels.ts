@@ -34,12 +34,12 @@ export function getAvailableHotels(hotelList: any[], date: { checkin: Date, chec
             if (hotel.hotel_name !== reservedHotel) return true;
             return (
                 // 사용자가 입력한 date와 local에 저장된 date 비교해서, 날짜가 겹치지 않았을 때에만 예약 가능 호텔 목록에 추가
-                !(isAfter(date.checkin, parseJSON(reserveDate.checkin))
-                    && isBefore(date.checkin, parseJSON(reserveDate.checkout))) &&
-                !(isAfter(date.checkout, parseJSON(reserveDate.checkin))
-                    && isBefore(date.checkout, parseJSON(reserveDate.checkout)))
-                && !isEqual(date.checkin, parseJSON(reserveDate.checkin))
-                && !isEqual(date.checkout, parseJSON(reserveDate.checkout))
+                !(isAfter(new Date(date.checkin), new Date(reserveDate.checkin))
+                    && isBefore(new Date(date.checkin), new Date(reserveDate.checkout))) &&
+                !(isAfter(new Date(date.checkout), new Date(reserveDate.checkin))
+                    && isBefore(new Date(date.checkout), new Date(reserveDate.checkout)))
+                && !isEqual(new Date(date.checkin), new Date(reserveDate.checkin))
+                && !isEqual(new Date(date.checkout), new Date(reserveDate.checkout))
             )
 
         })
