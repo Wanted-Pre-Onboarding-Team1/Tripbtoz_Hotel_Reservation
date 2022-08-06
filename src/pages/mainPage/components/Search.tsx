@@ -39,7 +39,7 @@ function Search() {
           <SearchIcon size={38} />
           <HotelNameInput
             type="text"
-            placeholder="지역명, 호텔명, 펜션명 검색"
+            placeholder="호텔명 검색"
             value={params.title}
             onChange={(e) => onChangeParams('title', e.target.value)}
           />
@@ -49,7 +49,12 @@ function Search() {
           <CheckInOutStyled>
             <div>
               <DateLabel>체크인</DateLabel>
-              <div>{format(params.date.checkin, 'MM월dd일')}</div>
+              <CheckDay>
+                {format(params.date.checkin, 'MM월dd일')}{' '}
+                <Br>
+                  <br />
+                </Br>
+              </CheckDay>
             </div>
             <DateLabel>
               {checkin &&
@@ -59,7 +64,7 @@ function Search() {
             </DateLabel>
             <div>
               <DateLabel>체크아웃</DateLabel>
-              <div>{checkout && format(checkout, 'MM월dd일')}</div>
+              <CheckDay>{checkout && format(checkout, 'MM월dd일')}</CheckDay>
             </div>
           </CheckInOutStyled>
         </CheckInBox>
@@ -73,7 +78,13 @@ function Search() {
           <PersonIcon size={38} />
           <RoomPersonStyled>
             <DateLabel>객실 / 인원</DateLabel>
-            <div>객실 1, 인원 {params.person}</div>
+            <div>
+              객실 1,
+              <Br>
+                <br />
+              </Br>
+              인원 {params.person}
+            </div>
           </RoomPersonStyled>
         </RoomPersonBox>
         <ToggleDiv isToggle={isPerson}>
@@ -117,6 +128,7 @@ const SearchBox = styled.div`
   @media screen and (max-width: 480px) {
     border: transparent;
     background-color: inherit;
+    align-items: center;
   }
 `;
 
@@ -171,6 +183,13 @@ const DateLabel = styled.div`
   }
 `;
 
+const CheckDay = styled.div`
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
 const CalendarIcon = styled(AiOutlineCalendar)`
   padding: 4px;
   @media screen and (max-width: 480px) {
@@ -180,6 +199,10 @@ const CalendarIcon = styled(AiOutlineCalendar)`
 
 const CheckInOutStyled = styled(FlexBetween)`
   flex: 1 1;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const RoomPersonBox = styled(FlexCenter)`
@@ -197,6 +220,11 @@ const PersonIcon = styled(AiOutlineTeam)`
 const RoomPersonStyled = styled.div`
   padding: 16px;
   flex: 1 1;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5px;
+  }
 `;
 
 const SubmitIcon = styled(AiOutlineSearch)`
@@ -213,7 +241,15 @@ const SubmitStyled = styled.div`
     display: none;
   }
 `;
+
 const ToggleDiv = styled.div<{ isToggle: boolean }>`
   display: ${({ isToggle }) => (isToggle ? 'block' : 'none')};
+`;
+
+const Br = styled.span`
+  display: none;
+  @media screen and (max-width: 480px) {
+    display: flex;
+  }
 `;
 export default Search;
