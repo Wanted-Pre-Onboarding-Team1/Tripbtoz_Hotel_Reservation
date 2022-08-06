@@ -1,3 +1,4 @@
+import { palette } from 'lib/styles/palette';
 import React from 'react';
 import styled from 'styled-components';
 import { hotelListType } from 'types/hotelList';
@@ -5,6 +6,8 @@ import SaveButton from './SaveButton';
 
 function HotelList({ value, person, start, end }: any) {
   const [isLoading, setIsLoading] = React.useState(true);
+  const [isReservationExist, setExist] = React.useState(false);
+  const [flag, setFlag] = React.useState(false);
 
   React.useEffect(() => {
     const imageObject = new Image();
@@ -13,6 +16,14 @@ function HotelList({ value, person, start, end }: any) {
       setIsLoading(false);
     };
   }, ['https://source.unsplash.com/collection/3989638/200*300']);
+
+  React.useEffect(() => {
+    if (localStorage.getItem(value.hotel_name)) {
+      setExist(true);
+    } else {
+      setExist(false);
+    }
+  }, [flag]);
 
   return (
     <div>
@@ -31,14 +42,19 @@ function HotelList({ value, person, start, end }: any) {
               </StyledOccupancy>
             </StyledTitle>
             <StyledPrice>
-              <SaveButton
-                hotelName={value.hotel_name}
-                person={person}
-                canceled={false}
-                past={false}
-                start={start}
-                end={end}
-              />
+              {!isReservationExist ? (
+                <SaveButton
+                  hotelName={value.hotel_name}
+                  person={person}
+                  canceled={false}
+                  past={false}
+                  start={start}
+                  end={end}
+                  onClick={() => setFlag(!flag)}
+                />
+              ) : (
+                <StyledButton>예약 완료</StyledButton>
+              )}
             </StyledPrice>
           </StyledArticle>
         </StyledList>
@@ -133,11 +149,13 @@ const StyledPrice = styled.div`
   }
 `;
 
-const StyledTex = styled.div`
-  margin-top: 10px;
-  font-size: 0.7rem;
-  color: gray;
-  @media screen and (max-width: 480px) {
-    font-size: 0.4rem;
-  }
+const StyledButton = styled.button`
+  font-size: 16px;
+  min-width: 106px;
+  height: 32px;
+  margin: 30px;
+  border-radius: 4px;
+  color: white;
+  background-color: ${palette.pointColor};
+  cursor: pointer;
 `;

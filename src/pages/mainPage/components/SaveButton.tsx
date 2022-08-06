@@ -15,6 +15,7 @@ export default function SaveButton({
   past,
   start,
   end,
+  onClick,
 }: any) {
   const date = {
     checkin: start,
@@ -39,6 +40,7 @@ export default function SaveButton({
         onClick={() => {
           onClickButton();
           ToastPopup();
+          onClick();
         }}
       >
         예약
