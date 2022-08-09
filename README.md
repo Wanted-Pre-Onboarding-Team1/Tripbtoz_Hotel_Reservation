@@ -7,7 +7,11 @@
 <br />
 
 ## **1. 팀원 소개 **
-
+### # <a href="https://github.com/chaengs">심채영</a>
+```
+- 예약 정보(호텔명, 숙박 기간, 인원 등)를 로컬스토리지에 저장
+- react-toast 라이브러리로 토스트 메세지 구현
+```
 ### # <a href="https://github.com/leejiho9898">이지호</a>
 ### # <a href="https://github.com/godcl1623">이치행<a>
 ### # <a href="https://github.com/devMarco14">임종혁</a>
